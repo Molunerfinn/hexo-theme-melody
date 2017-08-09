@@ -1,10 +1,9 @@
-
-if site.posts.length > 0
-  #recent-posts
-    h1 Recent Posts
-    each post in site.posts.sort('date', -1).limit(10).toArray()
-      .recent-post-item
-        a(href=config.root + post.path)= post.title
-        if post.date
-          time(datetime=post.date.toJSON())= date(post.date, date_format)
+each article in page.posts.data
+  .recent-post-item
+    if article.link
+      a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
+    else
+      a(href=url_for(article.path))= article.title || 'No Title'
+    time(datetime=date_xml(article.date))= date(article.date)
+    != article.excerpt
 
