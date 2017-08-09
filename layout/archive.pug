@@ -1,0 +1,58 @@
+
+extends includes/layout.pug
+
+block content
+  - var categoriesList = list_categories({ show_count: false })
+  - var tagsList = list_tags({ show_count: false })
+  - var archivesList = list_archives({ show_count: false })
+
+  div.archive
+    if !is_year()
+
+      h1 Archives
+
+      if theme.atom
+        p The feed is available via&nbsp;
+          a(href=theme.atom) atom
+          span .
+        br
+
+      aside
+        h2 Categories
+        if categoriesList
+          != categoriesList
+        else
+          p None.
+      br
+
+      aside
+        h2 Tags
+        if tagsList
+          != tagsList
+        else
+          p None.
+      br
+
+      aside
+        h2 Archives
+        if archivesList
+          != archivesList
+        else
+          p None.
+      br
+
+    else
+
+      h1= page.month + '/' + page.year
+
+      - page.posts.each(function(article){
+        .archive-list-item
+          if article.link
+            a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
+          else
+            a(href=url_for(article.path))= article.title || 'No Title'
+          time(datetime=date_xml(article.date))= date(article.date)
+      - })
+
+    include includes/pagination.pug
+

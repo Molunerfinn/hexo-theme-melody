@@ -1,0 +1,20 @@
+
+nav#pagination
+
+  //- previous page link, some pages may have a different url
+  if page.prev_link
+    a(class='prev', href=url_for(page.prev_link))!= '&larr; Prev'
+  else if page.prev && page.prev.path
+    a(class='prev', href=url_for(page.prev.path))!= '&larr; Prev'
+
+  //- show the page counts if there are any
+  if typeof page.current === 'number' && typeof page.total === 'number'
+    span.page-number
+      = 'Page ' + page.current +  ' of ' + page.total
+
+  //- next page link, again the logic is different on different pages
+  if page.next_link
+    a(class='next', href=url_for(page.next_link))!= 'Next &rarr;'
+  else if page.next && page.next.path
+    a(class='next', href=url_for(page.next.path))!= 'Next &rarr;'
+

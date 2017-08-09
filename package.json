@@ -1,0 +1,7 @@
+{
+  "name": "hexo-theme-melody",
+  "version": "0.0.0",
+  "description": "hexo-theme-melody hexo theme",
+  "private": true,
+  "dependencies": {}
+}

@@ -1,0 +1,8 @@
+extends includes/layout.pug
+
+block content
+  article#page
+    h1= page.title
+    != page.content
+  include includes/pagination.pug
+

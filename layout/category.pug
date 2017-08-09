@@ -1,0 +1,16 @@
+extends includes/layout.pug
+
+block content
+  #category
+    h1= page.category
+    - page.posts.each(function(article){
+      .category-item
+        if article.link
+          a(href=url_for(article.link) target="_blank")
+            = article.title || 'No Title'
+        else
+          a(href=url_for(article.path))= article.title || 'No Title'
+        time(datetime=date_xml(article.date))= date(article.date)
+    - })
+  include includes/pagination.pug
+
