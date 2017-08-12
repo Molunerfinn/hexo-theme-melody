@@ -12,9 +12,11 @@ menu:
 # Miscelaneous
 favicon: /favicon.ico
 
+highlight_theme: default 
+
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/hexo-theme-melody.css
+- /css/index.css
 
 # scripts loaded in the end of the body
 scripts:
