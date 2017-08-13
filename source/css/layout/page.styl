@@ -1,0 +1,23 @@
+#content-inner
+  margin: 0 auto
+  width: $content-width
+
+a
+  color: $a-link-color
+  transition: all 0.2s
+
+  &:hover
+    color: $a-hover-color
+    text-decoration: none
+
+img
+  width: 100%
+
+@media screen and (max-width: $sm)
+  #content-inner
+    margin: 0 24px
+    width: auto
+
+@media screen and (min-width: $md)
+  #content-inner
+    width: $content-large-width

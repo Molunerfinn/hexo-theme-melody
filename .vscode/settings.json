@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertNewLineBetweenSelectors": true,
+  "stylusSupremacy.insertParenthesisAroundIfCondition": false,
+  "stylusSupremacy.alwaysUseNoneOverZero": true,
+  "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
+  "stylusSupremacy.sortProperties": "grouped"
+}

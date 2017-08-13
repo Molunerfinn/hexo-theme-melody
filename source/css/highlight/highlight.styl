@@ -1,184 +1,167 @@
 // https://github.com/chriskempson/tomorrow-theme
-
-@require "theme"
-@require "diff"
+@require 'theme'
+@require 'diff'
 
 // Placeholder: $code-block
-$code-block {
-  overflow: auto;
-  margin: 20px 0;
-  padding: 0;
-  font-size $code-font-size;
-  color: $highlight-foreground;
-  background: $highlight-background;
-  line-height: $line-height-code-block;
-}
+$code-block
+  overflow: auto
+  margin: 20px 0
+  padding: 0
+  background: $highlight-background
+  color: $highlight-foreground
+  font-size: $code-font-size
+  line-height: $line-height-code-block
 
-pre, code { font-family: $code-font-family; }
+pre,
+code
+  font-family: $font-family
 
-code {
-  padding: 2px 4px;
-  word-wrap: break-word;
-  color: $code-foreground;
-  background: $code-background;
-  border-radius: $code-border-radius;
-  font-size $code-font-size;
-}
+code
+  padding: 2px 4px
+  background: $code-background
+  color: $code-foreground
+  word-wrap: break-word
+  font-size: $code-font-size
 
-pre {
-  @extend $code-block;
+pre
+  @extend $code-block
 
-  code {
-    padding: 0;
-    color: $highlight-foreground;
-    background: none;
-    text-shadow: none;
-  }
-}
+  code
+    padding: 0
+    background: none
+    color: $highlight-foreground
+    text-shadow: none
 
-.highlight {
-  @extend $code-block;
+.highlight
+  @extend $code-block
   border-radius: 1px
 
-  pre {
-    border: none;
-    margin: 0;
-    padding: 10px 0;
-  }
+  pre
+    margin: 0
+    padding: 8px 0
+    border: none
 
-  table {
-    margin: 0;
-    width: auto;
-    border: none;
-  }
+  table
+    margin: 0
+    width: auto
+    border: none
 
-  td {
-    border: none;
-    padding: 0;
-  }
+  td
+    padding: 0
+    border: none
 
-  figcaption {
-    clearfix();
-    font-size: 1em;
-    color: $highlight-foreground;
-    line-height: 1em;
-    margin-bottom: 1em;
+  figcaption
+    clearfix()
+    margin-bottom: 1em
+    color: $highlight-foreground
+    font-size: 1em
+    line-height: 1em
 
-    a {
-      float: right;
-      color: $highlight-foreground;
+    a
+      float: right
+      color: $highlight-foreground
 
-      &:hover { border-bottom-color: $highlight-foreground; }
-    }
-  }
+      &:hover
+        border-bottom-color: $highlight-foreground
 
-  .gutter pre {
-    padding-left: 10px
+  .gutter pre
     padding-right: 10px
+    padding-left: 10px
+    background-color: $highlight-gutter.bg-color
     color: $highlight-gutter.color
     text-align: right
-    background-color: $highlight-gutter.bg-color
-  }
 
-  .code pre {
-    width: 100%
-    padding-left: 10px
+  .code pre
     padding-right: 10px
+    padding-left: 10px
+    width: 100%
     background-color: $highlight-background
-  }
 
-  .line { height: 20px; }
-}
+  .line
+    height: 20px
 
+.gutter
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
 
-.gutter {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+.gist table
+  width: auto
 
-.gist table {
-  width: auto;
-
-  td { border: none; }
-}
+  td
+    border: none
 
 // For diff highlight
-pre .deletion { background: $highlight-deletion; }
-pre .addition { background: $highlight-addition; }
-pre .meta     { color: $highlight-purple; }
+pre .deletion
+  background: $highlight-deletion
 
-pre {
+pre .addition
+  background: $highlight-addition
 
-  .comment { color: $highlight-comment; }
+pre .meta
+  color: $highlight-purple
 
-  .variable
-  .attribute
-  .regexp
-  .ruby .constant
-  .xml .tag .title
-  .xml .pi
-  .xml .doctype
-  .html .doctype
-  .css .id
-  .tag .name
-  .css .class
-  .css .pseudo {
-    color: $highlight-red;
-  }
+pre
+  .comment
+    color: $highlight-comment
 
-  .tag {
-    color: $highlight-aqua;
-  }
+  .variable,
+  .attribute,
+  .regexp,
+  .ruby .constant,
+  .xml .tag .title,
+  .xml .pi,
+  .xml .doctype,
+  .html .doctype,
+  .css .id,
+  .tag .name,
+  .css .class,
+  .css .pseudo
+    color: $highlight-red
 
-  .number
-  .preprocessor
-  .literal
-  .params
-  .constant
-  .command {
-    color: $highlight-orange;
-  }
+  .tag
+    color: $highlight-aqua
 
-  .built_in {
-    color: $highlight-yellow;
-  }
+  .number,
+  .preprocessor,
+  .literal,
+  .params,
+  .constant,
+  .command
+    color: $highlight-orange
 
-  .ruby .class .title
-  .css .rules .attribute
-  .string
-  .value
-  .inheritance
-  .header
-  .ruby .symbol
-  .xml .cdata
-  .special
-  .number
-  .formula {
-    color: $highlight-green;
-  }
+  .built_in
+    color: $highlight-yellow
 
-  .keyword
-  .title
-  .css .hexcolor {
-    color: $highlight-aqua;
-  }
+  .ruby .class .title,
+  .css .rules .attribute,
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .ruby .symbol,
+  .xml .cdata,
+  .special,
+  .number,
+  .formula
+    color: $highlight-green
 
-  .function
-  .python .decorator
-  .python .title
-  .ruby .function .title
-  .ruby .title .keyword
-  .perl .sub
-  .javascript .title
-  .coffeescript .title {
-    color: $highlight-blue;
-  }
+  .keyword,
+  .title,
+  .css .hexcolor
+    color: $highlight-aqua
 
-  .tag .attr
-  .javascript .function {
-    color: $highlight-purple;
-  }
+  .function,
+  .python .decorator,
+  .python .title,
+  .ruby .function .title,
+  .ruby .title .keyword,
+  .perl .sub,
+  .javascript .title,
+  .coffeescript .title
+    color: $highlight-blue
 
-}
+  .tag .attr,
+  .javascript .function
+    color: $highlight-purple

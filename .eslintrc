@@ -1,0 +1,9 @@
+{
+  "extends": "standard",
+  "env": {
+    "jquery": true
+  },
+  "globals": {
+    "anime": false
+  }
+}

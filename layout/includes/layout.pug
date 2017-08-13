@@ -11,17 +11,22 @@ doctype html
 html(lang=config.language)
   head
     meta(charset='UTF-8')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
     title= pageTitle
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
-      //- stylesheets list from config.yml
       each url in theme.stylesheets
         link(rel='stylesheet', href=url)
+    each item in theme.cdn.css
+      if item !== undefined
+        link(rel='stylesheet', href=item)
     link(rel="icon", href=config.root + 'img/favicon.png')
   body
-    #menu-outer
-      nav#menu-inner
-        each url, label in theme.menu
-          a(href=url)= label
+    //- #menu-outer
+    //-   nav#menu-inner
+    //-     each url, label in theme.menu
+    //-       a(href=url)= label
+    i.fa.fa-arrow-right.toggle-sidebar(aria-hidden="true")
     #content-outer
       #content-inner
         if body
