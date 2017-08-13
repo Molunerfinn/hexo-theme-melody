@@ -10,8 +10,12 @@ body
   top: $sidebar-icon-top
   left: $sidebar-icon-left
   z-index: 100
-  font-size: $sidebar-size
+  font-size: $sidebar-icon-size
   cursor: pointer
 
 .fancybox-caption
   text-align: center
+
+@media screen and (max-width: $sm)
+  i.toggle-sidebar
+    display: none

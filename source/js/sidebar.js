@@ -6,8 +6,8 @@ $(function () {
       anime({
         targets: '#sidebar',
         translateX: '0px',
-        easing: 'easeInOutQuad',
-        duration: 300
+        easing: 'easeInSine',
+        duration: 250
       })
       anime({
         targets: 'body',
@@ -39,8 +39,8 @@ $(function () {
       anime({
         targets: '#sidebar',
         translateX: '300px',
-        easing: 'easeInOutQuad',
-        duration: 300
+        easing: 'easeInSine',
+        duration: 250
       })
     }
   })
