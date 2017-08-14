@@ -19,7 +19,7 @@ $(function () {
         targets: this,
         color: '#1F2D3D',
         rotate: '0deg',
-        easing: 'easeInOutQuad',
+        easing: 'easeInQuad',
         duration: 250
       })
     } else {
@@ -33,7 +33,6 @@ $(function () {
         targets: this,
         color: '#99a9bf',
         rotate: '180deg',
-        easing: 'easeInOutQuad',
         duration: 250
       })
       anime({

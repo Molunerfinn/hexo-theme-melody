@@ -4,6 +4,8 @@
     "jquery": true
   },
   "globals": {
-    "anime": false
+    "anime": false,
+    "debounce": false,
+    "throttle": false
   }
 }

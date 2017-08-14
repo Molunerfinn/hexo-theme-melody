@@ -13,8 +13,21 @@ body
   font-size: $sidebar-icon-size
   cursor: pointer
 
+.go-up
+  position: fixed
+  right: $go-up-right
+  bottom: $go-up-bottom
+  z-index: 100
+  font-size: $sidebar-icon-size
+  opacity: 0
+  cursor: pointer
+
 .fancybox-caption
   text-align: center
+
+.fireworks
+  position: fixed
+  z-index: -1
 
 @media screen and (max-width: $sm)
   i.toggle-sidebar

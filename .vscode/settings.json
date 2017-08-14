@@ -6,5 +6,6 @@
   "stylusSupremacy.insertParenthesisAroundIfCondition": false,
   "stylusSupremacy.alwaysUseNoneOverZero": true,
   "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
-  "stylusSupremacy.sortProperties": "grouped"
+  "stylusSupremacy.sortProperties": "grouped",
+  "eslint.autoFixOnSave": true
 }

@@ -12,7 +12,11 @@ menu:
 # Miscelaneous
 favicon: /favicon.ico
 
-highlight_theme: light
+# highlight
+highlight_theme: default
+
+# fireworks
+fireworks: true
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -20,12 +24,15 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
-- /js/hexo-theme-melody.js
+- /js/utils.js
 - /js/third-party/anime.min.js
 - /js/third-party/jquery.min.js
 - /js/third-party/jquery.fancybox.min.js
 - /js/fancybox.js
 - /js/sidebar.js
+- /js/copy.js
+- /js/fireworks.js
+- /js/go-up.js
 
 cdn:
   css:

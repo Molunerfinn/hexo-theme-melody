@@ -13,6 +13,13 @@ a
 a.fancybox
   outline: none
 
+  &:focus
+    outline: none
+
+  display: inline-block
+  width: 100%
+  text-align: center
+
 img
   padding: $img-border-padding
   max-width: 100%
@@ -21,6 +28,25 @@ img
 
   &:hover
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
+
+.fa-clipboard
+  position: absolute
+  top: 10px
+  right: 10px
+  color: $highlight-aqua
+  cursor: pointer
+  transition: color 0.2s
+
+  &:hover
+    color: darken($highlight-aqua, 20%)
+
+.copy-notice
+  position: absolute
+  top: 6px
+  right: 0
+  background: $highlight-background
+  color: $highlight-aqua
+  opacity: 0
 
 @media screen and (max-width: $sm)
   #content-inner
