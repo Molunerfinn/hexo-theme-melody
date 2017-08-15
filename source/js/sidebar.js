@@ -1,5 +1,5 @@
 $(function () {
-  $('.toggle-sidebar').on('click', function () {
+  $('#toggle-sidebar').on('click', function () {
     var isOpen = $(this).hasClass('on')
     isOpen ? $(this).removeClass('on') : $(this).addClass('on')
     if (isOpen) {
@@ -10,7 +10,7 @@ $(function () {
         duration: 250
       })
       anime({
-        targets: 'body',
+        targets: '#content-outer',
         paddingLeft: '0px',
         easing: 'easeInOutQuad',
         duration: 250
@@ -24,7 +24,7 @@ $(function () {
       })
     } else {
       anime({
-        targets: 'body',
+        targets: '#content-outer',
         paddingLeft: '300px',
         easing: 'easeInOutQuad',
         duration: 250

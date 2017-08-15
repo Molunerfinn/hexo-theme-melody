@@ -12,14 +12,14 @@ var setCanvasSize = debounce(function () {
   canvasEl.style.width = window.innerWidth + 'px'
   canvasEl.style.height = window.innerHeight + 'px'
   canvasEl.getContext('2d').scale(2, 2)
-})
+}, 500)
 
-function updateCoords (e) {
+function updateCoords(e) {
   pointerX = (e.clientX || e.touches[0].clientX) - canvasEl.getBoundingClientRect().left
   pointerY = e.clientY || e.touches[0].clientY - canvasEl.getBoundingClientRect().top
 }
 
-function setParticuleDirection (p) {
+function setParticuleDirection(p) {
   var angle = anime.random(0, 360) * Math.PI / 180
   var value = anime.random(50, 180)
   var radius = [-1, 1][anime.random(0, 1)] * value
@@ -29,7 +29,7 @@ function setParticuleDirection (p) {
   }
 }
 
-function createParticule (x, y) {
+function createParticule(x, y) {
   var p = {}
   p.x = x
   p.y = y
@@ -45,7 +45,7 @@ function createParticule (x, y) {
   return p
 }
 
-function createCircle (x, y) {
+function createCircle(x, y) {
   var p = {}
   p.x = x
   p.y = y
@@ -65,13 +65,13 @@ function createCircle (x, y) {
   return p
 }
 
-function renderParticule (anim) {
+function renderParticule(anim) {
   for (var i = 0; i < anim.animatables.length; i++) {
     anim.animatables[i].target.draw()
   }
 }
 
-function animateParticules (x, y) {
+function animateParticules(x, y) {
   var circle = createCircle(x, y)
   var particules = []
   for (var i = 0; i < numberOfParticules; i++) {
@@ -110,7 +110,7 @@ var render = anime({
 })
 
 document.addEventListener(tap, function (e) {
-  if (e.target.id !== 'sidebar') {
+  if (e.target.id !== 'sidebar' && e.target.id !== 'toggle-sidebar') {
     render.play()
     updateCoords(e)
     animateParticules(pointerX, pointerY)
