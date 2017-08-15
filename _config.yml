@@ -16,7 +16,7 @@ favicon: /favicon.ico
 highlight_theme: default
 
 # fireworks
-fireworks: false 
+fireworks: true 
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -28,6 +28,8 @@ scripts:
 - /js/third-party/anime.min.js
 - /js/third-party/jquery.min.js
 - /js/third-party/jquery.fancybox.min.js
+- https://cdn.bootcss.com/velocity/1.5.0/velocity.min.js
+- https://cdn.bootcss.com/velocity/1.5.0/velocity.ui.min.js
 - /js/fancybox.js
 - /js/sidebar.js
 - /js/copy.js

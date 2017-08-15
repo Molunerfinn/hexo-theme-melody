@@ -3,43 +3,38 @@ $(function () {
     var isOpen = $(this).hasClass('on')
     isOpen ? $(this).removeClass('on') : $(this).addClass('on')
     if (isOpen) {
-      anime({
-        targets: '#sidebar',
-        translateX: '0px',
-        easing: 'easeInSine',
-        duration: 250
+      $('#content-outer').velocity('stop').velocity({
+        paddingLeft: '0px'
+      }, {
+        duration: 200
       })
-      anime({
-        targets: '#content-outer',
-        paddingLeft: '0px',
-        easing: 'easeInOutQuad',
-        duration: 250
+      $('#sidebar').velocity('stop').velocity({
+        translateX: '0px'
+      }, {
+        duration: 200
       })
-      anime({
-        targets: this,
-        color: '#1F2D3D',
-        rotate: '0deg',
-        easing: 'easeInQuad',
-        duration: 250
+      $('#toggle-sidebar').velocity('stop').velocity({
+        rotateZ: '0deg',
+        color: '#1F2D3D'
+      }, {
+        duration: 200
       })
     } else {
-      anime({
-        targets: '#content-outer',
-        paddingLeft: '300px',
-        easing: 'easeInOutQuad',
-        duration: 250
+      $('#content-outer').velocity('stop').velocity({
+        paddingLeft: '300px'
+      }, {
+        duration: 200
       })
-      anime({
-        targets: this,
-        color: '#99a9bf',
-        rotate: '180deg',
-        duration: 250
+      $('#sidebar').velocity('stop').velocity({
+        translateX: '300px'
+      }, {
+        duration: 200
       })
-      anime({
-        targets: '#sidebar',
-        translateX: '300px',
-        easing: 'easeInSine',
-        duration: 250
+      $('#toggle-sidebar').velocity('stop').velocity({
+        rotateZ: '180deg',
+        color: '#99a9bf'
+      }, {
+        duration: 200
       })
     }
   })
