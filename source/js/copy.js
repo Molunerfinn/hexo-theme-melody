@@ -15,27 +15,27 @@ $(function () {
       textarea.setSelectionRange(0, textarea.value.length)
       try {
         document.execCommand('copy') // Security exception may be thrown by some browsers.
-        $(ctx).prev('.copy-notice').text('复制成功')
-        anime({
-          targets: $(ctx).prev('.copy-notice')[0],
-          translateX: -30,
-          opacity: 1,
-          direction: 'alternate',
-          easing: 'easeOutQuint',
-          duration: 700,
-          loop: 1
-        })
+        $(ctx).prev('.copy-notice')
+          .text('复制成功')
+          .velocity({
+            translateX: -30,
+            opacity: 1
+          }, {
+            loop: 1,
+            duration: 750,
+            easing: 'easeOutQuint'
+          })
       } catch (ex) {
-        $(ctx).prev('.copy-notice').text('复制失败')
-        anime({
-          targets: $(ctx).prev('.copy-notice')[0],
-          translateX: -30,
-          opacity: 1,
-          direction: 'alternate',
-          easing: 'easeOutQuint',
-          duration: 700,
-          loop: 1
-        })
+        $(ctx).prev('.copy-notice')
+          .text('复制失败')
+          .velocity({
+            translateX: -30,
+            opacity: 1
+          }, {
+            loop: 1,
+            duration: 750,
+            easing: 'easeOutQuint'
+          })
         return false
       } finally {
         document.body.removeChild(textarea)
@@ -53,5 +53,6 @@ $(function () {
     selection.addRange(range)
     var text = selection.toString()
     copy(text, this)
+    text = ''
   })
 })

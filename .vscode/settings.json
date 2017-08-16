@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "stylusSupremacy.insertSemicolons": false,
   "stylusSupremacy.insertBraces": false,
   "stylusSupremacy.insertNewLineBetweenSelectors": true,

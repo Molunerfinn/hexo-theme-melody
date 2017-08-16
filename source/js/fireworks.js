@@ -110,7 +110,7 @@ var render = anime({
 })
 
 document.addEventListener(tap, function (e) {
-  if (e.target.id !== 'sidebar' && e.target.id !== 'toggle-sidebar') {
+  if (e.target.id !== 'sidebar' && e.target.id !== 'toggle-sidebar' && e.target.nodeName !== 'A' && e.target.nodeName !== 'IMG') {
     render.play()
     updateCoords(e)
     animateParticules(pointerX, pointerY)

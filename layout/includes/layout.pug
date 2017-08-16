@@ -46,7 +46,7 @@ html(lang=config.language)
         span .
         br
         a(href=config.root) Home
-    i.fa.fa-arrow-up.go-up(aria-hidden="true")
+    i.fa.fa-arrow-up#go-up(aria-hidden="true")
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
