@@ -3,7 +3,7 @@ $(function () {
     var isOpen = $(this).hasClass('on')
     isOpen ? $(this).removeClass('on') : $(this).addClass('on')
     if (isOpen) {
-      $('#content-outer').velocity('stop').velocity({
+      $('body').velocity('stop').velocity({
         paddingLeft: '0px'
       }, {
         duration: 200
@@ -20,7 +20,7 @@ $(function () {
         duration: 200
       })
     } else {
-      $('#content-outer').velocity('stop').velocity({
+      $('body').velocity('stop').velocity({
         paddingLeft: '300px'
       }, {
         duration: 200

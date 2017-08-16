@@ -1,6 +1,9 @@
 extends includes/layout.pug
 
 block content
+  #page-header
+    span.pull-left 
+      a.go-back(href="/") #[i.fa.fa-angle-left(aria-hidden="true")] 返回首页
   article#post
     h1= page.title
     != page.content
