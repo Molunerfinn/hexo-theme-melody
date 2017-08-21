@@ -1,10 +1,43 @@
 extends includes/layout.pug
 
+block top_img
+  - var top_img = page.top_img || theme.top_img || config.top_img
+  if (top_img)
+    div#top-container(style=`background-image: url(${top_img})`)
+      #page-header
+        span.pull-left 
+          a#site-name(href="/") #[=config.title]
+      #post-info
+        #post-title= page.title
+        #post-meta
+          if (theme.post_meta.date_type)
+            - var date_type = theme.post_meta.date_type == 'updated' ? '' : 'date' 
+            time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)] 
+          if (theme.post_meta.categories && page.categories.data.length > 0)
+            if (theme.post_meta.date_type)
+              span.post-meta__separator  | 
+            each item, index in page.categories.data
+              i.fa.fa-inbox(aria-hidden="true")  
+              a(href=url_for(item.path)).post-meta__categories  #[=item.name]
+              if (index < page.categories.data.length - 1)
+                 i.fa.fa-angle-right(aria-hidden="true")  
+          if (theme.post_meta.tags)
+            .post-meta__tag-list
+              each item, index in page.tags.data
+                i.fa.fa-tag(aria-hidden="true")  
+                a(href=url_for(item.path)).post-meta__tags #[=item.name]
+                if (index < page.tags.data.length - 1)
+                  span.post-meta__separator &nbsp;
+
 block content
-  #page-header
-    span.pull-left 
-      a.go-back(href="/") #[i.fa.fa-angle-left(aria-hidden="true")] 返回首页
+  if(!top_img)
+    #page-header
+      span.pull-left 
+        a.go-back(href="/") #[i.fa.fa-angle-left(aria-hidden="true")] 返回首页
   article#post
-    h1= page.title
+    if (!top_img)
+      h1#post-title= page.title
+    #post-info
+
     != page.content
   include includes/pagination.pug

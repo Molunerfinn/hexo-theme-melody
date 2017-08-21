@@ -1,1 +1,9 @@
 #sidebar
+  if(is_post() && theme.toc.enable)
+    .sidebar-toc
+      div.sidebar-toc__title 目录
+      div.sidebar-toc__content!=toc(page.content)
+    script.
+      setTimeout(function() {
+        $('#toggle-sidebar').click()
+      }, 1000)

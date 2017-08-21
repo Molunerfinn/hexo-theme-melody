@@ -31,6 +31,7 @@ html(lang=config.language)
     i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
     include ./sidebar.pug
     #content-outer
+      block top_img
       #content-inner
         if body
           div!= body

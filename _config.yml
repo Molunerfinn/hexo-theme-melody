@@ -34,11 +34,19 @@ scripts:
 - /js/sidebar.js
 - /js/copy.js
 - /js/fireworks.js
-- /js/go-up.js
+- /js/scroll.js
 
 cdn:
   css:
     fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
   js:
 
+# Post info settings
 
+post_meta:
+  date_type: updated # created or updated 
+  categories: true
+  tags: true
+
+toc:
+  enable: true

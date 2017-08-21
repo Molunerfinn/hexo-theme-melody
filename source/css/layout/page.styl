@@ -3,9 +3,142 @@
   padding: 12px 0
   border-bottom: 1px solid $light-grey
 
+#top-container
+  position: relative
+  background-color: $grey
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
+
+  a
+    color: $light-grey
+    text-decoration: none
+    transition: all 0.3s ease-out
+
+    &:hover
+      color: $light-blue
+
+  #top-img
+    padding: 0
+    border: none
+
+  #page-header
+    position: absolute
+    top: 0
+    padding: 10px 45px
+    width: 100%
+    border: none
+    font-size: 18px
+
+    #site-name
+      font-weight: bold
+      cursor: pointer
+
+  #post-info
+    padding: 200px 20px
+    width: 100%
+    color: $light-grey
+    text-align: center
+
+  #post-title
+    font-size: 26px
+
+  .post-meta
+    &__categories
+      margin-right: 4px
+
+    &__separator
+      margin: 0 4px
+
+  i.fa.fa-angle-right,
+  i.fa.fa-tag
+    margin-right: 4px
+
 #content-inner
   margin: 0 auto
   width: $content-width
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    cursor: pointer
+
+    &:before
+      margin-right: 0.3rem
+      color: $light-red
+      content: '\f02e'
+      font: normal normal normal 14px / 1 FontAwesome
+      font-size: 0.8rem
+      transition: all 0.2s ease-out
+
+    &:hover
+      &:before
+        margin-right: 0.4rem
+        color: $light-blue
+
+  ol,
+  ul
+    margin-top: 0.4rem
+    padding: 0 0 0 0.8rem
+    list-style: none
+    counter-reset: li
+
+    ol,
+    ul
+      padding-left: 0.5rem
+
+    li
+      position: relative
+      margin: 0.2rem 0
+      padding: 0.1rem 0.5rem 0.1rem 1.5rem
+
+      &:hover
+        &:before
+          transform: rotate(360deg)
+
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        background: $light-blue
+        color: $white
+        cursor: pointer
+        transition: all 0.3s ease-out
+
+  ol
+    li
+      &:before
+        margin-top: 0.2rem
+        width: w = 1.2rem
+        height: h = w
+        border-radius: 0.5 * w
+        content: counter(li)
+        counter-increment: li
+        text-align: center
+        font-size: 0.6rem
+        line-height: h
+
+  ul
+    li
+      &:hover
+        &:before
+          border-color: $ruby
+
+      &:before
+        $w = 0.3rem
+        top: 50%
+        margin-top: -1 * $w
+        margin-left: 0.75rem - $w
+        width: w = $w
+        height: h = w
+        border: 0.5 * w solid $light-blue
+        border-radius: w
+        background: $white
+        content: ''
+        line-height: h
 
 a
   color: $a-link-color
@@ -15,7 +148,7 @@ a
     color: $light-blue
     text-decoration: none
 
-  &.go-back
+  &#site-name
     text-decoration: none
 
 a.fancybox
@@ -58,8 +191,13 @@ img
 
 @media screen and (max-width: $sm)
   #content-inner
-    margin: 0 24px
+    margin: 0 30px
     width: auto
+
+@media screen and (min-width: $sm)
+  #top-container
+    #post-title
+      font-size: 40px
 
 @media screen and (min-width: $md)
   #content-inner

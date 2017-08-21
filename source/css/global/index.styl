@@ -1,9 +1,15 @@
+html
+  font-size: $rem
+
 body
   position: relative
   color: $font-color
   font-size: $font-size
   font-family: $font-family
   line-height: $text-line-height
+
+*
+  box-sizing: border-box
 
 #toggle-sidebar
   position: fixed
@@ -27,8 +33,12 @@ body
 
 .fireworks
   position: fixed
-  z-index: 11
+  z-index: -1
   pointer-events: none
+
+*::selection
+  background: $selection
+  color: $pale-grey
 
 @media screen and (max-width: $sm)
   i.toggle-sidebar

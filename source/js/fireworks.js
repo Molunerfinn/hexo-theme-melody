@@ -3,7 +3,9 @@ var ctx = canvasEl.getContext('2d')
 var numberOfParticules = 30
 var pointerX = 0
 var pointerY = 0
-var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown'
+// var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown'
+// Fixed the mobile scroll
+var tap = 'mousedown'
 var colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
 var setCanvasSize = debounce(function () {
