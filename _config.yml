@@ -1,4 +1,3 @@
-
 # html lang
 language: en
 
@@ -16,7 +15,7 @@ favicon: /favicon.ico
 highlight_theme: default
 
 # fireworks
-fireworks: true 
+fireworks: false
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -25,23 +24,26 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/utils.js
-- /js/third-party/anime.min.js
-- /js/third-party/jquery.min.js
-- /js/third-party/jquery.fancybox.min.js
-- https://cdn.bootcss.com/velocity/1.5.0/velocity.min.js
-- https://cdn.bootcss.com/velocity/1.5.0/velocity.ui.min.js
 - /js/fancybox.js
 - /js/sidebar.js
 - /js/copy.js
 - /js/fireworks.js
+- /js/transition.js
 - /js/scroll.js
 
 cdn:
   css:
     fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
   js:
+    anime: /js/third-party/anime.min.js
+    jquery: /js/third-party/jquery.min.js
+    fancybox: /js/third-party/jquery.fancybox.min.js
+    velocity: https://cdn.bootcss.com/velocity/1.5.0/velocity.min.js
+    velocity-ui: https://cdn.bootcss.com/velocity/1.5.0/velocity.ui.min.js
 
 # Post info settings
+
+top_img: false 
 
 post_meta:
   date_type: updated # created or updated 
@@ -50,3 +52,20 @@ post_meta:
 
 toc:
   enable: true
+
+addThis:
+  enable: true
+  pubid: ra-5994f8f0fea9a5f4
+
+disqus:
+  enable: true
+  shortname: molunerfinn
+  count: true
+
+
+since: 2013
+
+ICP:
+  enable: true
+  text: 闽ICP备15023038号
+  url: 

@@ -1,0 +1,19 @@
+#footer.layout
+  if theme.since
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    .copyright= `©${theme.since} - ${nowYear} By ${config.author}` 
+  else
+    .copyright= `©${nowYear} By ${config.author}`
+  .framework-info
+    span 驱动 - 
+    a(href='http://hexo.io')
+      span Hexo
+    span  |  
+    span 主题 - 
+    a(href='https://github.com/Molunerfinn/hexo-theme-melody')
+      span Melody
+  if theme.ICP.enable
+    .icp
+      a(href=theme.ICP.url)
+        span=theme.ICP.text

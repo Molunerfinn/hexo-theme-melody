@@ -1,19 +1,26 @@
 html
+  height: 100%
   font-size: $rem
 
 body
   position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100%
   color: $font-color
   font-size: $font-size
   font-family: $font-family
   line-height: $text-line-height
+
+#content-outer
+  flex: 1
 
 *
   box-sizing: border-box
 
 #toggle-sidebar
   position: fixed
-  top: $sidebar-icon-top
+  bottom: $sidebar-icon-top
   left: $sidebar-icon-left
   z-index: 100
   font-size: $sidebar-icon-size
@@ -35,6 +42,13 @@ body
   position: fixed
   z-index: -1
   pointer-events: none
+
+hr
+  margin: 1.2rem 0
+  padding: 0
+  height: 0.2rem
+  border: none
+  background-color: $light-grey
 
 *::selection
   background: $selection

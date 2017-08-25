@@ -1,18 +1,48 @@
 $(function () {
+  var initTop = 0
   $('.toc-child').hide()
+
+  // main of scroll
   $(window).scroll(throttle(function (event) {
-    findHeadPosition($(this).scrollTop())
-    if ($(this).scrollTop() > 300) {
-      $('#go-up').velocity({
+    var currentTop = $(this).scrollTop()
+    // percentage inspired by hexo-theme-next
+    var docHeight = $('#content-outer').height()
+    var winHeight = $(window).height()
+    var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight)
+    var scrollPercent = (currentTop) / (contentMath)
+    var scrollPercentRounded = Math.round(scrollPercent * 100)
+    var percentage = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded
+    $('.progress-num').text(percentage)
+    $('.sidebar-toc__progress-bar').velocity('stop')
+      .velocity({
+        width: percentage + '%'
+      }, {
+        duration: 100,
+        easing: 'easeInOutQuart'
+      })
+    // head position
+    findHeadPosition(currentTop)
+    var isUp = scrollDirection(currentTop)
+    if (currentTop > 56) {
+      if (isUp) {
+        $('#page-header').hasClass('visible') ? $('#page-header').removeClass('visible') : console.log()
+      } else {
+        $('#page-header').hasClass('visible') ? console.log() : $('#page-header').addClass('visible')
+      }
+      $('#page-header').addClass('fixed')
+      $('#go-up').velocity('stop').velocity({
         translateX: -30,
         rotateZ: 360,
         opacity: 1
       }, {
-        easing: 'easeOutBack',
+        easing: 'easeOutQuart',
         duration: 200
       })
     } else {
-      $('#go-up').velocity({
+      if (currentTop === 0) {
+        $('#page-header').removeClass('fixed').removeClass('visible')
+      }
+      $('#go-up').velocity('stop').velocity({
         translateX: 0,
         rotateZ: 180,
         opacity: 0
@@ -22,8 +52,10 @@ $(function () {
       })
     }
   }, 50, 100))
+
+  // go up smooth scroll
   $('#go-up').on('click', function () {
-    $('body').velocity('scroll', {
+    $('body').velocity('stop').velocity('scroll', {
       duration: 500,
       easing: 'easeOutQuart'
     })
@@ -34,25 +66,36 @@ $(function () {
     scrollToHead('#' + $(this).attr('id'))
   })
 
+  // head scroll
   $('.toc-link').on('click', function (e) {
     e.preventDefault()
     scrollToHead($(this).attr('href'))
   })
 
+  // find the scroll direction
+  function scrollDirection (currentTop) {
+    var result = currentTop > initTop // true is down & false is up
+    initTop = currentTop
+    return result
+  }
+
+  // scroll to a head(anchor)
   function scrollToHead (anchor) {
-    $(anchor).velocity('scroll', {
+    $(anchor).velocity('stop').velocity('scroll', {
       duration: 500,
       easing: 'easeInOutQuart'
     })
   }
 
+  // expand toc-item
   function expandToc ($item) {
     $item.velocity('stop').velocity('transition.fadeIn', {
-      duration: 300,
-      easing: 'easeInOutQuart'
+      duration: 500,
+      easing: 'easeInQuart'
     })
   }
 
+  // find head position & add active class
   function findHeadPosition (top) {
     if (top < 200) {
       $('.toc-link').removeClass('active')

@@ -1,9 +1,22 @@
 -
   var options = {
-    prev_text: '<i class="fa fa-angle-left"></i>',
-    next_text: '<i class="fa fa-angle-right"></i>',
+    prev_text: '<i class="fa fa-chevron-left"></i>',
+    next_text: '<i class="fa fa-chevron-right"></i>',
     mid_size: 1
   }
 nav#pagination
-  !=paginator(options)
+  if(!is_post())
+    div.pagination
+      !=paginator(options)
+  else
+    if(page.prev)
+      .prev-post.pull-left
+        a(href=url_for(page.prev.path))
+          i.fa.fa-chevron-left   
+          span=page.prev.title
+    if(page.next)
+      .next-post.pull-right
+        a(href=url_for(page.next.path))
+          span=page.next.title 
+          i.fa.fa-chevron-right
 

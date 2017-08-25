@@ -6,5 +6,4 @@ each article in page.posts.data
       a(href=url_for(article.path))= article.title || 'No Title'
     time(datetime=date_xml(article.date))= date(article.date)
     .content!= article.excerpt
-    hr
 

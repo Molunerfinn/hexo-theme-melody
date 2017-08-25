@@ -2,6 +2,11 @@
   if(is_post() && theme.toc.enable)
     .sidebar-toc
       div.sidebar-toc__title 目录
+      div.sidebar-toc__progress
+        span.progress-notice 你已经读了
+        span.progress-num 0
+        span.progress-percentage %
+        div.sidebar-toc__progress-bar
       div.sidebar-toc__content!=toc(page.content)
     script.
       setTimeout(function() {

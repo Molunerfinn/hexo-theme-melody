@@ -21,6 +21,10 @@ html(lang=config.language)
       if item !== undefined
         link(rel='stylesheet', href=item)
     link(rel="icon", href=config.root + 'img/favicon.png')
+    each item in theme.cdn.js
+      if item !== undefined
+        script(src=item)
+    
   body
     if theme.fireworks
       canvas.fireworks
@@ -32,21 +36,13 @@ html(lang=config.language)
     include ./sidebar.pug
     #content-outer
       block top_img
-      #content-inner
+      #content-inner.layout
         if body
           div!= body
         else
           block content
-    #bottom-outer
-      #bottom-inner
-        span Site construction by
-        span= ' ' + config.author + ' '
-        span using
-        a(href='http://hexo.io')
-          span hexo blog framework
-        span .
-        br
-        a(href=config.root) Home
+    footer
+      include ./footer.pug
     i.fa.fa-arrow-up#go-up(aria-hidden="true")
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml

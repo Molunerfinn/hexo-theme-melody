@@ -1,20 +1,40 @@
 var canvasEl = document.querySelector('.fireworks')
-var ctx = canvasEl.getContext('2d')
-var numberOfParticules = 30
-var pointerX = 0
-var pointerY = 0
-// var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown'
-// Fixed the mobile scroll
-var tap = 'mousedown'
-var colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
+if (canvasEl) {
+  var ctx = canvasEl.getContext('2d')
+  var numberOfParticules = 30
+  var pointerX = 0
+  var pointerY = 0
+  // var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown'
+  // Fixed the mobile scroll
+  var tap = 'mousedown'
+  var colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
-var setCanvasSize = debounce(function () {
-  canvasEl.width = window.innerWidth * 2
-  canvasEl.height = window.innerHeight * 2
-  canvasEl.style.width = window.innerWidth + 'px'
-  canvasEl.style.height = window.innerHeight + 'px'
-  canvasEl.getContext('2d').scale(2, 2)
-}, 500)
+  var setCanvasSize = debounce(function () {
+    canvasEl.width = window.innerWidth * 2
+    canvasEl.height = window.innerHeight * 2
+    canvasEl.style.width = window.innerWidth + 'px'
+    canvasEl.style.height = window.innerHeight + 'px'
+    canvasEl.getContext('2d').scale(2, 2)
+  }, 500)
+
+  var render = anime({
+    duration: Infinity,
+    update: function () {
+      ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
+    }
+  })
+
+  document.addEventListener(tap, function (e) {
+    if (e.target.id !== 'sidebar' && e.target.id !== 'toggle-sidebar' && e.target.nodeName !== 'A' && e.target.nodeName !== 'IMG') {
+      render.play()
+      updateCoords(e)
+      animateParticules(pointerX, pointerY)
+    }
+  }, false)
+
+  setCanvasSize()
+  window.addEventListener('resize', setCanvasSize, false)
+}
 
 function updateCoords (e) {
   pointerX = (e.clientX || e.touches[0].clientX) - canvasEl.getBoundingClientRect().left
@@ -103,21 +123,3 @@ function animateParticules (x, y) {
       offset: 0
     })
 }
-
-var render = anime({
-  duration: Infinity,
-  update: function () {
-    ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
-  }
-})
-
-document.addEventListener(tap, function (e) {
-  if (e.target.id !== 'sidebar' && e.target.id !== 'toggle-sidebar' && e.target.nodeName !== 'A' && e.target.nodeName !== 'IMG') {
-    render.play()
-    updateCoords(e)
-    animateParticules(pointerX, pointerY)
-  }
-}, false)
-
-setCanvasSize()
-window.addEventListener('resize', setCanvasSize, false)
