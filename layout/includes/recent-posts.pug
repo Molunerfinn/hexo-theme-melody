@@ -1,9 +1,11 @@
 each article in page.posts.data
   .recent-post-item
-    if article.link
-      a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
-    else
-      a(href=url_for(article.path))= article.title || 'No Title'
-    time(datetime=date_xml(article.date))= date(article.date)
+    - var link = article.link || article.path
+      a.article-title(href=url_for(link))= article.title
+    if (theme.post_meta.date_type)
+      - var date_type = theme.post_meta.date_type == 'updated' ? '' : 'date' 
+      time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)] 
     .content!= article.excerpt
+    a.more(href=url_for(link) + '#more') 阅读更多
+    hr
 

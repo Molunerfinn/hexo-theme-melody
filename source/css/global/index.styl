@@ -12,6 +12,16 @@ body
   font-family: $font-family
   line-height: $text-line-height
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0.2rem 0
+  color: $font-black
+  font-weight: normal
+
 #content-outer
   flex: 1
 
@@ -44,11 +54,26 @@ body
   pointer-events: none
 
 hr
-  margin: 1.2rem 0
-  padding: 0
-  height: 0.2rem
-  border: none
-  background-color: $light-grey
+  position: relative
+  margin: 2rem auto
+  width: 100%
+  border: 2px dashed $pale-blue
+  background: $white
+
+  &:hover
+    &:before
+      transform: translateX(15rem)
+
+  &:before
+    position: absolute
+    top: -10px
+    z-index: 1
+    color: $light-blue
+    content: '\f0c4'
+    font: normal normal normal 14px / 1 FontAwesome
+    font-size: 20px
+    transition: all 1s ease-in-out
+    transform: translateX(1rem)
 
 *::selection
   background: $selection
