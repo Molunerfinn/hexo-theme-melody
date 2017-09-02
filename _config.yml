@@ -43,7 +43,14 @@ cdn:
 
 # Post info settings
 
-top_img: false 
+avatar: https://ws1.sinaimg.cn/large/8700af19ly1fj3cdqu3f6j20ix0iwq5r.jpg
+
+top_img: true 
+
+social:
+  github: https://github.com/Molunerfinn
+  weibo: https://github.com/Molunerfinn
+  rss: https://github.com/Molunerfinn
 
 post_meta:
   date_type: updated # created or updated 
@@ -66,6 +73,13 @@ disqus:
 since: 2013
 
 ICP:
-  enable: true
-  text: 闽ICP备15023038号
+  enable: false
+  text: 
   url: 
+
+# Sidebar Settings
+
+links_title: Links
+links:
+  Molunerfinn: https://molunerfinn.com
+  PiEgg: https://piegg.cn

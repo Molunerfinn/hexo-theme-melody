@@ -5,9 +5,7 @@ block top_img
   if (top_img)
     - var flag = top_img === true ? 'no-bg' : undefined
     div#top-container(style=`background-image: url(${top_img})` class=flag)
-      #page-header
-        span.pull-left 
-          a#site-name(href="/") #[=config.title]
+      include ./includes/header.pug
       #post-info
         #post-title= page.title
         #post-meta
@@ -30,9 +28,7 @@ block top_img
               span.disqus-comment-count(data-disqus-identifier=page.path)
   else
     div#top-container.plain
-      #page-header
-        span.pull-left 
-          a#site-name(href="/") #[=config.title]
+      include ./includes/header.pug
 
 block content
   article#post(class="")

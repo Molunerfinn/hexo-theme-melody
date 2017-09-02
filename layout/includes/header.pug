@@ -1,0 +1,6 @@
+#page-header
+  span.pull-left 
+    a#site-name(href="/") #[=config.title]
+  span.pull-right
+    each url, label in theme.menu
+      a.site-page(href=url)= label

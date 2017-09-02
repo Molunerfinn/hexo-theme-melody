@@ -62,23 +62,26 @@ hr
 
   &:hover
     &:before
-      transform: translateX(15rem)
+      left: calc(95% - 20px)
 
   &:before
     position: absolute
     top: -10px
+    left: 5%
     z-index: 1
     color: $light-blue
     content: '\f0c4'
     font: normal normal normal 14px / 1 FontAwesome
     font-size: 20px
     transition: all 1s ease-in-out
-    transform: translateX(1rem)
 
 *::selection
   background: $selection
   color: $pale-grey
 
+.text-center
+  text-align: center
+
 @media screen and (max-width: $sm)
-  i.toggle-sidebar
+  i#toggle-sidebar
     display: none

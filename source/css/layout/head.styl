@@ -1,0 +1,95 @@
+#nav
+  position: relative
+  margin-bottom: 1rem
+  background-color: $light-blue
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
+
+  &.no-bg
+    background-image: url($bg-svg + '') !important
+    background-size: initial
+
+#site-info
+  padding: 10rem 1rem
+
+#site-title,
+#site-sub-title
+  color: $light-grey
+  text-align: center
+  line-height: 1.5
+
+#site-title
+  font-weight: bold
+  font-size: 1.3rem
+
+#site-sub-title
+  font-size: 0.8rem
+
+#site-social-icons
+  margin: 0 auto
+  width: 15rem
+  text-align: center
+
+  .social-icon
+    margin: 0 0.5rem
+    color: $light-grey
+    font-size: 1.4rem
+    cursor: pointer
+
+    &:hover
+      color: $white
+
+#page-header
+  position: absolute
+  top: 0
+  z-index: 99
+  padding: 10px 36px
+  width: 100%
+  border: none
+  font-size: 18px
+  transition: all 0.2s ease-in-out
+
+  a
+    color: $light-grey
+    text-decoration: none
+
+    &:hover
+      color: $white
+
+  .site-page
+    margin-left: 0.6rem
+    font-size: 0.6rem
+
+  &.fixed
+    position: fixed
+    top: -56px
+    z-index: 101
+    background: alpha($white, 0.8)
+    box-shadow: 0 5px 6px -5px alpha($grey, 0.6)
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out
+
+    &.open-sidebar
+      .site-page
+        display: none
+        opacity: 0
+
+    a
+      color: $light-black
+
+      &:hover
+        color: $light-blue
+
+  &.visible
+    transform: translate3d(0, 100%, 0)
+
+  #site-name
+    font-weight: bold
+    cursor: pointer
+
+@media screen and (min-width: $sm)
+  #site-title
+    font-size: 2rem
+
+  #site-sub-title
+    font-size: 1.2rem

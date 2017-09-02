@@ -1,5 +1,9 @@
 #sidebar
-  if(is_post() && theme.toc.enable)
+  - var showToc = is_post() && theme.toc.enable
+  if(showToc)
+    .toggle-sidebar-info.text-center
+      span(data-toggle="切换文章详情") 切换站点概览
+      hr
     .sidebar-toc
       div.sidebar-toc__title 目录
       div.sidebar-toc__progress
@@ -8,7 +12,28 @@
         span.progress-percentage %
         div.sidebar-toc__progress-bar
       div.sidebar-toc__content!=toc(page.content)
-    script.
-      setTimeout(function() {
-        $('#toggle-sidebar').click()
-      }, 1000)
+  .author-info(class= showToc ? 'hide' : undefined)
+    .author-info__avatar.text-center
+      img(src=theme.avatar)
+    .author-info__name.text-center= config.author
+    .author-info__description.text-center= config.description
+    hr
+    .author-info-articles
+      if site.posts.length
+        a(href=url_for(config.archive_dir)).author-info-articles__archives.article-meta
+          span.pull-left 文章 
+          span.pull-right= site.posts.length
+      if site.tags.length
+        a(href=url_for(config.tag_dir)).author-info-articles__tags.article-meta
+          span.pull-left 标签 
+          span.pull-right= site.tags.length
+      if site.categories.length
+        a(href=url_for(config.tag_dir)).author-info-articles__categories.article-meta
+          span.pull-left 分类 
+          span.pull-right= site.categories.length
+    if theme.links_title
+      hr
+      .author-info-links
+        .author-info-links__title.text-center= theme.links_title
+        each url, name in theme.links
+          a.author-info-links__name.text-center(href=url)= name

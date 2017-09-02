@@ -4,15 +4,121 @@
   left: -300px
   z-index: 10
   overflow-y: auto
-  padding: 0.5rem 0 0.5rem 0.5rem
+  padding: 1rem 0 2rem 0.5rem
   width: $sidebar-width
   height: 100%
   background: $sidebar-background
   box-shadow: -0.25rem 0 0.25rem rgba(232, 237, 250, 0.6) inset
 
-  .sidebar-toc
-    padding-top: 1.5rem
+  hr
+    margin: 1rem 0
+    width: calc(100% - 0.25rem)
 
+  .toggle-sidebar-info
+    padding-right: 0.5rem
+
+    span
+      display: inline-block
+      padding: 0 0.6rem
+      height: h = 1.6rem
+      background: $light-blue
+      color: $white
+      line-height: h
+      cursor: pointer
+      transition: all 0.2s ease-in-out
+
+      &:hover
+        background: $cyan
+
+  .author-info
+    margin-left: -0.25rem
+    padding: 0.5rem
+    width: 100%
+
+    &.hide
+      display: none
+
+    &__avatar
+      margin: 0 auto
+      width: w = 5rem
+      height: w
+
+    &__name
+      font-size: 0.8rem
+
+    &__description
+      color: $a-link-color
+
+    &-articles
+      padding: 0.2rem 0
+
+      .article-meta
+        display: block
+        overflow: hidden
+        margin-bottom: 0.4rem
+        padding: 0.2rem 0.4rem
+        height: 1.8rem
+        background: $light-blue
+        color: $white
+        transition: all 0.2s ease-in-out
+
+        .pull-right
+          position: relative
+          margin: -0.2rem -0.4rem
+          width: 2.5rem
+          height: 1.8rem
+          background: $white
+          color: $light-blue
+          text-align: center
+          line-height: 1.8rem
+          transition: all 0.2s ease-in-out
+
+          &:before
+            position: absolute
+            top: 0
+            left: -0.8rem
+            width: 0
+            height: 0
+            border-top: 0.9rem solid transparent
+            border-right: 0.8rem solid $white
+            border-bottom: 0.9rem solid transparent
+            content: ''
+
+        &:hover
+          background: lighten($cyan, 8%)
+
+          .pull-right
+            color: $cyan
+
+    &-links
+      &__title
+        margin-bottom: 0.4rem
+        font-size: 0.8rem
+
+      &__name
+        position: relative
+        margin-right: 0.3rem
+        padding: 0.2rem 0.4rem 0.2rem 0.8rem
+        background: $light-blue
+        color: $white
+        text-decoration: none
+        transition: all 0.2s ease-in-out
+
+        &:hover
+          background: $ruby
+
+        &:before
+          position: absolute
+          top: 50%
+          left: 0.25rem
+          margin-top: -0.15rem
+          width: w = 0.3rem
+          height: w
+          border-radius: w
+          background: $white
+          content: ''
+
+  .sidebar-toc
     ol,
     li
       list-style: none

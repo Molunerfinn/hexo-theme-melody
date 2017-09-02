@@ -1,8 +1,15 @@
 $(function () {
+  $('.toggle-sidebar-info > span').on('click', function () {
+    var toggleText = $(this).attr('data-toggle')
+    $(this).attr('data-toggle', $(this).text())
+    $(this).text(toggleText)
+    changeSideBarInfo()
+  })
   $('#toggle-sidebar').on('click', function () {
     var isOpen = $(this).hasClass('on')
     isOpen ? $(this).removeClass('on') : $(this).addClass('on')
     if (isOpen) {
+      $('#page-header').removeClass('open-sidebar')
       $('body').velocity('stop').velocity({
         paddingLeft: '0px'
       }, {
@@ -20,6 +27,7 @@ $(function () {
         duration: 200
       })
     } else {
+      $('#page-header').addClass('open-sidebar')
       $('body').velocity('stop').velocity({
         paddingLeft: '300px'
       }, {
@@ -38,4 +46,25 @@ $(function () {
       })
     }
   })
+  function changeSideBarInfo () {
+    if ($('.author-info').is(':visible')) {
+      $('.author-info').velocity('stop')
+        .velocity('transition.slideLeftOut', {
+          duration: 300,
+          complete: function () {
+            $('.sidebar-toc').velocity('stop')
+              .velocity('transition.slideRightIn', { duration: 500 })
+          }
+        })
+    } else {
+      $('.sidebar-toc').velocity('stop')
+        .velocity('transition.slideRightOut', {
+          duration: 300,
+          complete: function () {
+            $('.author-info').velocity('stop')
+              .velocity('transition.slideLeftIn', { duration: 500 })
+          }
+        })
+    }
+  }
 })

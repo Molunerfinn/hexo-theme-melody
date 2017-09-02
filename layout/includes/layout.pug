@@ -34,6 +34,8 @@ html(lang=config.language)
     //-       a(href=url)= label
     i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
     include ./sidebar.pug
+    if (is_home())
+      include ./nav.pug
     #content-outer
       block top_img
       #content-inner.layout
