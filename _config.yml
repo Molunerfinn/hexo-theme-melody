@@ -4,9 +4,9 @@ language: en
 # main menu navigation
 menu:
   Home: /
-  About: /about
-  Contact: /contact
   Archives: /archives
+  Tags: /tags
+  Categories: /categories
 
 # Miscelaneous
 favicon: /favicon.ico

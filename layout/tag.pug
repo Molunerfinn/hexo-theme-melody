@@ -1,17 +1,9 @@
 extends includes/layout.pug
 
 block content
-  div#tag
-    h1= 'Tag: ' + page.tag
-    - page.posts.each(function(article){
-      if article.link
-        a(href=url_for(article.link) target="_blank")
-          = article.title || 'No Title'
-        time(datetime=date_xml(article.date))= date(article.date)
-      else
-        a(href=url_for(article.path))= article.title || 'No Title'
-        time(datetime=date_xml(article.date))= date(article.date)
-      br.clear
-    - })
+  include ./includes/mixins/article-sort.pug
+  #tag
+    .article-sort-title= 'Tag: ' + page.tag
+    +articleSort(page.posts)
   include includes/pagination.pug
 

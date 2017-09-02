@@ -5,7 +5,7 @@
 - if (is_category()) pageTitle = 'Category: ' + page.category
 - if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
 - if (is_year()) pageTitle += ': ' + page.year
-- pageTitle += ' [ ' + config.title + ' ]'
+- pageTitle += ' | ' + config.title
 
 doctype html
 html(lang=config.language)
@@ -34,7 +34,7 @@ html(lang=config.language)
     //-       a(href=url)= label
     i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
     include ./sidebar.pug
-    if (is_home())
+    if (!is_post())
       include ./nav.pug
     #content-outer
       block top_img

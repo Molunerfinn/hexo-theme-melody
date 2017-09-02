@@ -33,3 +33,132 @@
     &:hover
       border-bottom: 1px solid $light-blue
       color: $light-blue
+
+.tag-cloud
+  padding: 4.5rem 0 7rem
+  text-align: center
+
+  a
+    margin: 0 0.4rem
+    text-decoration: none
+    cursor: pointer
+
+    &:hover
+      color: $ruby !important
+
+  &__title
+    font-size: 1.8rem
+
+#tag,
+#category,
+#archive
+  padding: 3rem 0 3rem
+
+.article-sort
+  padding-left: 1rem
+  border-left: 2px solid $pale-blue
+
+  &-title
+    position: relative
+    padding-bottom: 1.2rem
+    padding-left: 1rem
+    font-size: 1.2rem
+    line-height: 1
+
+    &:hover
+      &:before
+        border-color: $ruby
+
+    &:before
+      position: absolute
+      top: 0.25rem
+      left: calc(-0.5rem + 1px)
+      z-index: 1
+      width: w = 0.5rem
+      height: h = w
+      border: 0.5 * w solid $light-blue
+      border-radius: w
+      background: $white
+      content: ""
+      line-height: h
+      transition: all 0.2s ease-in-out
+
+    &:after
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 0
+      width: 0.1rem
+      height: 1.3rem
+      background: $pale-blue
+      content: ""
+
+  &-item
+    position: relative
+    margin-bottom: 1rem
+    transition: all 0.2s ease-in-out
+
+    &:hover
+      &:before
+        border-color: $ruby
+
+    &:before
+      $w = unit(0.3 * $rem, "px")
+      position: absolute
+      top: 0.48rem
+      left: calc(-1rem - 7px)
+      width: w = $w
+      height: h = w
+      border: 0.5 * w solid $light-blue
+      border-radius: w
+      background: $white
+      content: ""
+      line-height: h
+      transition: all 0.2s ease-in-out
+
+    &.year
+      font-size: 1rem
+
+      &:hover
+        &:before
+          border-color: $light-blue
+
+      &:before
+        top: 0.7rem
+        border-color: $ruby
+
+    &__time
+      position: absolute
+      top: 0.1rem
+      color: $a-link-color
+
+    &__title
+      display: block
+      margin-left: 5rem
+      color: $font-black
+      text-decoration: none
+      font-size: 0.8rem
+      cursor: pointer
+
+.category-lists
+  padding: 3rem 0 3rem
+
+  .category__title
+    text-align: center
+    font-size: 1.8rem
+
+.category-list
+  a
+    color: $font-black
+    text-decoration: none
+    cursor: pointer
+
+  .category-list-count
+    margin-left: 0.4rem
+    color: $a-link-color
+
+    &:before
+      content: "("
+
+    &:after
+      content: ")"

@@ -7,5 +7,6 @@
   "stylusSupremacy.alwaysUseNoneOverZero": true,
   "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
   "stylusSupremacy.sortProperties": "grouped",
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "stylusSupremacy.quoteChar": "\""
 }
