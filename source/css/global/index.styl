@@ -70,10 +70,25 @@ hr
     left: 5%
     z-index: 1
     color: $light-blue
-    content: '\f0c4'
+    content: "\f0c4"
     font: normal normal normal 14px / 1 FontAwesome
     font-size: 20px
     transition: all 1s ease-in-out
+
+table
+  display: block
+  overflow: auto
+  width: 100%
+  border-spacing: 0
+  border-collapse: collapse
+
+  thead
+    background: alpha($a-link-color, 10%)
+
+  th,
+  td
+    padding: 0.3rem 0.6rem
+    border: 1px solid $light-grey
 
 *::selection
   background: $selection
@@ -82,6 +97,10 @@ hr
 .text-center
   text-align: center
 
-@media screen and (max-width: $sm)
-  i#toggle-sidebar
+@media screen and (max-width: $bg)
+  i#toggle-sidebar,
+  #sidebar
     display: none
+
+  body
+    padding-left: 0 !important

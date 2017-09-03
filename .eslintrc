@@ -6,6 +6,7 @@
   "globals": {
     "anime": false,
     "debounce": false,
-    "throttle": false
+    "throttle": false,
+    "isMobile": false
   }
 }

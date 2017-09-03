@@ -7,7 +7,7 @@
   background-size: cover
 
   &.no-bg
-    background-image: url($bg-svg + '') !important
+    background-image: url($bg-svg + "") !important
     background-size: initial
 
 #site-info
@@ -50,6 +50,16 @@
   font-size: 18px
   transition: all 0.2s ease-in-out
 
+  .toggle-menu
+    display: none
+    padding-top: 0.5rem
+    color: $light-grey
+    cursor: pointer
+    transition: all 0.2s ease-in-out
+
+    &:hover
+      color: $white
+
   a
     color: $light-grey
     text-decoration: none
@@ -74,7 +84,8 @@
         display: none
         opacity: 0
 
-    a
+    a,
+    .toggle-menu
       color: $light-black
 
       &:hover
@@ -93,3 +104,30 @@
 
   #site-sub-title
     font-size: 1.2rem
+
+@media screen and (max-width: $sm)
+  #page-header
+    padding: 10px 0.8rem
+
+    .toggle-menu
+      display: block
+
+    .menus
+      position: absolute
+      top: 3rem
+      right: 0.8rem
+      display: none
+      width: 8rem
+      background: alpha($white, 0.9)
+
+      a
+        display: block
+        margin-left: 0
+        padding-top: 0.3rem
+        padding-bottom: 0.3rem
+        padding-left: 0.6rem
+        color: $font-black
+        font-size: 0.8rem
+
+        &:hover
+          color: $light-blue

@@ -34,7 +34,7 @@
 
   &.no-bg
     background-color: $light-blue
-    background-image: url($bg-svg + '') !important
+    background-image: url($bg-svg + "") !important
     background-size: auto
 
   &.plain
@@ -47,39 +47,15 @@
     transition: all 0.3s ease-out
 
     &:hover
-      color: $dark-blue
+      color: $white
 
   #top-img
     padding: 0
     border: none
 
-  #page-header
-    position: absolute
-    top: 0
-    z-index: 99
-    padding: 10px 36px
-    width: 100%
-    border: none
-    font-size: 18px
-    transition: all 0.2s ease-in-out
-
-    &.fixed
-      position: fixed
-      top: -56px
-      z-index: 101
-      background: alpha($white, 0.8)
-      box-shadow: 0 5px 6px -5px alpha($grey, 0.6)
-      transition: transform 0.2s ease-in-out
-
-      a
-        color: $light-black
-
-    &.visible
-      transform: translate3d(0, 100%, 0)
-
-    #site-name
-      font-weight: bold
-      cursor: pointer
+  #site-name
+    font-weight: bold
+    cursor: pointer
 
   #post-info
     padding: 10rem 1rem
@@ -133,16 +109,16 @@
     cursor: pointer
 
     &:before
-      margin-right: unit(0.3 * $rem, 'px')
+      margin-right: unit(0.3 * $rem, "px")
       color: $light-red
-      content: '\f02e'
+      content: "\f02e"
       font: normal normal normal 14px / 1 FontAwesome
-      font-size: unit(0.8 * $rem, 'px')
+      font-size: unit(0.8 * $rem, "px")
       transition: all 0.2s ease-out
 
     &:hover
       &:before
-        margin-right: unit(0.4 * $rem, 'px')
+        margin-right: unit(0.4 * $rem, "px")
         color: $light-blue
 
   ol,
@@ -181,13 +157,13 @@
     li
       &:before
         margin-top: 0.2rem
-        width: w = unit(1.2 * $rem, 'px')
+        width: w = unit(1.2 * $rem, "px")
         height: h = w
         border-radius: 0.5 * w
         content: counter(li)
         counter-increment: li
         text-align: center
-        font-size: unit(0.6 * $rem, 'px')
+        font-size: unit(0.6 * $rem, "px")
         line-height: h
 
   ul
@@ -197,15 +173,15 @@
           border-color: $ruby
 
       &:before
-        $w = unit(0.3 * $rem, 'px')
+        $w = unit(0.3 * $rem, "px")
         top: 10px
-        margin-left: unit(0.75 * $rem, 'px') - $w
+        margin-left: unit(0.75 * $rem, "px") - $w
         width: w = $w
         height: h = w
         border: 0.5 * w solid $light-blue
         border-radius: w
         background: $white
-        content: ''
+        content: ""
         line-height: h
 
 #post-content

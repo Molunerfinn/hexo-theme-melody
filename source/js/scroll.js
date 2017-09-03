@@ -5,23 +5,12 @@ $(function () {
   // main of scroll
   $(window).scroll(throttle(function (event) {
     var currentTop = $(this).scrollTop()
-    // percentage inspired by hexo-theme-next
-    var docHeight = $('#content-outer').height()
-    var winHeight = $(window).height()
-    var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight)
-    var scrollPercent = (currentTop) / (contentMath)
-    var scrollPercentRounded = Math.round(scrollPercent * 100)
-    var percentage = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded
-    $('.progress-num').text(percentage)
-    $('.sidebar-toc__progress-bar').velocity('stop')
-      .velocity({
-        width: percentage + '%'
-      }, {
-        duration: 100,
-        easing: 'easeInOutQuart'
-      })
-    // head position
-    findHeadPosition(currentTop)
+    if (!isMobile()) {
+      // percentage inspired by hexo-theme-next
+      scrollPercent(currentTop)
+      // head position
+      findHeadPosition(currentTop)
+    }
     var isUp = scrollDirection(currentTop)
     if (currentTop > 56) {
       if (isUp) {
@@ -30,14 +19,16 @@ $(function () {
         $('#page-header').hasClass('visible') ? console.log() : $('#page-header').addClass('visible')
       }
       $('#page-header').addClass('fixed')
-      $('#go-up').velocity('stop').velocity({
-        translateX: -30,
-        rotateZ: 360,
-        opacity: 1
-      }, {
-        easing: 'easeOutQuart',
-        duration: 200
-      })
+      if ($('#go-up').css('opacity') === '0') {
+        $('#go-up').velocity('stop').velocity({
+          translateX: -30,
+          rotateZ: 360,
+          opacity: 1
+        }, {
+          easing: 'easeOutQuart',
+          duration: 200
+        })
+      }
     } else {
       if (currentTop === 0) {
         $('#page-header').removeClass('fixed').removeClass('visible')
@@ -93,6 +84,23 @@ $(function () {
       duration: 500,
       easing: 'easeInQuart'
     })
+  }
+
+  function scrollPercent (currentTop) {
+    var docHeight = $('#content-outer').height()
+    var winHeight = $(window).height()
+    var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight)
+    var scrollPercent = (currentTop) / (contentMath)
+    var scrollPercentRounded = Math.round(scrollPercent * 100)
+    var percentage = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded
+    $('.progress-num').text(percentage)
+    $('.sidebar-toc__progress-bar').velocity('stop')
+      .velocity({
+        width: percentage + '%'
+      }, {
+        duration: 100,
+        easing: 'easeInOutQuart'
+      })
   }
 
   // find head position & add active class

@@ -10,7 +10,7 @@ block top_img
         #post-title= page.title
         #post-meta
           if (theme.post_meta.date_type)
-            - var date_type = theme.post_meta.date_type == 'updated' ? '' : 'date' 
+            - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date' 
             time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)] 
           if (theme.post_meta.categories && page.categories.data.length > 0)
             if (theme.post_meta.date_type)

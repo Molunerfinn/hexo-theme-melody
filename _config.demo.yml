@@ -30,6 +30,7 @@ scripts:
 - /js/fireworks.js
 - /js/transition.js
 - /js/scroll.js
+- /js/head.js
 
 cdn:
   css:
@@ -38,8 +39,8 @@ cdn:
     anime: /js/third-party/anime.min.js
     jquery: /js/third-party/jquery.min.js
     fancybox: /js/third-party/jquery.fancybox.min.js
-    velocity: https://cdn.bootcss.com/velocity/1.5.0/velocity.min.js
-    velocity-ui: https://cdn.bootcss.com/velocity/1.5.0/velocity.ui.min.js
+    velocity: /js/third-party/velocity.min.js 
+    velocity-ui: /js/third-party/velocity.ui.min.js 
 
 # Post info settings
 
@@ -79,7 +80,11 @@ ICP:
 
 # Sidebar Settings
 
+# Links
 links_title: Links
 links:
   Molunerfinn: https://molunerfinn.com
   PiEgg: https://piegg.cn
+
+# Version
+version: 1.0
