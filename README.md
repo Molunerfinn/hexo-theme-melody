@@ -10,11 +10,11 @@ A simple & beautiful theme for Hexo.
 
 # Screen Shots
 
-![](https://ws1.sinaimg.cn/large/8700af19ly1fj6lfovr5rj21z4132jx0.jpg)
-![](https://ws1.sinaimg.cn/large/8700af19ly1fj6lfovduvj21z418gaey.jpg)
-![](https://ws1.sinaimg.cn/large/8700af19ly1fj6lfp7crrj21z4132e83.jpg)
-![](https://ws1.sinaimg.cn/large/8700af19ly1fj6lfowj2rj21z418gqf4.jpg)
-![](https://ws1.sinaimg.cn/large/8700af19ly1fj6lfowmoaj211014c11k.jpg)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/index-page.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/archives.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/post.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/post-2.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/mobile.png)
 
 # Installation
 
@@ -24,7 +24,7 @@ Find your hexo work folder
 git clone https://github.com/Molunerfinn/hexo-theme-melody themes/melody
 ```
 
-If you don't have jade & stylus renderer, follow this:
+If you don't have jade & stylus renderer, follow this:
 
 ```bash
 npm install hexo-jade-renderer hexo-stylus-renderer
