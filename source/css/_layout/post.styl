@@ -109,16 +109,16 @@
     cursor: pointer
 
     &:before
-      margin-right: unit(0.3 * $rem, "px")
+      margin-right: 0.3rem
       color: $light-red
       content: "\f02e"
       font: normal normal normal 14px / 1 FontAwesome
-      font-size: unit(0.8 * $rem, "px")
+      font-size: 0.8rem
       transition: all 0.2s ease-out
 
     &:hover
       &:before
-        margin-right: unit(0.4 * $rem, "px")
+        margin-right: 0.4rem
         color: $light-blue
 
   ol,
@@ -157,13 +157,13 @@
     li
       &:before
         margin-top: 0.2rem
-        width: w = unit(1.2 * $rem, "px")
+        width: w = 1.2rem
         height: h = w
         border-radius: 0.5 * w
         content: counter(li)
         counter-increment: li
         text-align: center
-        font-size: unit(0.6 * $rem, "px")
+        font-size: 0.6rem
         line-height: h
 
   ul
@@ -173,9 +173,9 @@
           border-color: $ruby
 
       &:before
-        $w = unit(0.3 * $rem, "px")
+        $w = 0.3rem
         top: 10px
-        margin-left: unit(0.75 * $rem, "px") - $w
+        margin-left: 0.45rem
         width: w = $w
         height: h = w
         border: 0.5 * w solid $light-blue
