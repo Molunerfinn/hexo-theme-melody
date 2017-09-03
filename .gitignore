@@ -1,4 +1,4 @@
 node_modules/*
 yarn.lock
 .DS_Store
-_config.yml
+_config.demo.yml
