@@ -57,11 +57,11 @@ avatar:
 
 top_img: true # false or url of img 
 
-social:
+#social:
   #icon_name: url
 
 post_meta:
-  date_type: updated # created or updated 
+  date_type: created # created or updated 
   categories: true
   tags: true
 
@@ -82,7 +82,7 @@ disqus:
 since: 2013
 
 ICP:
-  #enable: false
+  enable: false
   #text: 
 
 # Sidebar Settings

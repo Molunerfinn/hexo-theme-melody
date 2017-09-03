@@ -5,7 +5,8 @@ nav#nav(style=`background-image: url(${top_img})` class=flag)
   #site-info
     #site-title= config.title
     #site-sub-title= config.subtitle
-    #site-social-icons 
-      each url, icon in theme.social
-        a.social-icon(href=url)
-          i.fa(class="fa-" + icon)
+    if(theme.social)
+      #site-social-icons 
+        each url, icon in theme.social
+          a.social-icon(href=url)
+            i.fa(class="fa-" + icon)
