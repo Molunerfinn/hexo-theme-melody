@@ -1,12 +1,12 @@
 # hexo-theme-melody
 
-A simple & beautiful theme for Hexo.
+A simple & beautiful & fast theme for Hexo.
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 [![hexo-image](https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg)]()
 
-<!-- See demo: [molunerfinn.com](https://molunerfinn.com) -->
+See demo: [molunerfinn.com](https://molunerfinn.com)
 
 # Screen Shots
 
