@@ -20,7 +20,7 @@ html(lang=config.language)
     each item in theme.cdn.css
       if item !== undefined
         link(rel='stylesheet', href=item)
-    link(rel="icon", href=config.root + 'img/favicon.png')
+    link(rel="icon", href=config.root + 'favicon.ico')
     each item in theme.cdn.js
       if item !== undefined
         script(src=item)
@@ -28,10 +28,6 @@ html(lang=config.language)
   body
     if theme.fireworks
       canvas.fireworks
-    //- #menu-outer
-    //-   nav#menu-inner
-    //-     each url, label in theme.menu
-    //-       a(href=url)= label
     i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
     include ./sidebar.pug
     if (!is_post())

@@ -1,27 +1,34 @@
 # html lang
+# ---------------
 language: en
 
 # main menu navigation
+# ---------------
 menu:
   Home: /
   Archives: /archives
   Tags: /tags
   Categories: /categories
 
-# Miscelaneous
+# Favicon
+# ---------------
 favicon: /favicon.ico
 
-# highlight
+# Highlight theme
+# ---------------
 highlight_theme: default
 
-# fireworks
+# Toggle fireworks (IE >= 10)
+# ---------------
 fireworks: false
 
 # stylesheets loaded in the <head>
+# ---------------
 stylesheets:
 - /css/index.css
 
 # scripts loaded in the end of the body
+# ---------------
 scripts:
 - /js/utils.js
 - /js/fancybox.js
@@ -32,6 +39,8 @@ scripts:
 - /js/scroll.js
 - /js/head.js
 
+# cdn for third-party library
+# ---------------
 cdn:
   css:
     fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
@@ -43,15 +52,13 @@ cdn:
     velocity-ui: /js/third-party/velocity.ui.min.js 
 
 # Post info settings
+# ---------------
+avatar: 
 
-avatar: https://ws1.sinaimg.cn/large/8700af19ly1fj3cdqu3f6j20ix0iwq5r.jpg
-
-top_img: true 
+top_img: true # false or url of img 
 
 social:
-  github: https://github.com/Molunerfinn
-  weibo: https://github.com/Molunerfinn
-  rss: https://github.com/Molunerfinn
+  #icon_name: url
 
 post_meta:
   date_type: updated # created or updated 
@@ -62,29 +69,28 @@ toc:
   enable: true
 
 addThis:
-  enable: true
-  pubid: ra-5994f8f0fea9a5f4
+  #enable: true
+  #pubid: 
 
 disqus:
-  enable: true
-  shortname: molunerfinn
-  count: true
+  #enable: 
+  #shortname: 
+  #count: 
 
-
+# Footer Settings
+# ---------------
 since: 2013
 
 ICP:
-  enable: false
-  text: 
-  url: 
+  #enable: false
+  #text: 
 
 # Sidebar Settings
-
-# Links
-links_title: Links
-links:
-  Molunerfinn: https://molunerfinn.com
-  PiEgg: https://piegg.cn
+# ---------------
+#links_title: Links
+#links:
+  #Name: url
 
 # Version
+# ---------------
 version: 1.0
