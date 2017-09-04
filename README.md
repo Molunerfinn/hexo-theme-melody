@@ -50,6 +50,7 @@ IE >= 10
 - Search
 - Analysis
 - MathJax
+- i18n
 - PWA 
 - Performance optimization
 - ...
