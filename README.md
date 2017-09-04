@@ -21,7 +21,7 @@ See demo: [molunerfinn.com](https://molunerfinn.com)
 Find your hexo work folder
 
 ```bash
-git clone https://github.com/Molunerfinn/hexo-theme-melody themes/melody
+git clone -b master https://github.com/Molunerfinn/hexo-theme-melody themes/melody
 ```
 
 If you don't have jade & stylus renderer, follow this:
@@ -29,6 +29,16 @@ If you don't have jade & stylus renderer, follow this:
 ```bash
 npm install hexo-jade-renderer hexo-stylus-renderer
 ```
+
+# Configuration
+
+For smoothly updating theme-melody, I recommand to create a config file named `melody.yml` in your hexo work folder's (**Notice: not the theme-melody folder**) `source/_data` folder(If it doesn't exist, create one)
+
+Copy the contents of `_config.yml` to `melody.yml`. Now you can configure it by yourself and you can update theme-melody smoothly.
+
+# Update
+
+Jump into the melody folder, just `git pull` is OK.
 
 # Browser Support
 
