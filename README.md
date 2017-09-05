@@ -47,8 +47,8 @@ IE >= 10
 # TODOS
 
 - Doc
-- ~~Search~~ // algolia support
-- Analysis
+- ~~Search~~ // Algolia support
+- ~~Analysis~~ // Baidu & Google analytics support
 - MathJax
 - i18n
 - PWA 
