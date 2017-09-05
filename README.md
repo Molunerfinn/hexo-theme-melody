@@ -47,7 +47,7 @@ IE >= 10
 # TODOS
 
 - Doc
-- Search
+- ~~Search~~ // algolia support
 - Analysis
 - MathJax
 - i18n
