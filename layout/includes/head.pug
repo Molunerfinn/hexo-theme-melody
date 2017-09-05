@@ -7,7 +7,7 @@ if theme.baidu_analytics
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?!{theme.baidu_analysis}";
+      hm.src = "https://hm.baidu.com/hm.js?!{theme.baidu_analytics}";
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
@@ -18,5 +18,5 @@ if theme.google_analytics
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', '!{google_analytics}', 'auto');
+    ga('create', '!{theme.google_analytics}', 'auto');
     ga('send', 'pageview');
