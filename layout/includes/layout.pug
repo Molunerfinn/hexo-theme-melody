@@ -20,11 +20,9 @@ html(lang=config.language)
     each item in theme.cdn.css
       if item !== undefined
         link(rel='stylesheet', href=item)
+    include ./head.pug
+    include ./config.pug
     link(rel="icon", href=config.root + 'favicon.ico')
-    each item in theme.cdn.js
-      if item !== undefined
-        script(src=item)
-    
   body
     if theme.fireworks
       canvas.fireworks
@@ -42,7 +40,11 @@ html(lang=config.language)
     footer
       include ./footer.pug
     i.fa.fa-arrow-up#go-up(aria-hidden="true")
+    each item in theme.cdn.js
+      if item !== undefined
+        script(src=item)
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
         script(src=url)
+    include ./otherJS.pug

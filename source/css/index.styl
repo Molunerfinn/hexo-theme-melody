@@ -7,3 +7,8 @@
 @import "_global"
 @import "_highlight/highlight"
 @import "_layout/*"
+
+// search
+if hexo-config("algolia_search.enable")
+  @import "_search/index"
+  @import "_search/algolia"

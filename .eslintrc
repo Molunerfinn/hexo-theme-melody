@@ -7,6 +7,7 @@
     "anime": false,
     "debounce": false,
     "throttle": false,
-    "isMobile": false
+    "isMobile": false,
+    "instantsearch": false
   }
 }

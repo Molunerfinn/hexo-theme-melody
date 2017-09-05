@@ -14,7 +14,7 @@
       div.sidebar-toc__content!=toc(page.content)
   .author-info(class= showToc ? 'hide' : undefined)
     .author-info__avatar.text-center
-      img(src=theme.avatar)
+      img(src=theme.avatar || url_for('/img/avatar.png'))
     .author-info__name.text-center= config.author
     .author-info__description.text-center= config.description
     hr

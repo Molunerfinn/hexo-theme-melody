@@ -3,7 +3,7 @@ extends includes/layout.pug
 block content
   include ./includes/mixins/article-sort.pug
   #category
-    .article-sort-title= 'Category: ' + page.category
+    .article-sort-title= 'Category' + ' - ' + page.category
     +articleSort(page.posts)
   include includes/pagination.pug
 

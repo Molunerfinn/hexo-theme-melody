@@ -18,6 +18,18 @@ favicon: /favicon.ico
 # ---------------
 highlight_theme: default
 
+# Algolia search
+# ---------------
+
+algolia_search:
+  enable: false
+  hits:
+    per_page: 10
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}"
+    hits_stats: "${hits} results found in ${time} ms"
+
 # Toggle fireworks (IE >= 10)
 # ---------------
 fireworks: false
@@ -69,11 +81,11 @@ toc:
   enable: true
 
 addThis:
-  #enable: true
+  enable: false
   #pubid: 
 
 disqus:
-  #enable: 
+  enable: false 
   #shortname: 
   #count: 
 
@@ -88,7 +100,7 @@ ICP:
 # busuanzi count for PV / UV in site
 busuanzi:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
