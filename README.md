@@ -49,7 +49,7 @@ IE >= 10
 - Doc
 - ~~Search~~ // Algolia support
 - ~~Analysis~~ // Baidu & Google analytics support
-- MathJax
+- ~~MathJax~~ // MathJax support
 - i18n
 - PWA 
 - Performance optimization
