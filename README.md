@@ -50,7 +50,7 @@ IE >= 10
 - ~~Search~~ // Algolia support
 - ~~Analysis~~ // Baidu & Google analytics support
 - ~~MathJax~~ // MathJax support
-- i18n
+- ~~i18n~~ // zh-Hans & en support
 - PWA 
 - Performance optimization
 - ...

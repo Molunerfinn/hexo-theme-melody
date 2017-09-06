@@ -1,0 +1,17 @@
+sidebar:
+  articles: 文章
+  tags: 标签
+  categories: 分类
+  toggle_site: 切换站点概览
+  toggle_article: 切换文章详情
+  catalog: 目录
+  have_read: 你已经读了
+
+footer:
+  driven: 驱动
+  theme: 主题
+
+page:
+  Articles: 文章总览
+  Tag: 标签
+  Category: 分类 

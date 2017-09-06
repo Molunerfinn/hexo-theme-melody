@@ -2,12 +2,12 @@
   - var showToc = is_post() && theme.toc.enable
   if(showToc)
     .toggle-sidebar-info.text-center
-      span(data-toggle="切换文章详情") 切换站点概览
+      span(data-toggle= _p('sidebar.toggle_article'))= _p('sidebar.toggle_site')
       hr
     .sidebar-toc
-      div.sidebar-toc__title 目录
+      div.sidebar-toc__title= _p('sidebar.catalog')
       div.sidebar-toc__progress
-        span.progress-notice 你已经读了
+        span.progress-notice= _p('sidebar.have_read')
         span.progress-num 0
         span.progress-percentage %
         div.sidebar-toc__progress-bar
@@ -21,15 +21,15 @@
     .author-info-articles
       if site.posts.length
         a(href=url_for(config.archive_dir)).author-info-articles__archives.article-meta
-          span.pull-left 文章 
+          span.pull-left= _p('sidebar.articles') 
           span.pull-right= site.posts.length
       if site.tags.length
         a(href=url_for(config.tag_dir)).author-info-articles__tags.article-meta
-          span.pull-left 标签 
+          span.pull-left= _p('sidebar.tags')
           span.pull-right= site.tags.length
       if site.categories.length
         a(href=url_for(config.category_dir)).author-info-articles__categories.article-meta
-          span.pull-left 分类 
+          span.pull-left= _p('sidebar.categories') 
           span.pull-right= site.categories.length
     if theme.links_title
       hr
