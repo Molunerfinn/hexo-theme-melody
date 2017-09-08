@@ -14,5 +14,10 @@
 script.
   var GLOBAL = { 
     root: '!{config.root}',
-    algolia: !{algolia}
+    algolia: !{algolia},
+    copy: {
+      success: '!{_p("copy.success")}',
+      error: '!{_p("copy.error")}',
+      noSupport: '!{_p("copy.noSupport")}'
+    }
   } 

@@ -11,6 +11,11 @@ footer:
   driven: 驱动
   theme: 主题
 
+copy:
+  success: 复制成功
+  error: 复制错误
+  noSupport: 浏览器不支持
+
 page:
   Articles: 文章总览
   Tag: 标签

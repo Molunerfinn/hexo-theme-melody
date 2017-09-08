@@ -16,7 +16,7 @@ $(function () {
       try {
         document.execCommand('copy') // Security exception may be thrown by some browsers.
         $(ctx).prev('.copy-notice')
-          .text('复制成功')
+          .text(GLOBAL.copy.success)
           .velocity({
             translateX: -30,
             opacity: 1
@@ -27,7 +27,7 @@ $(function () {
           })
       } catch (ex) {
         $(ctx).prev('.copy-notice')
-          .text('复制失败')
+          .text(GLOBAL.copy.error)
           .velocity({
             translateX: -30,
             opacity: 1
@@ -41,7 +41,7 @@ $(function () {
         document.body.removeChild(textarea)
       }
     } else {
-      $(ctx).prev('.copy-notice').text('浏览器不支持')
+      $(ctx).prev('.copy-notice').text(GLOBAL.copy.noSupport)
     }
   }
   // click events

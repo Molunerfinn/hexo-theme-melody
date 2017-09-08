@@ -11,6 +11,11 @@ footer:
   driven: Driven
   theme: Theme
 
+copy:
+  success: Copy successfully
+  error: Copy error
+  noSupport: The browser does not support
+
 page:
   articles: Articles
   tag: Tag
