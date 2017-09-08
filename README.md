@@ -8,6 +8,10 @@ A simple & beautiful & fast theme for Hexo.
 
 See demo: [molunerfinn.com](https://molunerfinn.com)
 
+# Documentation
+
+Documentation is [here](https://molunerfinn.com/hexo-theme-melody-doc/)
+
 # Screen Shots
 
 ![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/index-page.png)
@@ -40,13 +44,15 @@ Copy the contents of `_config.yml` to `melody.yml`. Now you can configure it by 
 
 Jump into the melody folder, just `git pull` is OK.
 
+> For more details, please check [documentation](https://molunerfinn.com/hexo-theme-melody-doc/)
+
 # Browser Support
 
 IE >= 10
 
 # TODOS
 
-- Doc
+- ~~Doc~~
 - ~~Search~~ // Algolia support
 - ~~Analysis~~ // Baidu & Google analytics support
 - ~~MathJax~~ // MathJax support
