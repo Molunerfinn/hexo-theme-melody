@@ -7,7 +7,7 @@ block top_img
     div#top-container(style=`background-image: url(${top_img})` class=flag)
       include ./includes/header.pug
       #post-info
-        #post-title= page.title
+        #post-title= page.title || _p('no_title') 
         #post-meta
           if (theme.post_meta.date_type)
             - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date' 
@@ -33,7 +33,7 @@ block top_img
 block content
   article#post(class="")
     if (!top_img)
-      #post-title.plain= page.title
+      #post-title.plain= page.title || _p('no_title') 
       #post-meta
         if (theme.post_meta.date_type)
           - var date_type = theme.post_meta.date_type == 'updated' ? '' : 'date' 
@@ -61,4 +61,5 @@ block content
       .addthis_inline_share_toolbox.pull-right
       script(src=`//s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` async)
   include includes/pagination.pug
-  include includes/comments/index.pug
+  if page.comments !== false
+    include includes/comments/index.pug
