@@ -1,10 +1,10 @@
 # hexo-theme-melody
 
-<p style="text-align: center;">
+<p align="center">
   <img src="https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/logo.png">
 </p>
 
-<p style="text-align: center;">
+<p align="center">
   <a href="https://standardjs.com" target="_blank"><img alt="JavaScript Style Guide" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"></a>
   <a href="" target="_blank"><img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
   <a href="https://hexo.io" target="_blank"><img alt="hexo-image" src="https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg"></a>
