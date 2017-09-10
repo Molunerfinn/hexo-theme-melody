@@ -1,10 +1,17 @@
 # hexo-theme-melody
 
+<p style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/logo.png">
+</p>
+
+<p style="text-align: center;">
+  <a href="https://standardjs.com" target="_blank"><img alt="JavaScript Style Guide" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"></a>
+  <a href="" target="_blank"><img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
+  <a href="https://hexo.io" target="_blank"><img alt="hexo-image" src="https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg"></a>
+</p>
+
 A simple & beautiful & fast theme for Hexo.
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-[![hexo-image](https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg)]()
 
 See demo: [molunerfinn.com](https://molunerfinn.com)
 
@@ -14,11 +21,11 @@ Documentation is [here](https://molunerfinn.com/hexo-theme-melody-doc/)
 
 # Screen Shots
 
-![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/index-page.png)
-![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/archives.png)
-![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/post.png)
-![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/post-2.png)
-![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody/imgs/imgs/mobile.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/index-page.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/archives.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/post.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/post-2.png)
+![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/mobile.png)
 
 # Installation
 
