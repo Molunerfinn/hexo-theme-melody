@@ -49,15 +49,17 @@
     .ais-pagination--item
       margin: 0 0.2rem
       padding: 0
-      min-width: 1.2rem
-      height: 1.2rem
-      text-align: center
-      line-height: 1.2rem
-
-    .ais-pagination--item.current
-      background: $cyan
 
       a
+        display: inline-block
+        min-width: 1.2rem
+        height: 1.2rem
+        text-align: center
+        line-height: 1.2rem
+
+    .ais-pagination--item.current
+      a
+        background: $cyan
         color: $white
         text-decoration: none
         cursor: default
