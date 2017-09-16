@@ -236,6 +236,40 @@ img
   color: $highlight-aqua
   opacity: 0
 
+.post-copyright
+  position: relative
+  margin-bottom: 1rem
+  padding: 0.5rem 0.8rem
+  border: 1px solid $light-grey
+  transition: box-shadow 0.3s ease-in-out
+
+  &:before
+    position: absolute
+    top: t = 0.5rem
+    right: t
+    width: w = 0.8rem
+    height: w
+    border-radius: w
+    background: $light-blue
+    content: ""
+
+  &:after
+    position: absolute
+    top: t = 0.7rem
+    right: t
+    width: w = 0.4rem
+    height: w
+    border-radius: w
+    background: $white
+    content: ""
+
+  &:hover
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
+
+  &-meta
+    color: $light-blue
+    font-weight: bold
+
 @media screen and (max-width: $sm)
   .layout
     margin: 0 30px

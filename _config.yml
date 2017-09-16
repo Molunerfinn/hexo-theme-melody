@@ -2,7 +2,7 @@
 # ---------------
 language: en
 
-# main menu navigation
+# Main menu navigation
 # ---------------
 menu:
   Home: /
@@ -17,6 +17,11 @@ favicon: /favicon.ico
 # Highlight theme
 # ---------------
 highlight_theme: default
+
+# Nav settings
+# ---------------
+#social:
+  #icon_name: url
 
 # Algolia search
 # ---------------
@@ -82,9 +87,6 @@ avatar:
 
 top_img: true # false or url of img 
 
-#social:
-  #icon_name: url
-
 post_meta:
   date_type: created # created or updated 
   categories: true
@@ -92,6 +94,11 @@ post_meta:
 
 toc:
   enable: true
+
+post_copyright:
+  enable: true
+  license: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 addThis:
   enable: false

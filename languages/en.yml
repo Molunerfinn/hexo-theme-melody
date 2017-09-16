@@ -22,3 +22,12 @@ page:
   category: Category
 
 no_title: No title
+
+post:
+  copyright:
+    author: Author
+    link: Link
+    copyright_notice: Copyright Notice
+    copyright_content: 'All articles in this blog are licensed under
+      <a href="%s" target="_blank">%s</a> unless stating additionally.'
+      
