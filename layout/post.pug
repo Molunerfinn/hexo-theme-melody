@@ -68,6 +68,13 @@ block content
       .post-meta__tag-list
         each item, index in page.tags.data
           a(href=url_for(item.path)).post-meta__tags #[=item.name]
+    if (theme.QR_code)
+      if (theme.QR_code.length > 0)
+        .post-qr-code
+          each item in theme.QR_code
+            .post-qr-code-item
+              img.post-qr-code__img(src=item.itemlist.img)
+              .post-qr-code__desc=item.itemlist.text
     if (theme.addThis.enable)
       .addthis_inline_share_toolbox.pull-right
       script(src=`//s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` async)

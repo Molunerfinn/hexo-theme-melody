@@ -270,10 +270,30 @@ img
     color: $light-blue
     font-weight: bold
 
+.post-qr-code
+  text-align: center
+
+  &-item
+    display: inline-block
+    margin-bottom: 0.8rem
+
+  img
+    margin: 0 1rem 0.1rem 1rem
+    width: w = 10rem
+    height: w
+
+  &__desc
+    color: $grey
+
 @media screen and (max-width: $sm)
   .layout
     margin: 0 30px
     width: auto
+
+  .post-qr-code
+    img
+      width: w = 6rem
+      height: w
 
 @media screen and (min-width: $sm)
   #top-container
