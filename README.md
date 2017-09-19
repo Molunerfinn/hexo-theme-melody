@@ -22,7 +22,7 @@ See demo:
 
 Documentation is [here](https://molunerfinn.com/hexo-theme-melody-doc/)
 
-# Screen Shots
+# Screenshots
 
 ![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/index-page.png)
 ![](https://raw.githubusercontent.com/Molunerfinn/hexo-theme-melody-doc/master/docs/imgs/archives.png)
