@@ -18,7 +18,7 @@ favicon: /favicon.ico
 # ---------------
 pwa:
   enable: false
-  mainfest: 
+  manifest: 
 
 
 # Highlight theme
