@@ -19,7 +19,7 @@ html(lang=config.language)
         link(rel='stylesheet', href=url)
     each item in theme.cdn.css
       if item !== undefined
-        link(rel='stylesheet', href=item)
+        link(rel='stylesheet', href=item + '?version=' + theme.version)
     include ./head.pug
     include ./config.pug
     link(rel="icon", href=config.root + 'favicon.ico')
@@ -46,5 +46,5 @@ html(lang=config.language)
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
-        script(src=url)
+        script(src=url + '?version=' + theme.version)
     include ./additional-js.pug
