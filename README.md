@@ -13,7 +13,10 @@
 A simple & beautiful & fast theme for Hexo.
 
 
-See demo: [molunerfinn.com](https://molunerfinn.com)
+See demo: 
+
+- [molunerfinn.com](https://molunerfinn.com)
+- [LiuNianのBlog](http://www.huborui.com/)
 
 # Documentation
 
