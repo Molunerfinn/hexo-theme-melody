@@ -67,7 +67,7 @@ IE >= 10
 - ~~Analysis~~ // Baidu & Google analytics support
 - ~~MathJax~~ // MathJax support
 - ~~i18n~~ // zh-Hans & en support
-- PWA 
+- ~~PWA~~ // v1.2 support
 - Performance optimization
 - ...
 
