@@ -7,7 +7,8 @@
   background-size: cover
 
   &.no-bg
-    background-image: url($bg-svg + "") !important
+    $bg-svg += ""
+    background-image: url($bg-svg) !important
     background-size: initial
 
 #site-info
@@ -119,6 +120,7 @@
       display: none
       width: 8rem
       background: alpha($white, 0.9)
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.27)
 
       a
         display: block
