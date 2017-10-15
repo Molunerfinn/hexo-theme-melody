@@ -1,6 +1,10 @@
 .recent-post-item
   margin: 1.6rem 0 2rem
 
+  .content
+    p
+      word-break: break-word
+
   time
     color: $grey
 
@@ -162,3 +166,8 @@
 
     &:after
       content: ")"
+
+@media screen and (max-width: $sm)
+  .recent-post-item
+    .article-title
+      font-size: 1rem
