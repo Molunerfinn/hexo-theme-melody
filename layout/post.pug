@@ -11,21 +11,27 @@ block top_img
         #post-meta
           if (theme.post_meta.date_type)
             - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date' 
-            time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)] 
+            time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
           if (theme.post_meta.categories && page.categories.data.length > 0)
             if (theme.post_meta.date_type)
-              span.post-meta__separator  | 
+              span.post-meta__separator |
             each item, index in page.categories.data
-              i.fa.fa-inbox(aria-hidden="true")  
-              a(href=url_for(item.path)).post-meta__categories  #[=item.name]  
+              i.fa.fa-inbox.post-meta__icon(aria-hidden="true")  
+              a(href=url_for(item.path)).post-meta__categories #[=item.name]
               if (index < page.categories.data.length - 1)
                  i.fa.fa-angle-right(aria-hidden="true")  
           if (theme.disqus.enable && theme.disqus.count)
             if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
-              span.post-meta__separator  | 
-            i.fa.fa-comment-o(aria-hidden="true")  
+              span.post-meta__separator |
+            i.fa.fa-comment-o.post-meta__icon(aria-hidden="true")  
             a(href=url_for(page.path) + '#disqus_thread')
               span.disqus-comment-count(data-disqus-identifier=page.path)
+          if (theme.wordcount && theme.wordcount.enable)
+            .post-meta-wordcount
+              span= _p('post.wordcount') + ': '
+              span.word-count= wordcount(page.content)
+              span.post-meta__separator |
+              span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
   else
     div#top-container.plain
       include ./includes/header.pug
@@ -40,7 +46,7 @@ block content
           time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)] 
         if (theme.post_meta.categories && page.categories.data.length > 0)
           if (theme.post_meta.date_type)
-            span.post-meta__separator  | 
+            span.post-meta__separator |
           each item, index in page.categories.data
             i.fa.fa-inbox(aria-hidden="true")  
             a(href=url_for(item.path)).post-meta__categories  #[=item.name]
@@ -48,10 +54,17 @@ block content
                 i.fa.fa-angle-right.post-meta__separator(aria-hidden="true")  
         if (theme.disqus.enable && theme.disqus.count)
           if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
-            span.post-meta__separator  | 
+            span.post-meta__separator |
           i.fa.fa-comment-o(aria-hidden="true")  
           a(href=url_for(page.path) + '#disqus_thread')
             span.disqus-comment-count(data-disqus-identifier=page.path)
+        if (theme.wordcount && theme.wordcount.enable)
+          span.post-meta__separator |
+          span.post-meta-wordcount
+            span= _p('post.wordcount') + ': '
+            span.word-count= wordcount(page.content)
+            span.post-meta__separator |
+            span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
     #post-content!= page.content
     if (theme.post_copyright && theme.post_copyright.enable)
       .post-copyright

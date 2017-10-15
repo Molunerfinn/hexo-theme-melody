@@ -33,8 +33,9 @@
   opacity: 0
 
   &.no-bg
+    $bg-svg += ""
     background-color: $light-blue
-    background-image: url($bg-svg + "") !important
+    background-image: url($bg-svg) !important
     background-size: auto
 
   &.plain
@@ -66,14 +67,15 @@
   #post-title
     font-size: 1.3rem
 
-  i.fa.fa-angle-right,
-  i.fa.fa-tag,
-  i.fa.fa-comment-o
-    margin-right: 0.2rem
+  i.fa.fa-angle-right
+    margin: 0 0.3rem 0 0.2rem
 
 .post-meta
   &__separator
     margin: 0 0.3rem
+
+  &__icon
+    margin-right: 0.2rem
 
   &__tag-list
     margin-bottom: 0.5rem
