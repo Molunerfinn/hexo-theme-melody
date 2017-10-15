@@ -24,6 +24,8 @@ page:
 no_title: No title
 
 post:
+  wordcount: Word count
+  min2read: Reading time %s min
   copyright:
     author: Author
     link: Link
