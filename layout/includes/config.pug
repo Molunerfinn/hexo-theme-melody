@@ -11,6 +11,10 @@
   } else {
     algolia = 'undefined'
   }
+  var localSearchPath = 'undefined';
+  if (theme.local_search && theme.local_search.enable) {
+    localSearchPath = config.search.path
+  }
 script.
   var GLOBAL = { 
     root: '!{config.root}',
@@ -19,5 +23,6 @@ script.
       success: '!{_p("copy.success")}',
       error: '!{_p("copy.error")}',
       noSupport: '!{_p("copy.noSupport")}'
-    }
+    },
+    localSearchPath: '!{localSearchPath}'
   } 
