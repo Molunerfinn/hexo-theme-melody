@@ -1,18 +1,20 @@
 $(function () {
+  var loadFlag = false
   $('a.social-icon.search').on('click', function () {
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandIn', { duration: 300 })
     $('.search-mask').velocity('stop')
       .velocity('transition.fadeIn', { duration: 300 })
+    if (!loadFlag) {
+      search(GLOBAL.localSearch.path)
+      loadFlag = true
+    }
   })
   $('.search-mask, .search-close-button').on('click', function () {
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandOut', { duration: 300 })
     $('.search-mask').velocity('stop')
       .velocity('transition.fadeOut', { duration: 300 })
-  })
-  $('#local-search input').on('input', function () {
-    search()
   })
 
   function search (path) {
@@ -28,15 +30,17 @@ $(function () {
             url: $('url', this).text()
           }
         }).get()
-        var $input = document.getElementById('#local-search input')
-        var $resultContent = document.getElementById('#local-hits')
+        var $input = $('#local-search-input input')[0]
+        var $resultContent = $('#local-hits')[0]
         $input.addEventListener('input', function () {
-          var str = '<ul class="search-result-list">'
+          var str = '<div class="search-result-list">'
           var keywords = this.value.trim().toLowerCase().split(/[\s]+/)
           $resultContent.innerHTML = ''
           if (this.value.trim().length <= 0) {
+            $('.local-search-stats__hr').hide()
             return
           }
+          var count = 0
           // perform local searching
           datas.forEach(function (data) {
             var isMatch = true
@@ -45,7 +49,6 @@ $(function () {
             var dataUrl = data.url
             var indexTitle = -1
             var indexContent = -1
-            var firstOccur = -1
             // only match artiles with not empty titles and contents
             if (dataTitle !== '' && dataContent !== '') {
               keywords.forEach(function (keyword, i) {
@@ -57,39 +60,20 @@ $(function () {
                   if (indexContent < 0) {
                     indexContent = 0
                   }
-                  if (i === 0) {
-                    firstOccur = indexContent
-                  }
                 }
               })
             }
             // show search results
             if (isMatch) {
-              str += "<li><a href='" + dataUrl + "' class='search-result-title' target='_blank'>" + '> ' + dataTitle + '</a>'
-              var content = data.content.trim().replace(/<[^>]+>/g, '')
-              if (firstOccur >= 0) {
-                // cut out characters
-                var start = firstOccur - 6
-                var end = firstOccur + 6
-                if (start < 0) {
-                  start = 0
-                }
-                if (start === 0) {
-                  end = 10
-                }
-                if (end > content.length) {
-                  end = content.length
-                }
-                var matchContent = content.substr(start, end)
-                // highlight all keywords
-                keywords.forEach(function (keyword) {
-                  var regS = new RegExp(keyword, 'gi')
-                  matchContent = matchContent.replace(regS, '<em class="search-keyword">' + keyword + '</em>')
-                })
-                str += '<p class="search-result">' + matchContent + '...</p>'
-              }
+              str += '<div class="local-search__hit-item"><a href="' + dataUrl + '" class="search-result-title" target="_blank">' + dataTitle + '</a>' + '</div>'
+              count += 1
+              $('.local-search-stats__hr').show()
             }
           })
+          if (count === 0) {
+            str += '<div id="local-search__hits-empty">' + GLOBAL.localSearch.labels.hits_empty.replace(/\$\{query}/, this.value.trim()) +
+              '</div>'
+          }
           $resultContent.innerHTML = str
         })
       }

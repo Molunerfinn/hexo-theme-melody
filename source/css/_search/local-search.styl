@@ -10,3 +10,41 @@
       outline: none
       border: 2px solid $light-blue
       border-radius: 2rem
+
+  .local-search__hit-item
+    position: relative
+    padding-left: 1.5rem
+
+    &:hover
+      &:before
+        border-color: $ruby
+
+    &:before
+      $w = 0.3rem
+      position: absolute
+      top: 0.4rem
+      left: 0
+      width: w = $w
+      height: h = w
+      border: 0.5 * w solid $light-blue
+      border-radius: w
+      background: $white
+      content: ""
+      line-height: h
+      transition: all 0.2s ease-in-out
+
+    a
+      display: block
+      color: $font-black
+      text-decoration: none
+      cursor: pointer
+
+      &:hover
+        color: $light-blue
+
+  .local-search-stats__hr
+    display: none
+
+  .search-result-list
+    overflow-y: auto
+    max-height: 10.5rem
