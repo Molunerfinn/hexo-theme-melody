@@ -1,4 +1,5 @@
 {
+  "eslint.enable": true,
   "editor.formatOnSave": true,
   "stylusSupremacy.insertSemicolons": false,
   "stylusSupremacy.insertBraces": false,

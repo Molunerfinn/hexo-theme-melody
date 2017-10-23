@@ -3,4 +3,6 @@ if (theme.algolia_search.enable && !is_post())
 if (theme.mathjax && theme.mathjax.enable)
   if(!is_tag() && !is_category() && !is_archive())
     include ./third-party/mathjax.pug
+if (theme.local_search && theme.local_search.enable && !is_post())
+  script(src=url_for('/js/search/local-search.js'))
   
