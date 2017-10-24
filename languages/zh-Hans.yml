@@ -25,7 +25,7 @@ no_title: 无题
 
 post:
   wordcount: 字数总计
-  min2read: 阅读时长 %s 分钟
+  min2read: '阅读时长: %s 分钟'
   copyright:
     author: 文章作者
     link: 文章链接
