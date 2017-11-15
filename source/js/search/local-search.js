@@ -19,7 +19,7 @@ $(function () {
 
   function search (path) {
     $.ajax({
-      url: path,
+      url: '/' + path,
       dataType: 'xml',
       success: function (xmlResponse) {
         // get the contents from search data
