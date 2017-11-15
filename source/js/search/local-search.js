@@ -1,6 +1,9 @@
 $(function () {
   var loadFlag = false
   $('a.social-icon.search').on('click', function () {
+    $('body').css('width', '100%');
+    $('body').css('overflow-y', 'scroll');
+    $('body').css('position', 'fixed');
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandIn', { duration: 300 })
     $('.search-mask').velocity('stop')
@@ -11,6 +14,7 @@ $(function () {
     }
   })
   $('.search-mask, .search-close-button').on('click', function () {
+    $('body').css('position', 'absolute');
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandOut', { duration: 300 })
     $('.search-mask').velocity('stop')
