@@ -103,6 +103,12 @@ $(function () {
       })
   }
 
+  function updateAnchor(anchor) {
+    if (history.replaceState && anchor != location.hash) {
+      history.replaceState(undefined, undefined, anchor)
+    }
+  }
+
   // find head position & add active class
   function findHeadPosition (top) {
     if (top < 200) {
@@ -119,6 +125,8 @@ $(function () {
     })
     var currentActive = $('.toc-link.active')
     if (currentId && currentActive.attr('href') !== currentId) {
+      updateAnchor(currentId)
+
       $('.toc-link').removeClass('active')
       var _this = $('.toc-link[href="' + currentId + '"]')
       _this.addClass('active')
