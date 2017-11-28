@@ -78,7 +78,7 @@ block content
             a(href=url_for(page.permalink)) #[=page.permalink]
         .post-copyright__notice
           span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
-          span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license)
+          span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
     if (theme.post_meta.tags)
       .post-meta__tag-list
         each item, index in page.tags.data
