@@ -88,8 +88,8 @@ block content
         .post-qr-code
           each item in theme.QR_code
             .post-qr-code-item
-              img.post-qr-code__img(src=item.itemlist.img)
-              .post-qr-code__desc=item.itemlist.text
+              img.post-qr-code__img(src=(item.itemlist||item).img)
+              .post-qr-code__desc=(item.itemlist||item).text
     if (theme.addThis.enable)
       .addthis_inline_share_toolbox.pull-right
       script(src=`//s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` async)
