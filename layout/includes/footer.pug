@@ -2,15 +2,15 @@
   if theme.since
     - var now = new Date()
     - var nowYear = now.getFullYear()
-    .copyright= `©${theme.since} - ${nowYear} By ${config.author}` 
+    .copyright!= `&copy;${theme.since} - ${nowYear} By ${config.author}`
   else
-    .copyright= `&copy;${nowYear} By ${config.author}`
+    .copyright!= `&copy;${nowYear} By ${config.author}`
   .framework-info
-    span= _p('footer.driven') + ' - ' 
+    span= _p('footer.driven') + ' - '
     a(href='http://hexo.io')
       span Hexo
     span.footer-separator |
-    span= _p('footer.theme') + ' - ' 
+    span= _p('footer.theme') + ' - '
     a(href='https://github.com/Molunerfinn/hexo-theme-melody')
       span Melody
   if theme.ICP.enable
@@ -19,4 +19,3 @@
         span=theme.ICP.text
   if theme.busuanzi.enable
     include ./count/busuanzi.pug
-      
