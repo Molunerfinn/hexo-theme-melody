@@ -22,6 +22,7 @@ page:
   category: Category
 
 no_title: No title
+read_more: Read more
 
 post:
   wordcount: Word count
@@ -32,4 +33,3 @@ post:
     copyright_notice: Copyright Notice
     copyright_content: 'All articles in this blog are licensed under
       <a href="%s" target="_blank">%s</a> unless stating additionally.'
-      
