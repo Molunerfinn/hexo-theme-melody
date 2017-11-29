@@ -3,9 +3,9 @@ each article in page.posts.data
     - var link = article.link || article.path
       a.article-title(href=url_for(link))= article.title || _p('no_title')
     if (theme.post_meta.date_type)
-      - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date' 
-      time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)] 
+      - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date'
+      time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)]
     .content!= article.excerpt
-    a.more(href=url_for(link) + '#more') 阅读更多
+    a.more(href=url_for(link) + '#more')= _p('read_more')
     hr
 
