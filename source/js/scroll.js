@@ -103,9 +103,9 @@ $(function () {
       })
   }
 
-  function updateAnchor(anchor) {
-    if (history.replaceState && anchor != location.hash) {
-      history.replaceState(undefined, undefined, anchor)
+  function updateAnchor (anchor) {
+    if (window.history.replaceState && anchor !== window.location.hash) {
+      window.history.replaceState(undefined, undefined, anchor)
     }
   }
 
