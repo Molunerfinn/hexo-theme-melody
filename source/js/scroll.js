@@ -111,6 +111,12 @@ $(function () {
 
   // find head position & add active class
   function findHeadPosition (top) {
+    // assume that we are not in the post page if no TOC link be found,
+    // thus no need to update the status
+    if ($('.toc-link').length === 0) {
+      return;
+    }
+
     if (top < 200) {
       $('.toc-link').removeClass('active')
       $('.toc-child').hide()
