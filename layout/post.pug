@@ -90,9 +90,11 @@ block content
             .post-qr-code-item
               img.post-qr-code__img(src=(item.itemlist||item).img)
               .post-qr-code__desc=(item.itemlist||item).text
-    if (theme.addThis.enable)
+    if theme.addThis.enable
       .addthis_inline_share_toolbox.pull-right
       script(src=`//s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` async)
   include includes/pagination.pug
+  if (theme.adv && theme.adv.enable)
+    .post-adv!= theme.adv.info
   if page.comments !== false
     include includes/comments/index.pug
