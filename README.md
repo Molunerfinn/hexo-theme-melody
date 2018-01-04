@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://standardjs.com" target="_blank"><img alt="JavaScript Style Guide" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"></a>
-  <a href="" target="_blank"><img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
-  <a href="https://hexo.io" target="_blank"><img alt="hexo-image" src="https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg"></a>
+  <a href="https://standardjs.com" target="_blank"><img alt="JavaScript Style Guide" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square"></a>
+  <a href="" target="_blank"><img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"></a>
+  <a href="https://hexo.io" target="_blank"><img alt="hexo-image" src="https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg?style=flat-square"></a>
 </p>
 
 A simple & beautiful & fast theme for Hexo.
