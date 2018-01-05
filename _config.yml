@@ -9,6 +9,7 @@ menu:
   Archives: /archives
   Tags: /tags
   Categories: /categories
+  #XXX: /xxx
 
 # Favicon
 # ---------------
@@ -51,7 +52,6 @@ local_search:
 
 # MathJax
 # ---------------
-
 mathjax:
   enable: false
   cdn: https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
@@ -123,15 +123,37 @@ post_copyright:
   #     img:
   #     text:
 
+# adv:
+  # enable: false
+  # info: 
 
+# Share System
+# ---------------
 addThis:
   enable: false
   #pubid: 
 
+# sharejs:
+  # enable: false
+  # disabled_sites: 
+
+# Comments System
+# ---------------
 disqus:
   enable: false 
   #shortname: 
   #count: 
+
+# laibili:
+  # enable: false
+  # uid:
+
+# gitment
+  # enable: false
+  # owner: 
+  # repo: 
+  # client_id: 
+  # client_secret: 
 
 # Footer Settings
 # ---------------
