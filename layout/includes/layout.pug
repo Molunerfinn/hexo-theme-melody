@@ -56,5 +56,5 @@ html(lang=config.language)
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
-        script(src=url + '?version=' + theme.version)
+        script(src=url + '?version=' + version())
     include ./additional-js.pug
