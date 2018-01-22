@@ -30,7 +30,7 @@ html(lang=config.language)
         link(rel='stylesheet', href=url)
     each item in theme.cdn.css
       if item !== undefined
-        link(rel='stylesheet', href=item + '?version=' + theme.version)
+        link(rel='stylesheet', href=item + '?version=' + version())
     include ./head.pug
     include ./config.pug
   body
