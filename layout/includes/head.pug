@@ -6,6 +6,10 @@ if (theme.gitment && theme.gitment.enable)
   link(rel="stylesheet" type="text/css" href="https://imsun.github.io/gitment/style/default.css")
   script(src="https://imsun.github.io/gitment/dist/gitment.browser.js")
 
+if (theme.gitalk && theme.gitalk.enable)
+  link(rel="stylesheet" type="text/css" href="https://unpkg.com/gitalk/dist/gitalk.css")
+  script(src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js")
+
 if (theme.pwa && theme.pwa.enable)
   link(rel="manifest" href=theme.pwa.manifest)
 

@@ -155,6 +155,14 @@ disqus:
   # client_id: 
   # client_secret: 
 
+# gitalk:
+#   enable: false
+#   client_id: 
+#   client_secret: 
+#   repo: gitalkBlog
+#   owner: zouyaoji
+#   admin: zouyaoji
+
 # Footer Settings
 # ---------------
 since: 2013
