@@ -16,7 +16,9 @@ A simple & beautiful & fast theme for Hexo.
 See demo: 
 
 - [molunerfinn.com](https://molunerfinn.com)
-- [LiuNianのBlog](http://www.huborui.com/)
+- [zouyaoji's Blog](https://zouyaoji.top/)
+- [flytreeleft's Blog](https://flytreeleft.org/)
+- [木](http://muller.nctu.me/)
 
 # Documentation
 
