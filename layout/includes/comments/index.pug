@@ -1,10 +1,10 @@
-if(theme.disqus.enable)
+if theme.disqus.enable
   include ./disqus.pug
-elif(theme.laibili && theme.laibili.enable)
+else if theme.laibili && theme.laibili.enable
   include ./laibili.pug
-elif(theme.gitment && theme.gitment.enable)
+else if theme.gitment && theme.gitment.enable
   include ./gitment.pug
-elif(theme.gitalk && theme.gitalk.enable)
+else if theme.gitalk && theme.gitalk.enable
   include ./gitalk.pug
-elif(theme.valine && theme.valine.enable)
+else if theme.valine && theme.valine.enable
   include ./valine.pug
