@@ -53,7 +53,7 @@ $(function () {
   })
 
   // head scroll
-  $('h1,h2,h3,h4,h5,h6').on('click', function (e) {
+  $('#post-content').find('h1,h2,h3,h4,h5,h6').on('click', function (e) {
     scrollToHead('#' + $(this).attr('id'))
   })
 
@@ -114,14 +114,14 @@ $(function () {
     // assume that we are not in the post page if no TOC link be found,
     // thus no need to update the status
     if ($('.toc-link').length === 0) {
-      return;
+      return false
     }
 
     if (top < 200) {
       $('.toc-link').removeClass('active')
       $('.toc-child').hide()
     }
-    var list = $('h1,h2,h3,h4,h5,h6')
+    var list = $('#post-content').find('h1,h2,h3,h4,h5,h6')
     var currentId = ''
     list.each(function () {
       var head = $(this)
