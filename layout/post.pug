@@ -66,31 +66,31 @@ block content
             span.post-meta__separator |
             span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
     #post-content!= page.content
-    if (theme.post_copyright && theme.post_copyright.enable)
-      .post-copyright
-        .post-copyright__author
-          span.post-copyright-meta= _p('post.copyright.author') + ": "
-          span.post-copyright-info
-            a(href=`mailto:${config.email}`) #[=config.author]
-        .post-copyright__type
-          span.post-copyright-meta= _p('post.copyright.link') + ": "
-          span.post-copyright-info
-            a(href=url_for(page.permalink)) #[=page.permalink]
-        .post-copyright__notice
-          span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
-          span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
-    if (theme.post_meta.tags)
-      .post-meta__tag-list
-        each item, index in page.tags.data
-          a(href=url_for(item.path)).post-meta__tags #[=item.name]
-    if (theme.QR_code)
-      if (theme.QR_code.length > 0)
-        .post-qr-code
-          each item in theme.QR_code
-            .post-qr-code-item
-              img.post-qr-code__img(src=(item.itemlist||item).img)
-              .post-qr-code__desc=(item.itemlist||item).text
-    include includes/share/index.pug
+  if (theme.post_copyright && theme.post_copyright.enable)
+    .post-copyright
+      .post-copyright__author
+        span.post-copyright-meta= _p('post.copyright.author') + ": "
+        span.post-copyright-info
+          a(href=`mailto:${config.email}`) #[=config.author]
+      .post-copyright__type
+        span.post-copyright-meta= _p('post.copyright.link') + ": "
+        span.post-copyright-info
+          a(href=url_for(page.permalink)) #[=page.permalink]
+      .post-copyright__notice
+        span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
+        span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
+  if (theme.post_meta.tags)
+    .post-meta__tag-list
+      each item, index in page.tags.data
+        a(href=url_for(item.path)).post-meta__tags #[=item.name]
+  if (theme.QR_code)
+    if (theme.QR_code.length > 0)
+      .post-qr-code
+        each item in theme.QR_code
+          .post-qr-code-item
+            img.post-qr-code__img(src=(item.itemlist||item).img)
+            .post-qr-code__desc=(item.itemlist||item).text
+  include includes/share/index.pug
   include includes/pagination.pug
   if (theme.adv && theme.adv.enable)
     .post-adv!= theme.adv.info
