@@ -8,6 +8,9 @@
   <a href="https://standardjs.com" target="_blank"><img alt="JavaScript Style Guide" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square"></a>
   <a href="" target="_blank"><img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"></a>
   <a href="https://hexo.io" target="_blank"><img alt="hexo-image" src="https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg?style=flat-square"></a>
+  <a href="https://github.com/Molunerfinn/hexo-theme-melody/releases/latest">
+    <img src="https://img.shields.io/github/release/Molunerfinn/hexo-theme-melody.svg?style=flat-square" alt="">
+  </a>
 </p>
 
 A simple & beautiful & fast theme for Hexo.
