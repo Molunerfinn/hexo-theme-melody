@@ -14,6 +14,9 @@ block content
           |  - 
           span.category__amount= site.categories.length
         div!= list_categories()
+  else if page.type === 'slide'
+    include ./includes/mixins/slide.pug
+    +slideArticle()
   else
     article#page
       h1= page.title
