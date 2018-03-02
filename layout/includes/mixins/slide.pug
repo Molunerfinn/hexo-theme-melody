@@ -1,0 +1,6 @@
+include ./article-sort.pug
+mixin slideArticle()
+  - var posts = site.posts.filter(item => item.layout === 'slides')
+  #archive
+    .article-sort-title= 'Slides - ' + posts.length
+    +articleSort(posts)
