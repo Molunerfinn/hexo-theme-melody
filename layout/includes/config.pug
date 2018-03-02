@@ -1,10 +1,11 @@
 -
   var algolia;
+  var env = process.env;
   if (theme.algolia_search.enable) {
     algolia = JSON.stringify({
-      appId: config.algolia.appId || config.algolia.applicationID,
-      apiKey: config.algolia.apiKey,
-      indexName: config.algolia.indexName,
+      appId: env.ALGOLIA_APP_ID || config.algolia.appId || config.algolia.applicationID,
+      apiKey: env.ALGOLIA_API_KEY || config.algolia.apiKey,
+      indexName: env.ALGOLIA_INDEX_NAME || config.algolia.indexName,
       hits: theme.algolia_search.hits,
       labels: theme.algolia_search.labels
     })
