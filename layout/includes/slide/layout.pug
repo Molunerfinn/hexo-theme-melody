@@ -22,7 +22,12 @@ html(lang=config.language)
     meta(name="copyright" content=pageCopyright)
     title= pageTitle
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
+    link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css")
+    link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/" + theme.slide.theme + ".min.css")
+    link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/lib/css/zenburn.min.css")
   body
     include ../mixins/slide.pug
-    +slide(page)
+    .reveal
+      .slides
+        +slide(page)
   include ./script.pug
