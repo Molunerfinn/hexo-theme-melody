@@ -118,10 +118,21 @@ post_copyright:
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
+# slide
+# For reveal.js config, see https://github.com/hakimel/reveal.js#configuration
 slide:
-  separator: ^\n---\n$
-  separator_vertical: ^\n--\n$
+  separator: ---
+  separator_vertical: --
   charset: utf-8
+  theme: black
+  # optional
+  mouseWheel: false
+  transition: slide
+  transitionSpeed: default
+  parallaxBackgroundImage: ''
+  parallaxBackgroundSize: ''
+  parallaxBackgroundHorizontal: null
+	parallaxBackgroundVertical: null
 
 # QR_code:
   # - itemlist:

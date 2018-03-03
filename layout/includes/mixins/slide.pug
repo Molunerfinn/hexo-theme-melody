@@ -6,8 +6,9 @@ mixin slideArticle()
     +articleSort(posts)
 
 mixin slide(item)
-  section(data-markdown
+  section(
+    data-markdown
     data-separator=theme.slide.separator
-    data-separator-vertical=theme.slide.separtor_vertical
+    data-separator-vertical=theme.slide.separator_vertical
     data-charset=theme.slide.charset)
       script(type="text/template")!= item._content

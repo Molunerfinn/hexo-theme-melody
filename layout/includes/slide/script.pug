@@ -1,8 +1,24 @@
 script(src="/js/third-party/reveal/head.min.js")
 script(src="/js/third-party/reveal/reveal.min.js")
 
+- var slide = page.slide || theme.slide
+- var mouseWheel = slide.mouseWheel
+- var transition = slide.transition
+- var transitionSpeed = slide.transitionSpeed
+- var parallaxBackgroundImage = slide.parallaxBackgroundImage
+- var parallaxBackgroundSize = slide.parallaxBackgroundSize
+- var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal
+- var parallaxBackgroundVertical = slide.parallaxBackgroundVertical
+
 script.
   Reveal.initialize({
+    mouseWheel: '!{mouseWheel}',
+    transition: '!{transition}',
+    transitionSpeed: '!{transitionSpeed}',
+    parallaxBackgroundImage: '!{parallaxBackgroundImage}',
+    parallaxBackgroundSize: '!{parallaxBackgroundSize}',
+    parallaxBackgroundHorizontal: '!{parallaxBackgroundHorizontal}',
+    parallaxBackgroundVertical: '!{parallaxBackgroundVertical}',
     markdown: {
       smartypants: true
     },
