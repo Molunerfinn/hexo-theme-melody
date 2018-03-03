@@ -23,4 +23,6 @@ html(lang=config.language)
     title= pageTitle
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
   body
-    != page._content
+    include ../mixins/slide.pug
+    +slide(page)
+  include ./script.pug
