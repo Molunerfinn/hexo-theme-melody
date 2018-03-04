@@ -5,7 +5,13 @@ each article in page.posts.data
     if (theme.post_meta.date_type)
       - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date'
       time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)]
-    .content!= article.excerpt
-    a.more(href=url_for(link) + '#more')= _p('read_more')
+    if (article.layout === 'slides')
+      a.article-type(href='/slides') Slides
+      include ./mixins/slide.pug 
+      - var iframeLink = article.iframe || link
+      +slideIframe(iframeLink)
+    else
+      .content!= article.excerpt
+      a.more(href=url_for(link) + '#more')= _p('read_more')
     hr
 

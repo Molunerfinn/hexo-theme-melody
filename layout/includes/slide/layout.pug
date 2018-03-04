@@ -22,12 +22,28 @@ html(lang=config.language)
     meta(name="copyright" content=pageCopyright)
     title= pageTitle
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
-    link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css")
-    link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/" + theme.slide.theme + ".min.css")
-    link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/lib/css/zenburn.min.css")
+    if !page.iframe
+      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css")
+      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/" + theme.slide.theme + ".min.css")
+      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/lib/css/zenburn.min.css")
+    else
+      style.
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          overflow: hidden;
+        }
+        .post-iframe iframe{
+          width: 100%;
+          height: 100vh;
+        }
   body
     include ../mixins/slide.pug
-    .reveal
-      .slides
-        +slide(page)
-  include ./script.pug
+    if page.iframe
+      +postSlideIframe(page.iframe)
+    else
+      .reveal
+        .slides
+          +slide(page)
+      include ./script.pug
