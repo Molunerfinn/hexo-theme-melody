@@ -12,3 +12,11 @@ mixin slide(item)
     data-separator-vertical=theme.slide.separator_vertical
     data-charset=theme.slide.charset)
       script(type="text/template")!= item._content
+
+mixin slideIframe(url)
+  .content
+    iframe(src=url frameborder="0")
+
+mixin postSlideIframe(url)
+  .post-iframe
+    iframe(src=url frameborder="0")
