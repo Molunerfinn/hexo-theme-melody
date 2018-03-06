@@ -24,7 +24,10 @@ html(lang=config.language)
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
     if !page.iframe
       link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css")
-      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/" + theme.slide.theme + ".min.css")
+      - var slide = page.slide || theme.slide
+      - var defaultSlide = theme.slide
+      - var slideTheme = slide.theme || defaultSlide.theme
+      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/" + slideTheme + ".min.css")
       link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/lib/css/zenburn.min.css")
     else
       style.
