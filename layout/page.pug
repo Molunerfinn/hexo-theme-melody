@@ -14,7 +14,7 @@ block content
           |  - 
           span.category__amount= site.categories.length
         div!= list_categories()
-  else if page.type === 'slide'
+  else if page.type === 'slides'
     include ./includes/mixins/slide.pug
     +slideArticle()
   else
