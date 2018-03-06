@@ -6,11 +6,13 @@ mixin slideArticle()
     +articleSort(posts)
 
 mixin slide(item)
+  - var slide = page.slide || theme.slide
+  - var defaultSlide = theme.slide
   section(
     data-markdown
-    data-separator=theme.slide.separator
-    data-separator-vertical=theme.slide.separator_vertical
-    data-charset=theme.slide.charset)
+    data-separator=slide.separator || defaultSlide.separator
+    data-separator-vertical=slide.separator_vertical || defaultSlide.separator_vertical
+    data-charset=slide.charset || defaultSlide.charset)
       script(type="text/template")!= item._content
 
 mixin slideIframe(url)
