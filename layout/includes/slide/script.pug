@@ -2,13 +2,14 @@ script(src="/js/third-party/reveal/head.min.js")
 script(src="/js/third-party/reveal/reveal.min.js")
 
 - var slide = page.slide || theme.slide
-- var mouseWheel = slide.mouseWheel
-- var transition = slide.transition
-- var transitionSpeed = slide.transitionSpeed
-- var parallaxBackgroundImage = slide.parallaxBackgroundImage
-- var parallaxBackgroundSize = slide.parallaxBackgroundSize
-- var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal
-- var parallaxBackgroundVertical = slide.parallaxBackgroundVertical
+- var defaultSlide = theme.slide
+- var mouseWheel = slide.mouseWheel || defaultSlide.mouseWheel 
+- var transition = slide.transition || defaultSlide.transition
+- var transitionSpeed = slide.transitionSpeed || defaultSlide.transitionSpeed
+- var parallaxBackgroundImage = slide.parallaxBackgroundImage || defaultSlide.parallaxBackgroundImage
+- var parallaxBackgroundSize = slide.parallaxBackgroundSize || defaultSlide.parallaxBackgroundSize
+- var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal || defaultSlide.parallaxBackgroundHorizontal
+- var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
 
 script.
   Reveal.initialize({
