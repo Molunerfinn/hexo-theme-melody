@@ -108,19 +108,24 @@
   h4,
   h5,
   h6
+    padding-left: 1rem
     cursor: pointer
+    transition: all 0.2s ease-out
 
     &:before
-      margin-right: 0.3rem
+      position: absolute
+      top: calc(50% - 0.3rem)
+      left: 0
       color: $light-red
-      content: "\f02e"
+      content: "\f0c1"
       font: normal normal normal 14px / 1 FontAwesome
       font-size: 0.8rem
       transition: all 0.2s ease-out
 
     &:hover
+      padding-left: 1.1rem
+
       &:before
-        margin-right: 0.4rem
         color: $light-blue
 
 #post-content

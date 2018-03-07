@@ -115,8 +115,12 @@ toc:
 
 post_copyright:
   enable: true
-  license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# auto_excerpt:
+#   enable: false
+#   length: 150
 
 # slide
 # For reveal.js config, see https://github.com/hakimel/reveal.js#configuration
