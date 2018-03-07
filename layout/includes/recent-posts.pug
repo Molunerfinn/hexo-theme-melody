@@ -10,8 +10,16 @@ each article in page.posts.data
       include ./mixins/slide.pug 
       - var iframeLink = article.iframe || link
       +slideIframe(iframeLink)
-    else
+    else if article.excerpt
       .content!= article.excerpt
       a.more(href=url_for(link) + '#more')= _p('read_more')
+    else if theme.auto_excerpt && theme.auto_excerpt.enable
+      - const content = strip_html(article.content)
+      - let expert = content.substring(0, theme.auto_excerpt.length) 
+      - content.length > theme.auto_excerpt.length ? expert += ' ...' : ''
+      .content!= expert
+      a.more(href=url_for(link) + '#more' style="margin-top: 14px")= _p('read_more')
+    else
+      .content!= article.content
     hr
 
