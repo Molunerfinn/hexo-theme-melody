@@ -1,3 +1,13 @@
+headStyle(fontsize)
+  padding-left: unit(fontsize + 0.1, "rem")
+
+  &:before
+    top: calc(50% - unit(fontsize / 2 - 0.05, "rem"))
+    font-size: unit(fontsize, "rem")
+
+  &:hover
+    padding-left: unit(fontsize + 0.2, "rem")
+
 #post-title
   font-size: 1.4rem
 
@@ -108,13 +118,12 @@
   h4,
   h5,
   h6
-    padding-left: 1rem
     cursor: pointer
     transition: all 0.2s ease-out
 
     &:before
       position: absolute
-      top: calc(50% - 0.325rem)
+      top: calc(50% - 0.35rem)
       left: 0
       color: $light-red
       content: "\f0c1"
@@ -127,6 +136,24 @@
 
       &:before
         color: $light-blue
+
+  h1
+    headStyle(1)
+
+  h2
+    headStyle(0.9)
+
+  h3
+    headStyle(0.8)
+
+  h4
+    headStyle(0.7)
+
+  h5
+    headStyle(0.6)
+
+  h6
+    headStyle(0.6)
 
 #post-content
   margin-bottom: 1rem
