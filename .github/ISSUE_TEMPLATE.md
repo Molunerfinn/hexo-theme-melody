@@ -27,10 +27,15 @@ Or it will be closed.
 
 ## Actual behavior <!-- (实际行为) -->
 
-<!-- 请尽量提供截图来定位问题 -->
 <!-- Please give me the screenshots to locate the issue -->
+<!-- 请尽量提供截图来定位问题 -->
 
 ## Steps to reproduce the behavior <!-- (重现步骤) -->
+
+## Feature Request
+
+<!-- If you have any ideas of theme-melody, please write down here and we can have a discussion. -->
+<!-- 如果你有任何关于theme-melody的功能方面的想法，可以在这个部分里写下来我们一起讨论 -->
 
 ---
 
