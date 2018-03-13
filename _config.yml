@@ -136,7 +136,7 @@ slide:
   parallaxBackgroundImage: ''
   parallaxBackgroundSize: ''
   parallaxBackgroundHorizontal: null
-	parallaxBackgroundVertical: null
+  parallaxBackgroundVertical: null
 
 # QR_code:
   # - itemlist:
