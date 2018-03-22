@@ -15,13 +15,13 @@
 
 A simple & beautiful & fast theme for Hexo.
 
+See demo:
 
-See demo: 
-
-- [molunerfinn.com](https://molunerfinn.com)
-- [zouyaoji's Blog](https://zouyaoji.top/)
-- [flytreeleft's Blog](https://flytreeleft.org/)
-- [木](http://muller.nctu.me/)
+* [molunerfinn.com](https://molunerfinn.com)
+* [Elody's Blog](https://elody-07.github.io)
+* [zouyaoji's Blog](https://zouyaoji.top/)
+* [flytreeleft's Blog](https://flytreeleft.org/)
+* [StaunchKai](http://staunchkai.com/)
 
 # Documentation
 
@@ -67,17 +67,16 @@ IE >= 10
 
 # TODOS
 
-- ~~Doc~~
-- ~~Search~~ // Algolia support
-- ~~Analysis~~ // Baidu & Google analytics support
-- ~~MathJax~~ // MathJax support
-- ~~i18n~~ // zh-Hans & en support
-- ~~PWA~~ // v1.2 support
-- Performance optimization
-- ...
+* ~~Doc~~
+* ~~Search~~ // Algolia support
+* ~~Analysis~~ // Baidu & Google analytics support
+* ~~MathJax~~ // MathJax support
+* ~~i18n~~ // zh-Hans & en support
+* ~~PWA~~ // v1.2 support
+* Performance optimization
+* ...
 
 # License
-
 
 [MIT](http://opensource.org/licenses/MIT)
 
