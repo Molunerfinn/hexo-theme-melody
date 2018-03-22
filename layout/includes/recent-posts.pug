@@ -7,6 +7,23 @@ each article in page.posts.data
       time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)]
     if (article.layout === 'slides')
       a.article-type(href='/slides') Slides
+    if (theme.post_meta.categories && article.categories.data.length > 0)
+      span.article-meta
+        span.article-meta__separator |
+        each item, index in article.categories.data
+          i.fa.fa-inbox.article-meta__icon(aria-hidden="true")
+          a(href=url_for(item.path)).article-meta__categories #[=item.name]
+          if (index < article.categories.data.length - 1)
+              i.fa.fa-angle-right(aria-hidden="true")
+    if (theme.post_meta.tags && article.tags.data.length > 0)
+      span.article-meta.tags
+        span.article-meta__separator |
+        each item, index in article.tags.data
+          i.fa.fa-tag.article-meta__icon(aria-hidden="true")
+          a(href=url_for(item.path)).article-meta__tags #[=item.name]
+          if (index < article.tags.data.length - 1)
+            span.article-meta__link -
+    if (article.layout === 'slides')
       include ./mixins/slide.pug 
       - var iframeLink = article.iframe || link
       +slideIframe(iframeLink)
