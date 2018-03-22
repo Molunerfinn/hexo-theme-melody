@@ -70,7 +70,8 @@
 
   .site-page
     margin-left: 0.6rem
-    font-size: 0.6rem
+    text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3)
+    font-size: 0.7rem
 
   &.fixed
     position: fixed
@@ -86,8 +87,10 @@
         opacity: 0
 
     a,
-    .toggle-menu
+    .toggle-menu,
+    #site-name
       color: $light-black
+      text-shadow: none
 
       &:hover
         color: $light-blue
@@ -96,6 +99,7 @@
     transform: translate3d(0, 100%, 0)
 
   #site-name
+    text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3)
     font-weight: bold
     cursor: pointer
 
