@@ -22,6 +22,7 @@ See demo:
 * [zouyaoji's Blog](https://zouyaoji.top/)
 * [flytreeleft's Blog](https://flytreeleft.org/)
 * [StaunchKai](http://staunchkai.com/)
+* [Crystalwindz's Blog](http://crystalwindz.com/)
 
 # Documentation
 
