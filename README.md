@@ -23,6 +23,7 @@ See demo:
 * [flytreeleft's Blog](https://flytreeleft.org/)
 * [StaunchKai](http://staunchkai.com/)
 * [Crystalwindz's Blog](http://crystalwindz.com/)
+* [霪霖笙箫的博客](https://fridolph.github.io/)
 
 # Documentation
 
