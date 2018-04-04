@@ -24,6 +24,7 @@ See demo:
 * [StaunchKai](http://staunchkai.com/)
 * [Crystalwindz's Blog](http://crystalwindz.com/)
 * [霪霖笙箫的博客](https://fridolph.github.io/)
+* [upupming 的博客](https://upupming.site/)
 
 # Documentation
 
