@@ -82,7 +82,7 @@
             border-top: 0.9rem solid transparent
             border-right: 0.8rem solid $white
             border-bottom: 0.9rem solid transparent
-            content: ''
+            content: ""
 
         &:hover
           background: lighten($cyan, 8%)
@@ -97,11 +97,15 @@
 
       &__name
         position: relative
+        float: left
         margin-right: 0.3rem
-        padding: 0.2rem 0.4rem 0.2rem 0.8rem
+        margin-bottom: 0.3rem
+        padding: 0 0.4rem 0 0.8rem
+        height: 1.3rem
         background: $light-blue
         color: $white
         text-decoration: none
+        line-height: 1.3rem
         transition: all 0.2s ease-in-out
 
         &:hover
@@ -116,7 +120,7 @@
           height: w
           border-radius: w
           background: $white
-          content: ''
+          content: ""
 
   .sidebar-toc
     ol,
@@ -130,7 +134,7 @@
     &__title
       padding-right: 0.5rem
       text-align: center
-      font-size: unit(0.9 * $rem, 'px')
+      font-size: unit(0.9 * $rem, "px")
 
     .toc-link
       display: block
