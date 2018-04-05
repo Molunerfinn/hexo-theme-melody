@@ -26,6 +26,8 @@ See demo:
 * [霪霖笙箫的博客](https://fridolph.github.io/)
 * [upupming 的博客](https://upupming.site/)
 
+If you are using `theme-melody` and want to be shown to others like above, please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
+
 # Documentation
 
 Documentation is [here](https://molunerfinn.com/hexo-theme-melody-doc/)
