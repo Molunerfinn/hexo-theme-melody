@@ -1,4 +1,5 @@
 if theme.gitalk && theme.gitalk.enable
+  - let lang = config.language === 'zh-Hans' ? 'zh-CN' : config.language
   #gitalk-container
   script.
     var gitalk = new Gitalk({
@@ -7,6 +8,7 @@ if theme.gitalk && theme.gitalk.enable
       repo: '!{theme.gitalk.repo}',
       owner: '!{theme.gitalk.owner}',
       admin: '!{theme.gitalk.admin}',
-      id: md5(decodeURI(location.pathname))
+      id: md5(decodeURI(location.pathname)),
+      language: '!{lang}'
     })
     gitalk.render('gitalk-container')
