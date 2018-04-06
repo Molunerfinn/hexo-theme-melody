@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-melody",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "hexo-theme-melody hexo theme",
   "scripts": {
     "patch": "npm version patch && git push && git push --tags",
