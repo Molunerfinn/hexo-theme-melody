@@ -7,6 +7,8 @@ block content
         |  - 
         span.tag-cloud__amount= site.tags.length
       .tag-cloud-tags!= tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#A4D8FA', end_color: '#0790E8'})
+    if page.comments !== false
+      include includes/comments/index.pug
   else if page.type === 'categories'
     #post-content
       .category-lists
@@ -14,11 +16,17 @@ block content
           |  - 
           span.category__amount= site.categories.length
         div!= list_categories()
+    if page.comments !== false
+      include includes/comments/index.pug
   else if page.type === 'slides'
     include ./includes/mixins/slide.pug
     +slideArticle()
+    if page.comments !== false
+      include includes/comments/index.pug
   else
     article#page
       h1= page.title
       != page.content
     include includes/pagination.pug
+    if page.comments !== false
+      include includes/comments/index.pug
