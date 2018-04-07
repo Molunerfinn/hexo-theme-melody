@@ -6,7 +6,10 @@ $(function () {
     $('body').css('position', 'fixed')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandIn', {
-        duration: 300
+        duration: 300,
+        complete: function () {
+          $('#local-search-input input').focus()
+        }
       })
     $('.search-mask').velocity('stop')
       .velocity('transition.fadeIn', {

@@ -2,12 +2,16 @@ $(function () {
   $('a.social-icon.search').on('click', function () {
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandIn', {
-        duration: 300
+        duration: 300,
+        complete: function () {
+          $('.ais-search-box--input').focus()
+        }
       })
     $('.search-mask').velocity('stop')
       .velocity('transition.fadeIn', {
         duration: 300
       })
+    // $('.ais-search-box--input').attr('autofocus', 'autofocus')
   })
   $('.search-mask, .search-close-button').on('click', function () {
     $('.search-dialog').velocity('stop')
