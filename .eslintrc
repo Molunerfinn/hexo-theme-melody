@@ -8,6 +8,7 @@
     "debounce": false,
     "throttle": false,
     "isMobile": false,
-    "instantsearch": false
+    "instantsearch": false,
+    "GLOBAL_CONFIG": false
   }
 }
