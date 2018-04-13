@@ -17,7 +17,7 @@ mixin slide(item)
 
 mixin slideIframe(url)
   .content
-    iframe(src=url frameborder="0")
+    iframe(src=url_for(url) frameborder="0")
 
 mixin postSlideIframe(url)
   .post-iframe
