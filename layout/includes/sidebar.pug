@@ -17,6 +17,9 @@
       img(src=theme.avatar || url_for('/img/avatar.png'))
     .author-info__name.text-center= config.author
     .author-info__description.text-center= config.description
+    if theme.follow && theme.follow.enable
+      .follow-button
+        a(href=theme.follow.url target="_blank")= theme.follow.text || 'Follow Me'
     hr
     .author-info-articles
       if site.posts.length
