@@ -227,3 +227,9 @@ busuanzi:
 #links_title: Links
 #links:
   #Name: url
+
+# Follow Me
+# follow:
+#   enable: true
+#   url: ''
+#   text: ''
