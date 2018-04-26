@@ -1,18 +1,30 @@
 $(function () {
   $('a.social-icon.search').on('click', function () {
     $('.search-dialog').velocity('stop')
-      .velocity('transition.expandIn', { duration: 300 })
+      .velocity('transition.expandIn', {
+        duration: 300,
+        complete: function () {
+          $('.ais-search-box--input').focus()
+        }
+      })
     $('.search-mask').velocity('stop')
-      .velocity('transition.fadeIn', { duration: 300 })
+      .velocity('transition.fadeIn', {
+        duration: 300
+      })
+    // $('.ais-search-box--input').attr('autofocus', 'autofocus')
   })
   $('.search-mask, .search-close-button').on('click', function () {
     $('.search-dialog').velocity('stop')
-      .velocity('transition.expandOut', { duration: 300 })
+      .velocity('transition.expandOut', {
+        duration: 300
+      })
     $('.search-mask').velocity('stop')
-      .velocity('transition.fadeOut', { duration: 300 })
+      .velocity('transition.fadeOut', {
+        duration: 300
+      })
   })
 
-  var algolia = GLOBAL.algolia
+  var algolia = GLOBAL_CONFIG.algolia
   var isAlgoliaValid = algolia.appId && algolia.apiKey && algolia.indexName
   if (!isAlgoliaValid) {
     return console.error('Algolia setting is invalid!')
@@ -47,7 +59,7 @@ $(function () {
       container: '#algolia-hits',
       templates: {
         item: function (data) {
-          var link = data.permalink ? data.permalink : (GLOBAL.root + data.path)
+          var link = data.permalink ? data.permalink : (GLOBAL_CONFIG.root + data.path)
           return (
             '<a href="' + link + '" class="algolia-hit-item-link">' +
             data._highlightResult.title.value +
@@ -80,7 +92,7 @@ $(function () {
             '<hr>' +
             stats +
             '<span class="algolia-logo pull-right">' +
-            '  <img src="' + GLOBAL.root + 'img/algolia.svg" alt="Algolia" />' +
+            '  <img src="' + GLOBAL_CONFIG.root + 'img/algolia.svg" alt="Algolia" />' +
             '</span>'
           )
         }

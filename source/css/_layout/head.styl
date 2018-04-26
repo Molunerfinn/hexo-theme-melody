@@ -18,6 +18,7 @@
 #site-sub-title
   color: $light-grey
   text-align: center
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
   line-height: 1.5
 
 #site-title
@@ -35,6 +36,7 @@
   .social-icon
     margin: 0 0.5rem
     color: $light-grey
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
     font-size: 1.4rem
     cursor: pointer
 
@@ -69,9 +71,26 @@
       color: $white
 
   .site-page
+    position: relative
     margin-left: 0.6rem
-    text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3)
+    padding-bottom: 0.3rem
+    text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.3)
     font-size: 0.7rem
+
+    &::after
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: -1
+      width: 0
+      height: 3px
+      background-color: lighten($theme-color, 30%)
+      content: ""
+      transition: all 0.3s ease-in-out
+
+    &:hover
+      &::after
+        width: 100%
 
   &.fixed
     position: fixed
@@ -99,7 +118,7 @@
     transform: translate3d(0, 100%, 0)
 
   #site-name
-    text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3)
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
     font-weight: bold
     cursor: pointer
 

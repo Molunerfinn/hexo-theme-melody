@@ -1,24 +1,35 @@
 $(function () {
   var loadFlag = false
   $('a.social-icon.search').on('click', function () {
-    $('body').css('width', '100%');
-    $('body').css('overflow-y', 'scroll');
-    $('body').css('position', 'fixed');
+    $('body').css('width', '100%')
+    $('body').css('overflow-y', 'scroll')
+    $('body').css('position', 'fixed')
     $('.search-dialog').velocity('stop')
-      .velocity('transition.expandIn', { duration: 300 })
+      .velocity('transition.expandIn', {
+        duration: 300,
+        complete: function () {
+          $('#local-search-input input').focus()
+        }
+      })
     $('.search-mask').velocity('stop')
-      .velocity('transition.fadeIn', { duration: 300 })
+      .velocity('transition.fadeIn', {
+        duration: 300
+      })
     if (!loadFlag) {
-      search(GLOBAL.localSearch.path)
+      search(GLOBAL_CONFIG.localSearch.path)
       loadFlag = true
     }
   })
   $('.search-mask, .search-close-button').on('click', function () {
-    $('body').css('position', 'absolute');
+    $('body').css('position', 'absolute')
     $('.search-dialog').velocity('stop')
-      .velocity('transition.expandOut', { duration: 300 })
+      .velocity('transition.expandOut', {
+        duration: 300
+      })
     $('.search-mask').velocity('stop')
-      .velocity('transition.fadeOut', { duration: 300 })
+      .velocity('transition.fadeOut', {
+        duration: 300
+      })
   })
 
   function search (path) {
@@ -75,7 +86,7 @@ $(function () {
             }
           })
           if (count === 0) {
-            str += '<div id="local-search__hits-empty">' + GLOBAL.localSearch.labels.hits_empty.replace(/\$\{query}/, this.value.trim()) +
+            str += '<div id="local-search__hits-empty">' + GLOBAL_CONFIG.localSearch.labels.hits_empty.replace(/\$\{query}/, this.value.trim()) +
               '</div>'
           }
           $resultContent.innerHTML = str
