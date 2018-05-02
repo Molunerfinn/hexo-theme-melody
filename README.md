@@ -28,6 +28,8 @@ See demo:
 * [徒然の博客](http://techotaku.me/)
 * [清白之年](https://www.wangfan.site/)
 * [sphc's blog](https://jkuvw.xyz/)
+* [HibisciDai's blog](https://hibiscidai.com/)
+* [李牧羊](https://www.limuyang.cc/)
 
 If you are using `theme-melody` and want to be shown to others like above, please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
