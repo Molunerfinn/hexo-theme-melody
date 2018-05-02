@@ -3,7 +3,7 @@ extends includes/layout.pug
 block content
   if page.type === 'tags'
     .tag-cloud
-      .tag-cloud__title= page.title  
+      .tag-cloud__title= _p('page.tag')
         |  - 
         span.tag-cloud__amount= site.tags.length
       .tag-cloud-tags!= tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#A4D8FA', end_color: '#0790E8'})
@@ -12,7 +12,7 @@ block content
   else if page.type === 'categories'
     #post-content
       .category-lists
-        .category__title= page.title  
+        .category__title= _p('page.category')
           |  - 
           span.category__amount= site.categories.length
         div!= list_categories()
