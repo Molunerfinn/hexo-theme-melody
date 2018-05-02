@@ -17,9 +17,9 @@ copy:
   noSupport: 浏览器不支持
 
 page:
-  Articles: 文章总览
-  Tag: 标签
-  Category: 分类
+  articles: 文章总览
+  tag: 标签
+  category: 分类
 
 no_title: 无题
 read_more: 阅读更多
