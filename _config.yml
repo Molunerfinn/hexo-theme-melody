@@ -19,7 +19,7 @@ favicon: /favicon.ico
 # ---------------
 pwa:
   enable: false
-  manifest: 
+  manifest:
 
 
 # Highlight theme
@@ -63,7 +63,7 @@ fireworks: false
 
 # Analysis
 # ---------------
-baidu_analytics: 
+baidu_analytics:
 
 google_analytics:
 
@@ -93,17 +93,17 @@ cdn:
     anime: /js/third-party/anime.min.js
     jquery: /js/third-party/jquery.min.js
     fancybox: /js/third-party/jquery.fancybox.min.js
-    velocity: /js/third-party/velocity.min.js 
-    velocity-ui: /js/third-party/velocity.ui.min.js 
+    velocity: /js/third-party/velocity.min.js
+    velocity-ui: /js/third-party/velocity.ui.min.js
 
 # Post info settings
 # ---------------
-avatar: 
+avatar:
 
-top_img: true # false or url of img 
+top_img: true # false or url of img
 
 post_meta:
-  date_type: created # created or updated 
+  date_type: created # created or updated
   categories: true
   tags: true
 
@@ -112,6 +112,11 @@ wordcount:
 
 toc:
   enable: true
+
+heart:
+  enable: true
+  href: https://github.com/Molunerfinn/hexo-theme-melody
+  text: 感谢对melody的支持，若喜欢请star ^_^
 
 post_copyright:
   enable: true
@@ -145,24 +150,24 @@ slide:
 
 # adv:
   # enable: false
-  # info: 
+  # info:
 
 # Share System
 # ---------------
 addThis:
   enable: false
-  #pubid: 
+  #pubid:
 
 # sharejs:
   # enable: false
-  # disabled_sites: 
+  # disabled_sites:
 
 # Comments System
 # ---------------
 disqus:
-  enable: false 
-  #shortname: 
-  #count: 
+  enable: false
+  #shortname:
+  #count:
 
 # laibili:
   # enable: false
@@ -170,15 +175,15 @@ disqus:
 
 # gitment
   # enable: false
-  # owner: 
-  # repo: 
-  # client_id: 
-  # client_secret: 
+  # owner:
+  # repo:
+  # client_id:
+  # client_secret:
 
 # gitalk:
 #   enable: false
-#   client_id: 
-#   client_secret: 
+#   client_id:
+#   client_secret:
 #   repo:
 #   owner:
 #   admin:
@@ -202,7 +207,7 @@ since: 2013
 
 ICP:
   enable: false
-  #text: 
+  #text:
 
 # busuanzi count for PV / UV in site
 busuanzi:
