@@ -23,7 +23,7 @@ See demo:
 * [flytreeleft's Blog](https://flytreeleft.org/)
 * [StaunchKai](http://staunchkai.com/)
 * [Crystalwindz's Blog](http://crystalwindz.com/)
-* [霪霖笙箫的博客](https://fridolph.github.io/)
+* [霪霖笙箫的博客](http://blog.fridolph.wang/)
 * [upupming 的博客](https://upupming.site/)
 * [徒然の博客](http://techotaku.me/)
 * [清白之年](https://www.wangfan.site/)
