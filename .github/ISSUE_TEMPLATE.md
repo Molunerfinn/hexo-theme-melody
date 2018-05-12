@@ -1,7 +1,10 @@
 <!--
 IMPORTANT: Please follow the template to create a new issue.
-Or it will be closed.
-重要：请依照该模板来提交，否则将会被关闭。请尽可能用英文来提问，因为并不是所有使用者都能看得懂中文。你的提问也会帮助到其他人~
+IMPORTANT: Do not ask questions like how to modify the theme or how to change the theme.I can't help you and you need to learn CSS & HTML & JS by yourself.
+Or it will be closed!!
+重要：请依照该模板来提交，请尽可能用英文来提问，因为并不是所有使用者都能看得懂中文。你的提问也会帮助到其他人~
+重要：请不要提问类似于如何修改主题，如何改变主题等相关问题。我没有时间帮助你，你需要自己学习CSS&HTML&JS的相关知识。
+ISSUE是用来提交bug或提出新的feature的。否则将会被关闭！！
 -->
 
 ## I want to create a new issue <!-- 我想要创建一个新的issue --> 
