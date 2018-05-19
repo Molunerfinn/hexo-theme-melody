@@ -1,5 +1,5 @@
 each article in page.posts.data
-  .recent-post-item
+  .recent-post-item.article-container
     - var link = article.link || article.path
       a.article-title(href=url_for(link))= article.title || _p('no_title')
     if (theme.post_meta.date_type)
@@ -39,4 +39,3 @@ each article in page.posts.data
     else
       .content!= article.content
     hr
-

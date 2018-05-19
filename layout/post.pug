@@ -65,7 +65,7 @@ block content
             span.word-count= wordcount(page.content)
             span.post-meta__separator |
             span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
-    #post-content!= page.content
+    #post-content.article-container!= page.content
   if (theme.post_copyright && theme.post_copyright.enable)
     .post-copyright
       .post-copyright__author
