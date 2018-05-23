@@ -255,7 +255,8 @@ img
 .fa-clipboard
   position: fixed
   right: 10px
-  margin-top: 10px
+  z-index: 1
+  margin-top: -1rem
   color: $highlight-aqua
   cursor: pointer
   transition: color 0.2s
@@ -265,9 +266,10 @@ img
 
 .copy-notice
   position: absolute
-  top: 6px
+  top: 4px
   right: 0
-  background: $highlight-background
+  z-index: 1
+  background: darken($highlight-background, 5)
   color: $highlight-aqua
   opacity: 0
 
@@ -341,7 +343,7 @@ img
 
   #top-container
     background-attachment: local
-    
+
     #post-title
       font-size: 1.1rem
 
