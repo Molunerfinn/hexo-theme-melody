@@ -23,12 +23,12 @@ html(lang=config.language)
     title= pageTitle
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
     if !page.iframe
-      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css")
       - var slide = page.slide || theme.slide
       - var defaultSlide = theme.slide
       - var slideTheme = slide.theme || defaultSlide.theme
-      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/" + slideTheme + ".min.css")
-      link(rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/lib/css/zenburn.min.css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/" + slideTheme + ".css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/css/zenburn.min.css")
     else
       style.
         body {
