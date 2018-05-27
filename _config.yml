@@ -200,6 +200,8 @@ disqus:
 # ---------------
 since: 2013
 
+# footer_custom_text:
+
 ICP:
   enable: false
   #text: 
