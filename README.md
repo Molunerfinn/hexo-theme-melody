@@ -31,6 +31,7 @@ See demo:
 * [HibisciDai's blog](https://hibiscidai.com/)
 * [李牧羊](https://www.limuyang.cc/)
 * [「Zeech」](http://zcheng.ren/)
+* [DoubleFJ の Blog](http://putop.top)
 
 If you are using `theme-melody` and want to be shown to others like above, please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
