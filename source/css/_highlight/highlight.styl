@@ -58,7 +58,17 @@ blockquote
 
   .highlight
     @extend $code-block
+    position: relative
     border-radius: 1px
+
+    &:after
+      position: absolute
+      top: 0
+      z-index: 0
+      min-width: 100%
+      height: 1.4rem
+      background: darken($highlight-background, 5)
+      content: ""
 
     pre
       margin: 0
@@ -73,7 +83,6 @@ blockquote
     table
       position: relative
       margin: 0
-      min-width: 100%
       width: auto
       border: none
 
