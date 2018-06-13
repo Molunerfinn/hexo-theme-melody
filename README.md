@@ -33,6 +33,7 @@ See demo:
 * [「Zeech」](http://zcheng.ren/)
 * [DoubleFJ の Blog](http://putop.top)
 * [种地的小豆豆](http://www.lslqm.com)
+* [Athrun's Blog](https://www.athrun.org/)
 
 If you are using `theme-melody` and want to be shown to others like above, please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
