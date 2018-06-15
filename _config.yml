@@ -26,6 +26,8 @@ pwa:
 # ---------------
 highlight_theme: default
 
+# code_word_wrap: true or false
+
 # Nav settings
 # ---------------
 #social:
