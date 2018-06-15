@@ -25,6 +25,9 @@ $code-block
   color: $highlight-foreground
   font-size: $code-font-size
   line-height: $line-height-code-block
+  // word wrap for code
+  white-space: pre-wrap;
+  counter-reset: line;
 
 figure.highlight
   position: relative
@@ -79,6 +82,15 @@ blockquote
       &::selection
         background: $highlight-selection
         color: $highlight-foreground
+      
+      &:before
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        padding: 0 .5em;
+        width: 1em;
+        margin-right: .5em;
+        color: #888
 
     table
       position: relative
