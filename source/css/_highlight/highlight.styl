@@ -2,7 +2,8 @@
 @require "theme"
 @require "diff"
 
-languages = "js" "javascript" "python" "ruby" "xml" "html" "css" "perl" "sql" "coffeescript" "java" "scala" "kotlin" "c" "c++" "go" "less" "sass" "scss" "stylus" "styl" "typescript" "ts"
+languages = "js" "javascript" "python" "ruby" "xml" "html" "css" "perl" "sql" "coffeescript" "java" "scala" "kotlin" "c" "c++" "go" "less" "sass" "scss" "stylus" "styl" "typescript" "ts" "bash"
+wordWrap = !hexo-config("rootConfig.highlight.line_number") && hexo-config("code_word_wrap")
 
 loopForLanguages()
   for lang in languages
@@ -25,6 +26,10 @@ $code-block
   color: $highlight-foreground
   font-size: $code-font-size
   line-height: $line-height-code-block
+
+  if wordWrap
+    counter-reset: line
+    white-space: pre-wrap
 
 figure.highlight
   position: relative
@@ -79,6 +84,16 @@ blockquote
       &::selection
         background: $highlight-selection
         color: $highlight-foreground
+
+      if wordWrap
+        &:before
+          display: inline-block
+          padding: 0 0.3rem 0 0
+          min-width: 1.6rem
+          color: $highlight-gutter.color
+          content: counter(line)
+          counter-increment: line
+          text-align: left
 
     table
       position: relative
