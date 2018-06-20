@@ -1,5 +1,7 @@
 $(function () {
   $('a.social-icon.search').on('click', function () {
+    $('body').css('width', '100%')
+    $('body').css('overflow', 'hidden')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandIn', {
         duration: 300,
@@ -11,9 +13,9 @@ $(function () {
       .velocity('transition.fadeIn', {
         duration: 300
       })
-    // $('.ais-search-box--input').attr('autofocus', 'autofocus')
   })
   $('.search-mask, .search-close-button').on('click', function () {
+    $('body').css('overflow', 'auto')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandOut', {
         duration: 300
