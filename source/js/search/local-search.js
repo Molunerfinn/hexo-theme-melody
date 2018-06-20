@@ -2,8 +2,7 @@ $(function () {
   var loadFlag = false
   $('a.social-icon.search').on('click', function () {
     $('body').css('width', '100%')
-    $('body').css('overflow-y', 'scroll')
-    $('body').css('position', 'fixed')
+    $('body').css('overflow', 'hidden')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandIn', {
         duration: 300,
@@ -21,7 +20,7 @@ $(function () {
     }
   })
   $('.search-mask, .search-close-button').on('click', function () {
-    $('body').css('position', 'absolute')
+    $('body').css('overflow', 'auto')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandOut', {
         duration: 300

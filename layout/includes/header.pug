@@ -3,5 +3,9 @@
     a#site-name(href=url_for('/')) #[=config.title]
   i.fa.fa-bars.toggle-menu.pull-right(aria-hidden="true")
   span.pull-right.menus
+    if (theme.algolia_search.enable || theme.local_search && theme.local_search.enable)
+      a.site-page.social-icon.search
+        i.fa.fa-search
+        span=' '+_p('search')
     each url, label in theme.menu
       a.site-page(href=url)= label
