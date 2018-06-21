@@ -14,7 +14,10 @@ if (theme.gitment && theme.gitment.enable)
 
 if (theme.gitalk && theme.gitalk.enable)
   link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css")
-  script(src="/js/comment/gitalk.min.js")
+  if(theme.gitalk.js)
+    script(src=theme.gitalk.js)
+  else
+    script(src="https://cdn.jsdelivr.net/gh/upupming/gitalk@76e5bb4670abe1e706a8163a44b6dba4210a24a8/dist/gitalk.min.js")
   script(src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js")
 
 if (theme.pwa && theme.pwa.enable)
