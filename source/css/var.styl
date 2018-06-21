@@ -3,8 +3,19 @@ $theme-color = #49B1F5
 $theme-paginator-color = #00c4b6
 $theme-button-hover-color = #FF7242
 $theme-text-selection-color = #00c4b6
-$theme-link-color = #858585
+$theme-meta-color = #858585
+$theme-link-color = #99a9bf
 $theme-hr-color = #A4D8FA
+
+if hexo-config("theme_color") && hexo-config("theme_color.enable")
+  $theme-color = convert(hexo-config("theme_color.main")) || #49B1F5
+  $theme-paginator-color = convert(hexo-config("theme_color.paginator")) || #00c4b6
+  $theme-button-hover-color = convert(hexo-config("theme_color.button_hover")) || #FF7242
+  $theme-text-selection-color = convert(hexo-config("theme_color.text_selection")) || #00c4b6
+  $theme-link-color = convert(hexo-config("theme_color.link_color")) || #99a9bf
+  $theme-meta-color = convert(hexo-config("theme_color.meta_color")) || #858585
+  $theme-hr-color = convert(hexo-config("theme_color.hr_color")) || #A4D8FA
+
 // Global Variables
 $font-size = 14px
 $font-color = #1F2D3D
@@ -44,7 +55,7 @@ $black = #2E2E2E
 $dark-black = #000000
 $pale-grey = #F7F7F7
 $light-grey = #EEEEEE
-$grey = $theme-link-color
+$grey = $theme-meta-color
 $white = #FFFFFF
 $dark-white = #F9F9F9
 $font-black = #4C4948
@@ -63,7 +74,7 @@ $content-width = 700px
 $iframe-height = (700 / 16 * 9)px
 $content-large-width = 900px
 $iframe-large-height = (900 / 16 * 9)px
-$a-link-color = #99a9bf
+$a-link-color = $theme-link-color
 $a-hover-color = #82AAFF
 $img-border-color = #eaeefb
 $img-border-padding = 4px

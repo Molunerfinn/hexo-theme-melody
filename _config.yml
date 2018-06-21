@@ -1,3 +1,15 @@
+# Theme color for customize
+# Notice: color value must in double quotes like "#000" or may cause error!
+# ---------------
+# theme_color:
+#   enable: true
+#   main: "#49B1F5"
+#   paginator: "#00C4B6"
+#   button_hover: "#FF7242"
+#   text_selection: "#00C4B6"
+#   link_color: "#858585"
+#   hr_color: "#A4D8FA"
+
 # Main menu navigation
 # ---------------
 menu:
@@ -18,13 +30,13 @@ favicon: /my-favicon.ico
 pwa:
   enable: false
   manifest: /manifest.json
-  # If you  don't want to trouble, just ignore the following and delete them
-  # See https://realfavicongenerator.net/ 
-  theme_color: "#1B9EF3"
-  apple_touch_icon: /apple-touch-icon.png
-  favicon_32_32: /favicon-32x32.png
-  favicon_16_16: /favicon-16x16.png
-  mask_icon: /safari-pinned-tab.svg
+  # If you don't want to trouble, just ignore the following things
+  # See https://realfavicongenerator.net/
+  # theme_color: "#1B9EF3"
+  # apple_touch_icon: /apple-touch-icon.png
+  # favicon_32_32: /favicon-32x32.png
+  # favicon_16_16: /favicon-16x16.png
+  # mask_icon: /safari-pinned-tab.svg
 
 
 # Highlight theme
@@ -47,11 +59,13 @@ algolia_search:
 
 
 # Local search
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=local-search
 # ---------------
 local_search:
   enable: false
 
 # MathJax
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=mathjax
 # ---------------
 mathjax:
   enable: false
@@ -108,6 +122,7 @@ post_meta:
   categories: true
   tags: true
 
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/additional-package-support?id=word-counting
 wordcount:
   enable: false
 
@@ -120,6 +135,7 @@ post_copyright:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/theme-config?id=auto-excerpt
 # auto_excerpt:
 #   enable: false
 #   length: 150
@@ -232,7 +248,7 @@ busuanzi:
 #links:
   #Name: url
 
-# Follow Me
+# Follow Me Button
 # follow:
 #   enable: true
 #   url: ''
