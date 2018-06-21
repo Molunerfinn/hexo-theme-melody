@@ -200,6 +200,9 @@ disqus:
 #   repo:
 #   owner:
 #   admin:
+####   Using this js for redirect to gitalk container after login
+####   See https://github.com/gitalk/gitalk/issues/125
+#   js: https://cdn.jsdelivr.net/gh/upupming/gitalk@76e5bb4670abe1e706a8163a44b6dba4210a24a8/dist/gitalk.min.js
 
 # valine comment system. https://valine.js.org
 # valine:
