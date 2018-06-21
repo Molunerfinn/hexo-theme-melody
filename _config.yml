@@ -8,14 +8,23 @@ menu:
   #XXX: /xxx
 
 # Favicon
+# use my-favicon.ico to avoid duplicate favicon of melody theme
 # ---------------
-favicon: /favicon.ico
+favicon: /my-favicon.ico
 
 # PWA
+# See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
   enable: false
-  manifest: 
+  manifest: /manifest.json
+  # If you  don't want to trouble, just ignore the following and delete them
+  # See https://realfavicongenerator.net/ 
+  theme_color: "#1B9EF3"
+  apple_touch_icon: /apple-touch-icon.png
+  favicon_32_32: /favicon-32x32.png
+  favicon_16_16: /favicon-16x16.png
+  mask_icon: /safari-pinned-tab.svg
 
 
 # Highlight theme
