@@ -27,7 +27,7 @@ html(lang=config.language)
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       each url in theme.stylesheets
-        link(rel='stylesheet', href=url_for(url))
+        link(rel='stylesheet', href=url_for(url) + '?version=' + version())
     each item in theme.cdn.css
       if item !== undefined
         link(rel='stylesheet', href=item + '?version=' + version())
