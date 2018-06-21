@@ -31,7 +31,7 @@ $(function () {
       })
   })
 
-  function search (path) {
+  function search(path) {
     $.ajax({
       url: '/' + path,
       dataType: 'xml',
@@ -85,7 +85,7 @@ $(function () {
             }
           })
           if (count === 0) {
-            str += '<div id="local-search__hits-empty">' + GLOBAL_CONFIG.localSearch.labels.hits_empty.replace(/\$\{query}/, this.value.trim()) +
+            str += '<div id="local-search__hits-empty">' + GLOBAL_CONFIG.local_search.hits_empty.replace(/\$\{query}/, this.value.trim()) +
               '</div>'
           }
           $resultContent.innerHTML = str

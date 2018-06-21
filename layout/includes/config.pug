@@ -1,5 +1,7 @@
 -
-  var algolia;
+  var algolia = 'undefined';
+  // search languages
+  var algolia_search = 'undefined';
   var env = process.env;
   if (theme.algolia_search.enable) {
     algolia = JSON.stringify({
@@ -9,15 +11,21 @@
       hits: theme.algolia_search.hits,
       labels: theme.algolia_search.labels
     })
-  } else {
-    algolia = 'undefined'
-  }
+    algolia_search = JSON.stringify({
+      input_placeholder: _p("algolia_search.input_placeholder"),
+      hits_empty: _p("algolia_search.hits_empty"),
+      hits_stats: _p("algolia_search.hits_stats")
+    })
+  } 
   var localSearch = 'undefined';
+  // search languages
+  var local_search = 'undefined';
   if (theme.local_search && theme.local_search.enable) {
-    localSearchPath = config.search.path
     localSearch = JSON.stringify({
-      labels: theme.local_search.labels,
       path: config.search.path
+    })
+    local_search = JSON.stringify({
+      hits_empty: _p("local_search.hits_empty")
     })
   }
 script.
@@ -29,5 +37,8 @@ script.
       error: '!{_p("copy.error")}',
       noSupport: '!{_p("copy.noSupport")}'
     },
+    // search languages
+    algolia_search: !{algolia_search},
+    local_search: !{local_search},
     localSearch: !{localSearch}
   } 

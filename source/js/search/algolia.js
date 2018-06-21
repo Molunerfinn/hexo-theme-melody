@@ -53,7 +53,7 @@ $(function () {
       container: '#algolia-search-input',
       reset: false,
       magnifier: false,
-      placeholder: algolia.labels.input_placeholder
+      placeholder: GLOBAL_CONFIG.algolia_search.input_placeholder
     })
   )
   search.addWidget(
@@ -71,7 +71,7 @@ $(function () {
         empty: function (data) {
           return (
             '<div id="algolia-hits-empty">' +
-            algolia.labels.hits_empty.replace(/\$\{query}/, data.query) +
+            GLOBAL_CONFIG.algolia_search.hits_empty.replace(/\$\{query}/, data.query) +
             '</div>'
           )
         }
@@ -87,7 +87,7 @@ $(function () {
       container: '#algolia-stats',
       templates: {
         body: function (data) {
-          var stats = algolia.labels.hits_stats
+          var stats = GLOBAL_CONFIG.algolia_search.hits_stats
             .replace(/\$\{hits}/, data.nbHits)
             .replace(/\$\{time}/, data.processingTimeMS)
           return (

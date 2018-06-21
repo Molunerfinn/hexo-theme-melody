@@ -1,15 +1,20 @@
 #local-search.search-dialog
-  #local-search-title.search-dialog__title Local Search
+  #local-search-title.search-dialog__title=_p("local_search.label")
   #local-input-panel
     #local-search-input
       .local-search-box
-        input(placeholder=theme.local_search.labels.input_placeholder).local-search-box--input
+        input(placeholder=_p("local_search.input_placeholder")).local-search-box--input
   hr
   #local-search-results
     #local-hits
     #local-stats
       hr.local-search-stats__hr
-      | Powered by #[span(style="color: #49B1F5")= 'hexo-generator-search']
+      case config.language
+        when "zh-Hans"
+          #span(style="color: #49B1F5")= 'hexo-generator-search ' + _p("local_search.powered_by")
+        when "en"
+        default
+          #span(style="color: #49B1F5")= _p("local_search.powered_by") + ' hexo-generator-search'
   span.search-close-button
     i.fa.fa-times
 .search-mask
