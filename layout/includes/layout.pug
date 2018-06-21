@@ -58,3 +58,4 @@ html(lang=config.language)
       each url in theme.scripts
         script(src=url_for(url) + '?version=' + version())
     include ./additional-js.pug
+    include ./search/index.pug
