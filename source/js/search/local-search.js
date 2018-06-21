@@ -18,8 +18,17 @@ $(function () {
       search(GLOBAL_CONFIG.localSearch.path)
       loadFlag = true
     }
+
+    // shortcut: ESC
+    document.addEventListener('keydown', function f(event) {
+      if (event.code == "Escape") {
+        closeSearch();
+        document.removeEventListener('keydown', f);
+      }
+    })
   })
-  $('.search-mask, .search-close-button').on('click', function () {
+
+  var closeSearch = function () {
     $('body').css('overflow', 'auto')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandOut', {
@@ -29,7 +38,9 @@ $(function () {
       .velocity('transition.fadeOut', {
         duration: 300
       })
-  })
+  }
+  $('.search-mask, .search-close-button').on('click', closeSearch)
+
 
   function search(path) {
     $.ajax({
