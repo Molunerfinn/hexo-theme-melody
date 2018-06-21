@@ -1,5 +1,11 @@
 #sidebar
-  - var showToc = is_post() && theme.toc.enable
+  - const showToc = is_post() && theme.toc.enable
+  -
+    let tocNumber
+    if (page.toc_number !== undefined) tocNumber = page.toc_number
+    else if (theme.toc.number !== undefined) tocNumber = theme.toc.number
+    else tocNumber = true
+  -
   if(showToc)
     .toggle-sidebar-info.text-center
       span(data-toggle= _p('sidebar.toggle_article'))= _p('sidebar.toggle_site')
@@ -11,7 +17,7 @@
         span.progress-num 0
         span.progress-percentage %
         div.sidebar-toc__progress-bar
-      div.sidebar-toc__content!=toc(page.content)
+      div.sidebar-toc__content!=toc(page.content, {list_number: tocNumber})
   .author-info(class= showToc ? 'hide' : undefined)
     .author-info__avatar.text-center
       img(src=theme.avatar || url_for('/img/avatar.png'))
