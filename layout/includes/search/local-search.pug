@@ -8,13 +8,16 @@
   #local-search-results
     #local-hits
     #local-stats
-      hr.local-search-stats__hr
-      case config.language
-        when "zh-Hans"
-          #span(style="color: #49B1F5")= 'hexo-generator-search ' + _p("local_search.powered_by")
-        when "en"
-        default
-          #span(style="color: #49B1F5")= _p("local_search.powered_by") + ' hexo-generator-search'
+      #hr.local-search-stats__hr
+        case config.language
+          when "zh-Hans"
+            span=_p("local_search.by")
+            |  #[a(href="https://github.com/wzpan/hexo-generator-search" style={'color': '#49B1F5'}) hexo-generator-search]
+            |  #[span=_p("local_search.powered")]
+          when "en"
+          default
+            span=_p("local_search.powered_by")
+            |  #[a(href="https://github.com/wzpan/hexo-generator-search" style={'color': '#49B1F5'}) hexo-generator-search]
   span.search-close-button
     i.fa.fa-times
 .search-mask
