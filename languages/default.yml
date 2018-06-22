@@ -20,6 +20,7 @@ page:
   articles: Articles
   tag: Tag
   category: Category
+  archives: Archives
 
 no_title: No title
 read_more: Read more
