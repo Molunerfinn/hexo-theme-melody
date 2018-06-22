@@ -40,7 +40,11 @@ If you are using `theme-melody` and want to be shown to others like above, pleas
 
 # Documentation
 
-Documentation is [here](https://molunerfinn.com/hexo-theme-melody-doc/)
+Documentation is [here](https://molunerfinn.com/hexo-theme-melody-doc/). Now it supports `en` and `zh-Hans`.
+
+# Changelogs
+
+See [releases](https://github.com/Molunerfinn/hexo-theme-melody/releases).
 
 # Screenshots
 
