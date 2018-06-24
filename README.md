@@ -35,6 +35,7 @@ See demo:
 * [种地的小豆豆](http://www.lslqm.com)
 * [Athrun's Blog](https://www.athrun.org/)
 * [Ykk's blog](https://ykksmile.top/)
+* [Mrjoe的博客](https://mrjoe.cc/)
 
 If you are using `theme-melody` and want to be shown to others like above, please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
