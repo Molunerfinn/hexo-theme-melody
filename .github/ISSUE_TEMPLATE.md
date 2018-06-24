@@ -9,8 +9,9 @@ ISSUE是用来提交bug或提出新的feature的。否则将会被关闭！！
 
 ## I want to create a new issue <!-- 我想要创建一个新的issue --> 
 
-<!-- Check all with "x" (使用 "x" 选择) -->
-<!-- 请确认是否都已经翻阅过如下的资料 -->
+<!-- Check all with "x" especially FAQ & Documentation!! (使用 "x" 选择) -->
+<!-- 请确认是否都已经翻阅过如下的资料, 尤其是FAQ和文档！! -->
+- [] Yes, I have read [FAQ](https://github.com/Molunerfinn/hexo-theme-melody/blob/dev/FAQ.md).
 - [] Yes, I have read [Hexo Docs page](https://hexo.io/docs/), especially [Templates](https://hexo.io/docs/templates.html), [Variables](https://hexo.io/docs/variables.html), [Helpers](https://hexo.io/docs/helpers.html) and [Troubleshooting](https://hexo.io/docs/troubleshooting.html).
 - [] Yes, I have read [Hexo-theme-melody Documentation](https://molunerfinn.com/hexo-theme-melody-doc/).
 - [] And yes, I already searched for current [issues](https://github.com/Molunerfinn/hexo-theme-melody/issues?utf8=%E2%9C%93&q=is%3Aissue) and this is not help to me.
