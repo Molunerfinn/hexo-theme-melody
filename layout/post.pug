@@ -3,8 +3,9 @@ extends includes/layout.pug
 block top_img
   - var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img
   if (top_img && page.top_img !== false)
-    - var flag = top_img === true ? 'no-bg' : undefined
-    div#top-container(style=`background-image: url(${top_img})` class=flag)
+    - var bg_img = top_img !== true ? `background-image: url(${top_img})` : ''
+    - var flag = top_img === true ? 'no-bg' : ''
+    div#top-container(style=bg_img class=flag)
       include ./includes/header.pug
       #post-info
         #post-title= page.title || _p('no_title')
