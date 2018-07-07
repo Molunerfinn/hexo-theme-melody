@@ -1,12 +1,13 @@
 - var top_img = theme.top_img || config.top_img
-- var flag = top_img === true ? 'no-bg' : top_img
-nav#nav(style=`background-image: url(${top_img})` class=flag)
+- var bg_img = top_img && top_img !== true ? `background-image: url(${top_img})` : ''
+- var flag = top_img === true ? 'no-bg' : ''
+nav#nav(style=bg_img class=flag)
   include ./header.pug
   #site-info
     #site-title= config.title
     #site-sub-title= config.subtitle
     if(theme.social)
-      #site-social-icons 
+      #site-social-icons
         each url, icon in theme.social
           a.social-icon(href=url target="_blank")
             i.fa(class="fa-" + icon)
