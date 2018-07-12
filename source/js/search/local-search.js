@@ -20,10 +20,10 @@ $(function () {
     }
 
     // shortcut: ESC
-    document.addEventListener('keydown', function f(event) {
-      if (event.code == "Escape") {
-        closeSearch();
-        document.removeEventListener('keydown', f);
+    document.addEventListener('keydown', function f (event) {
+      if (event.code === 'Escape') {
+        closeSearch()
+        document.removeEventListener('keydown', f)
       }
     })
   })
@@ -41,10 +41,9 @@ $(function () {
   }
   $('.search-mask, .search-close-button').on('click', closeSearch)
 
-
-  function search(path) {
+  function search (path) {
     $.ajax({
-      url: '/' + path,
+      url: GLOBAL_CONFIG.root + path,
       dataType: 'xml',
       success: function (xmlResponse) {
         // get the contents from search data
