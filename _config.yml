@@ -82,6 +82,9 @@ baidu_analytics:
 
 google_analytics:
 
+# Tencent_analytics ID
+tencent_analytics: 
+
 # stylesheets loaded in the <head>
 # ---------------
 stylesheets:

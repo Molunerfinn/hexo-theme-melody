@@ -59,3 +59,12 @@ if theme.google_analytics
 
     ga('create', '!{theme.google_analytics}', 'auto');
     ga('send', 'pageview');
+if theme.tencent_analytics
+  link(rel="dns-prefetch" href="http://ta.qq.com")
+  script.
+   (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://tajs.qq.com/stats?sId=#{theme.tencent_analytics}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
