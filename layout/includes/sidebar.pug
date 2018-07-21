@@ -25,12 +25,12 @@
     .author-info__description.text-center= config.description
     if theme.follow && theme.follow.enable
       .follow-button
-        a(href=theme.follow.url target="_blank")= theme.follow.text || 'Follow Me'
+        a(href=theme.follow.url)= theme.follow.text || 'Follow Me'
     hr
     .author-info-articles
       if site.posts.length
         a(href=url_for(config.archive_dir)).author-info-articles__archives.article-meta
-          span.pull-left= _p('sidebar.articles') 
+          span.pull-left= _p('sidebar.articles')
           span.pull-right= site.posts.length
       if site.tags.length
         a(href=url_for(config.tag_dir)).author-info-articles__tags.article-meta
@@ -38,11 +38,11 @@
           span.pull-right= site.tags.length
       if site.categories.length
         a(href=url_for(config.category_dir)).author-info-articles__categories.article-meta
-          span.pull-left= _p('sidebar.categories') 
+          span.pull-left= _p('sidebar.categories')
           span.pull-right= site.categories.length
     if theme.links_title
       hr
       .author-info-links
         .author-info-links__title.text-center= theme.links_title
         each url, name in theme.links
-          a.author-info-links__name.text-center(href=url target="_blank")= name
+          a.author-info-links__name.text-center(href=url)= name
