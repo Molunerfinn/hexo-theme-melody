@@ -270,9 +270,9 @@ galleryItemStyle(w, h)
 .gallery
   &-item
     position: relative
-    float: left
+    display: inline-block
     overflow: hidden
-    margin: 0.5rem
+    margin: 0.4rem
     width: 6rem
     height: 6rem
     background-position: 50% 50%
@@ -308,7 +308,7 @@ galleryItemStyle(w, h)
     .article-meta.tags
       display: none
 
-  galleryItemStyle(calc(50% - 20px), 6)
+  galleryItemStyle(calc(50% - 22px), 6)
 
 @media screen and (min-width: $md)
   galleryItemStyle(8rem, 8)
