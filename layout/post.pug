@@ -67,7 +67,7 @@ block content
             span.post-meta__separator |
             span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
     #post-content.article-container!= page.content
-  if (theme.post_copyright && theme.post_copyright.enable)
+  if (theme.post_copyright && theme.post_copyright.enable && !page.copyright.disable)
     .post-copyright
       .post-copyright__author
         span.post-copyright-meta= _p('post.copyright.author') + ": "
