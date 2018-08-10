@@ -38,6 +38,13 @@ if (theme.pwa && theme.pwa.enable)
   if(theme.pwa.theme_color)
     link(rel="mask-icon" href=theme.pwa.mask_icon color=theme.pwa.theme_color)
 
+if (theme.google_adsense && theme.google_adsense.enable)
+  script(async src=theme.google_adsense.js)
+  script.
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: '!{theme.google_adsense.client}',
+      enable_page_level_ads: '!{theme.google_adsense.enable_page_level_ads}'
+    });
 
 if theme.baidu_analytics
   link(rel="dns-prefetch" href="https://hm.baidu.com")
