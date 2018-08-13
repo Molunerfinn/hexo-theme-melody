@@ -43,7 +43,7 @@ See demo:
 * [JerryC](http://jerryc.me/)
 * [Yorushika Shi](https://sh.yorushika.xyz/)
 
-If you are using `theme-melody` and want to be shown to others like above (It will be stopped when the demo sites' number up to 25), please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
+~~If you are using `theme-melody` and want to be shown to others like above (It will be stopped when the demo sites' number up to 25), please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!~~
 
 # Documentation
 
