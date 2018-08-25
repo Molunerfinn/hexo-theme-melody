@@ -6,10 +6,10 @@ $(function () {
   for (var i = 0; i < imgList.length; i++) {
     var $a = $(
       '<a href="' +
-        imgList[i].src +
-        '" data-fancybox="group" data-caption="' +
-        imgList[i].alt +
-        '" class="fancybox"></a>'
+      imgList[i].src +
+      '" data-fancybox="group" data-caption="' +
+      imgList[i].alt +
+      '" class="fancybox"></a>'
     )
     var alt = imgList[i].alt
     var $wrap = $(imgList[i]).wrap($a)
@@ -21,7 +21,15 @@ $(function () {
   $().fancybox({
     selector: '[data-fancybox]',
     loop: true,
-    transitionEffect: 'slide'
+    transitionEffect: 'slide',
+    buttons: [
+      "share",
+      "slideShow",
+      "fullScreen",
+      "download",
+      "thumbs",
+      "close"
+    ],
   })
 
   var galleryItem = $('.gallery-item')
