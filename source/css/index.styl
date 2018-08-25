@@ -1,6 +1,9 @@
 @import "nib"
 // third-party
-@import "_third-party/jquery.fancybox.min.css"
+if hexo-config("cdn.js.fancybox") == "https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"
+  @import url("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css")
+else 
+  @import "_third-party/jquery.fancybox.min.css"
 @import "_third-party/normalize.min.css"
 // project
 @import "var"
