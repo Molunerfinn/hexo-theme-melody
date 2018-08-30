@@ -2,6 +2,11 @@ each article in page.posts.data
   .recent-post-item.article-container
     - var link = article.link || article.path
       a.article-title(href=url_for(link))= article.title || _p('no_title')
+    if (article.top)
+      span.article-meta
+        i.fa.fa-thumb-tack.article-meta__icon.sticky
+        span.sticky= _p('sticky')
+        span.article-meta__separator(style="margin-right: 0.3rem") |
     if (theme.post_meta.date_type)
       - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date'
       time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)]
