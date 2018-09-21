@@ -10,7 +10,7 @@ nav#nav(style=bg_img class=flag)
       #site-social-icons
         each url, icon in theme.social
           a.social-icon(href=url)
-            i.fa(class="fa-" + icon)
+            i(class="fa-" + icon)
         if (theme.algolia_search.enable || theme.local_search && theme.local_search.enable)
           a.social-icon.search
             i.fa.fa-search

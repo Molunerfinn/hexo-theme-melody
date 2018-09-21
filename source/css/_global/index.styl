@@ -92,18 +92,19 @@ hr
 
 // collapse/expand beautify
 details
-  border: 2px solid darken($light-grey, 10%)
   padding: 0.3rem
+  border: 2px solid darken($light-grey, 10%)
+
   summary
     color: $theme-color
 
 // set <caption> of <figure> to center-align
 // use class="not-code" to avoid conflicts because code also use <figure> tag
 .not-code
-  text-align: center
   margin: 0.5em
   padding: 0.5em
   border: thin silver solid
+  text-align: center
 
 table
   overflow: auto
@@ -126,6 +127,12 @@ table
 
 .text-center
   text-align: center
+
+.pull-left
+  float: left
+
+.pull-right
+  float: right
 
 @media screen and (max-width: $bg)
   i#toggle-sidebar,
