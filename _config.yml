@@ -20,9 +20,8 @@ menu:
   #XXX: /xxx
 
 # Favicon
-# use my-favicon.ico to avoid duplicate favicon of melody theme
 # ---------------
-favicon: /my-favicon.ico
+favicon: /melody-favicon.ico
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
