@@ -21,7 +21,7 @@ html(lang=config.language)
     meta(name="author" content=pageAuthor)
     meta(name="copyright" content=pageCopyright)
     title= pageTitle
-    !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
+    !=favicon_tag(config.favicon || theme.favicon || '/melody-favicon.ico')
     if !page.iframe
       link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css")
       - var slide = page.slide || theme.slide
