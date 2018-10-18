@@ -73,6 +73,12 @@ mathjax:
   enable: false
   cdn: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
+# KaTeX
+# ---------------
+katex:
+  enable: false
+  cdn:
+    css: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
 
 # Toggle fireworks (IE >= 10)
 # ---------------
