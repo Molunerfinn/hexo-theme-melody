@@ -3,6 +3,9 @@ if (theme.algolia_search.enable)
 if (theme.mathjax && theme.mathjax.enable)
   if(!is_tag() && !is_category() && !is_archive())
     include ./third-party/mathjax.pug
+if (theme.katex && theme.katex.enable)
+  if(!is_tag() && !is_category() && !is_archive())
+    include ./third-party/katex.pug
 if (theme.local_search && theme.local_search.enable)
   script(src=url_for('/js/search/local-search.js'))
   
