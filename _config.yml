@@ -1,7 +1,7 @@
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
-? theme_color
+# theme_color:
 #   enable: true
 #   main: "#49B1F5"
 #   paginator: "#00C4B6"
