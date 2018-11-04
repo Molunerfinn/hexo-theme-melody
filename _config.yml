@@ -25,7 +25,8 @@ menu:
 # ---------------
 favicon: /melody-favicon.ico
 
-SpaStyleArchive: true
+# SPA style archive page
+SpaStyleArchive: false
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline

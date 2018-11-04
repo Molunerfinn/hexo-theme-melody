@@ -6,12 +6,6 @@ block content
     - var global = stringify(site.tags)
     script var global = !{JSON.stringify(global)}
     #tags_cloud
-    script(src="/js/third-party/jquery.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min.js")
-    script(src="/js/archive.js")
   else
     include ./includes/mixins/article-sort.pug
     #archive

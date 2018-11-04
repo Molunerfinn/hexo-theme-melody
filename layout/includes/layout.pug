@@ -57,5 +57,9 @@ html(lang=config.language)
       //- scripts list from config.yml
       each url in theme.scripts
         script(src=url_for(url) + '?version=' + version())
+    if theme.SpaStyleArchive
+        script(src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/vue-router@3.0.1/dist/vue-router.min.js")
+        script(src="/js/archive.js")
     include ./additional-js.pug
     include ./search/index.pug
