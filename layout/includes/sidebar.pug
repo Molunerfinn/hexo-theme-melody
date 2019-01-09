@@ -46,3 +46,19 @@
         .author-info-links__title.text-center= theme.links_title
         each url, name in theme.links
           a.author-info-links__name.text-center(href=url)= name
+
+    - var showHeart = theme.heart.enable
+      if (showHeart)
+        .unit
+        .heart
+        .heart-piece-0
+        .heart-piece-1
+        .heart-piece-2
+        .heart-piece-3
+        .heart-piece-4
+        .heart-piece-5
+        .heart-piece-6
+        .heart-piece-7
+        .heart-piece-8
+      p.anime-title
+        a(href=theme.heart.href target="_blank")= theme.heart.text || '感谢您对melody的支持，欢迎star'
