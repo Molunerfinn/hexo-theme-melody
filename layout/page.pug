@@ -6,7 +6,9 @@ block content
       .tag-cloud__title= _p('page.tag')
         |  - 
         span.tag-cloud__amount= site.tags.length
-      .tag-cloud-tags!= tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#A4D8FA', end_color: '#0790E8'})
+      - var start_color = theme.theme_color ? (theme.theme_color.tag_start_color || '#A4D8FA'): '#A4D8FA'
+      - var end_color = theme.theme_color ? (theme.theme_color.tag_end_color || '#1B9EF3') : '#1B9EF3'
+      .tag-cloud-tags!= tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color, end_color})
     if page.comments !== false
       include includes/comments/index.pug
   else if page.type === 'categories'

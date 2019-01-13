@@ -159,9 +159,6 @@ headStyle(fontsize)
   h6
     headStyle(0.6)
 
-#post-content
-  margin-bottom: 1rem
-
   ol,
   ul
     margin-top: 0.4rem
@@ -195,7 +192,7 @@ headStyle(fontsize)
         transition: all 0.3s ease-out
 
   ol
-    li
+    > li
       &:before
         margin-top: 0.2rem
         width: w = 1.2rem
@@ -208,7 +205,7 @@ headStyle(fontsize)
         line-height: h
 
   ul
-    li
+    > li
       &:hover
         &:before
           border-color: $ruby
@@ -224,6 +221,9 @@ headStyle(fontsize)
         background: $white
         content: ""
         line-height: h
+
+#post-content
+  margin-bottom: 1rem
 
 a
   color: $a-link-color
