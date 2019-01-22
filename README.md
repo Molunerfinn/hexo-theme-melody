@@ -74,7 +74,7 @@ git clone -b master https://github.com/Molunerfinn/hexo-theme-melody themes/melo
 If you don't have jade & stylus renderer, follow this:
 
 ```bash
-npm install hexo-renderer-jade hexo-renderer-stylus
+npm install hexo-renderer-pug hexo-renderer-stylus
 ```
 
 # Configuration
