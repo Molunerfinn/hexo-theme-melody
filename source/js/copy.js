@@ -40,7 +40,7 @@ $(function () {
   $('.highlight .fa-clipboard').on('click', function () {
     var selection = window.getSelection()
     var range = document.createRange()
-    range.selectNodeContents($(this).next('table').find('.code pre')[0])
+    range.selectNodeContents($(this).siblings('table').find('.code pre')[0])
     selection.removeAllRanges()
     selection.addRange(range)
     var text = selection.toString()

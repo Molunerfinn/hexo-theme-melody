@@ -129,10 +129,22 @@ blockquote
 
     figcaption
       clearfix()
+      position: absolute
+      z-index: 1
       margin-bottom: 1em
+      padding: 0.2em 0 0.2em 0.7rem
+      width: 100%
+      height: 1.4em
       color: $highlight-foreground
       font-size: 1em
       line-height: 1em
+
+      span
+        display: block
+        overflow: hidden
+        width: 100%
+        text-overflow: ellipsis
+        white-space: nowrap
 
       a
         float: right
@@ -140,6 +152,15 @@ blockquote
 
         &:hover
           border-bottom-color: $highlight-foreground
+
+      &+table
+        margin-top: 1em
+
+        &:before
+          margin-top: -2.1rem
+
+        &:after
+          top: -2.1rem
 
     .gutter pre
       padding-right: 0.5rem
