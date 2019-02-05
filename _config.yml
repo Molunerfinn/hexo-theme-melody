@@ -1,3 +1,4 @@
+--- # ---------------
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
@@ -13,7 +14,6 @@
 #   tag_end_color: "#1B9EF3"
 
 # Main menu navigation
-# ---------------
 menu:
   Home: /
   Archives: /archives
@@ -86,18 +86,17 @@ fireworks: false
 
 # Analysis
 # ---------------
-? baidu_analytics
+baidu_analytics:
 
-? google_analytics
+google_analytics:
 
 # Tencent_analytics ID
-? tencent_analytics
+tencent_analytics:
 
 # stylesheets loaded in the <head>
 # ---------------
 stylesheets:
   - /css/index.css
-
   # scripts loaded in the end of the body
   # ---------------
 scripts:
@@ -125,7 +124,7 @@ cdn:
 
 # Post info settings
 # ---------------
-? avatar
+avatar:
 
 top_img: true # false or url of img
 
@@ -163,8 +162,8 @@ slide:
   mouseWheel: false
   transition: slide
   transitionSpeed: default
-  parallaxBackgroundImage: ""
-  parallaxBackgroundSize: ""
+  parallaxBackgroundImage: ''
+  parallaxBackgroundSize: ''
   parallaxBackgroundHorizontal: null
   parallaxBackgroundVertical: null
 
@@ -212,9 +211,6 @@ disqus:
 #   repo:
 #   owner:
 #   admin:
-####   Using this js for redirect to gitalk container after login
-####   See https://github.com/gitalk/gitalk/issues/125
-#   js: https://cdn.jsdelivr.net/gh/upupming/gitalk@36368e5dffd049e956cdbbd751ff96c28d8255cf/dist/gitalk.min.js
 
 # valine comment system. https://valine.js.org
 # valine:
@@ -246,15 +242,15 @@ busuanzi:
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
-  ? site_uv_footer
+  site_uv_footer:
   # custom pv span for the whole site
   site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
-  ? site_pv_footer
+  site_pv_footer:
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
-  ? page_pv_footer
+  page_pv_footer:
 
 # Sidebar Settings
 # ---------------
