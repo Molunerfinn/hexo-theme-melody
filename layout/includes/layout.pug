@@ -47,8 +47,8 @@ html(lang=config.language)
           div!= body
         else
           block content
-    - var footer_img = page.footer_img || theme.post_meta.footer_img || theme.footer_img || config.footer_img || true
-    - var bg_img = footer_img !== true ? `background-image: url(${footer_img})` : ''
+    - var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img || true
+    - var bg_img = top_img !== true ? `background-image: url(${top_img})` : ''
     - var footer_bg_class= bg_img ? 'footer-bg' : ''
     footer(style=bg_img class=footer_bg_class)
       include ./footer.pug
