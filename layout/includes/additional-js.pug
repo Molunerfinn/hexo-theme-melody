@@ -8,4 +8,8 @@ if (theme.katex && theme.katex.enable)
     include ./third-party/katex.pug
 if (theme.local_search && theme.local_search.enable)
   script(src=url_for('/js/search/local-search.js'))
-  
+script.
+  if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    $('#nav').addClass('is-mobile')
+    $('footer').addClass('is-mobile')
+  }
