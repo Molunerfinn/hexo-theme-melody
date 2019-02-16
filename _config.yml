@@ -128,6 +128,8 @@ avatar:
 
 top_img: true # false or url of img
 
+footer_img: true # false or url of img
+
 post_meta:
   date_type: created # created or updated
   categories: true
