@@ -7,13 +7,13 @@ if theme.algolia_search.enable
   link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css")
   script(src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer)
 
-else if (theme.gitment && theme.gitment.enable)
+if (theme.gitment && theme.gitment.enable)
   link(rel="dns-prefetch" href="https://unpkg.com")
   link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitment/style/default.min.css")
   script(src="https://cdn.jsdelivr.net/npm/gitment/dist/gitment.browser.min.js")
   script(src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js")
 
-else if (theme.gitalk && theme.gitalk.enable)
+if (theme.gitalk && theme.gitalk.enable)
   link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css")
   if(theme.gitalk.js)
     script(src=theme.gitalk.js)
