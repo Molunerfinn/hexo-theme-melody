@@ -256,11 +256,14 @@ img
   &:hover
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
 
+.code-area-wrap
+  position: relative
+
 .fa-clipboard
-  position: fixed
+  position: absolute
+  top: 0.4rem
   right: 10px
   z-index: 1
-  margin-top: -1rem
   color: $highlight-aqua
   cursor: pointer
   transition: color 0.2s
@@ -270,7 +273,7 @@ img
 
 .copy-notice
   position: absolute
-  top: 4px
+  top: 0
   right: 0
   z-index: 1
   background: darken($highlight-background, 5)
