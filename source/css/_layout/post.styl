@@ -378,5 +378,7 @@ img
 
 .katex-html
   overflow: auto
-  &::-webkit-scrollbar 
-    display: none
+
+  if hexo-config("katex") && hexo-config("katex.hide_scrollbar")
+    &::-webkit-scrollbar
+      display: none
