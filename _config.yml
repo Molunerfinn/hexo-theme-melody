@@ -79,6 +79,7 @@ katex:
   enable: false
   cdn:
     css: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
+  hide_scrollbar: true
 
 # Toggle fireworks (IE >= 10)
 # ---------------
