@@ -375,3 +375,9 @@ img
       iframe
         width: $content-large-width
         height: $iframe-large-height
+
+.katex-wrap
+  overflow: auto
+  if hexo-config("katex") && hexo-config("katex.hide_scrollbar")
+    &::-webkit-scrollbar
+      display: none
