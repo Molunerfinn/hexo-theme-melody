@@ -21,7 +21,7 @@ See demo:
 - [Elody's Blog](https://elody-07.github.io)
 - [zouyaoji's Blog](https://zouyaoji.top/)
 - [flytreeleft's Blog](https://flytreeleft.org/)
-- [Crystalwindz's Blog](http://crystalwindz.com/)
+- [Crystalwindz's Blog](https://crystalwindz.com/)
 - [霪霖笙箫的博客](https://fridolph.github.io/)
 - [upupming 的博客](https://upupming.site/)
 - [徒然の博客](http://techotaku.me/)
@@ -40,6 +40,9 @@ See demo:
 - [JunzhouLiu](https://liujunzhou.top/)
 - [FoolのGarden](https://gofugui.github.io/)
 - [高可用可伸缩微服务架构](https://msainaction.github.io/)
+- [Oolong Box](https://www.oolongbox.com/)
+- [Kiyoshi's Blog](https://blog.k1yoshi.com/)
+- [Sheey的小窝](https://sheey.moe/)
 
 If you are using `theme-melody` and want to be shown to others like above (It will be stopped when the demo sites' number up to 25), please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
