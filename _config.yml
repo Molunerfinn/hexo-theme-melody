@@ -250,7 +250,7 @@ busuanzi:
   site_pv_footer:
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_header: <i class="fa fa-file"></i>
   page_pv_footer:
 
 # canvas_ribbon
