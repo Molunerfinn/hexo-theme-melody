@@ -9,7 +9,7 @@ if (theme.katex && theme.katex.enable)
 if (theme.local_search && theme.local_search.enable)
   script(src=url_for('/js/search/local-search.js'))
 if (theme.canvas_ribbon && theme.canvas_ribbon.enable)
-  include ./third-party/canvas_ribbon.pug
+  include ./third-party/canvas-ribbon.pug
 script.
   if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     $('#nav').addClass('is-mobile')
