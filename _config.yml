@@ -253,6 +253,14 @@ busuanzi:
   page_pv_header: <i class="fa fa-file"></i>
   page_pv_footer:
 
+# canvas_ribbon
+# See: https://github.com/zproo/canvas-ribbon
+canvas_ribbon:
+  enable: false
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+
 # Sidebar Settings
 # ---------------
 #links_title: Links
