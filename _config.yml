@@ -254,12 +254,13 @@ busuanzi:
   page_pv_footer:
 
 # canvas_ribbon
-# See: https://github.com/zproo/canvas-ribbon
+# See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
   enable: false
   size: 150
   alpha: 0.6
   zIndex: -1
+  click_to_change: false
 
 # Sidebar Settings
 # ---------------
