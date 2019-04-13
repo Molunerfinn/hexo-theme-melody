@@ -12,6 +12,8 @@
 #   hr_color: "#A4D8FA"
 #   tag_start_color: "#A4D8FA"
 #   tag_end_color: "#1B9EF3"
+#   header_text_color: "#EEEEEE"
+#   footer_text_color: "#EEEEEE"
 
 # Main menu navigation
 menu:
