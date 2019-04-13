@@ -6,6 +6,8 @@ $theme-text-selection-color = #00c4b6
 $theme-meta-color = #858585
 $theme-link-color = #99a9bf
 $theme-hr-color = #A4D8FA
+$theme-header-text-color =  #EEEEEE
+$theme-footer-text-color = #EEEEEE
 
 if hexo-config("theme_color") && hexo-config("theme_color.enable")
   $theme-color = convert(hexo-config("theme_color.main")) || #49B1F5
@@ -15,6 +17,8 @@ if hexo-config("theme_color") && hexo-config("theme_color.enable")
   $theme-link-color = convert(hexo-config("theme_color.link_color")) || #99a9bf
   $theme-meta-color = convert(hexo-config("theme_color.meta_color")) || #858585
   $theme-hr-color = convert(hexo-config("theme_color.hr_color")) || #A4D8FA
+  $theme-header-text-color = convert(hexo-config("theme_color.header_text_color")) || #EEEEEE
+  $theme-footer-text-color = convert(hexo-config("theme_color.footer_text_color")) || #EEEEEE
 
 // Global Variables
 $font-size = 14px
