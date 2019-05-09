@@ -8,7 +8,7 @@ $(function () {
         .velocity('transition.slideUpOut', { duration: 300 })
     }
   })
-  $(document).on('click', function (e) {
+  $(document).on('click touchstart', function (e) {
     var flag = $('.menus')[0].contains(e.target) || $('.toggle-menu')[0].contains(e.target)
     if (!flag && $('.toggle-menu').is(':visible')) {
       $('.menus').velocity('stop')

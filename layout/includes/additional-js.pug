@@ -11,7 +11,8 @@ if (theme.local_search && theme.local_search.enable)
 if (theme.canvas_ribbon && theme.canvas_ribbon.enable)
   include ./third-party/canvas-ribbon.pug
 script.
-  if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
     $('#nav').addClass('is-mobile')
     $('footer').addClass('is-mobile')
+    $('#top-container').addClass('is-mobile')
   }
