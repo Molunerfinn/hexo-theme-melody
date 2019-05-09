@@ -1,5 +1,8 @@
 headStyle(fontsize)
   padding-left: unit(fontsize + 0.1, "rem")
+  
+  code 
+    font-size: unit(fontsize, "rem")
 
   &:before
     top: calc(50% - unit(fontsize / 2 - 0.05, "rem"))
@@ -95,8 +98,10 @@ headStyle(fontsize)
     margin-bottom: 0.5rem
 
   &__tags
-    margin-right: 0.4rem
-    padding: 0.2rem 0.6rem
+    display: inline-block
+    width: fit-content
+    margin: 0 0.4rem 0.2rem 0
+    padding: 0rem 0.6rem
     border: 1px solid $light-blue
     border-radius: 0.6rem
     background: $white

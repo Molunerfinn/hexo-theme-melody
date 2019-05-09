@@ -1,9 +1,8 @@
-link(rel="dns-prefetch" href="https://cdn.staticfile.org")
-link(rel="dns-prefetch" href="https://cdn.bootcss.com")
-link(rel="dns-prefetch" href="https://creativecommons.org")
+meta(name="format-detection" content="telephone=no")
+meta(http-equiv="x-dns-prefetch-control" content="on") 
+link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
 
 if theme.algolia_search.enable
-  link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
   link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css")
   script(src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer)
 
@@ -76,3 +75,18 @@ if theme.tencent_analytics
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
+if theme.google_site_verification
+  meta(name="google-site-verification" content=theme.google_site_verification)
+
+if theme.bing_site_verification
+  meta(name="msvalidate.01" content=theme.bing_site_verification)
+
+if theme.baidu_site_verification
+  meta(name="baidu-site-verification" content=theme.baidu_site_verification)
+
+if theme.qihu_site_verification
+  meta(name="360-site-verification" content=theme.qihu_site_verification)
+
+if theme.disable_baidu_transformation
+  meta(http-equiv="Cache-Control" content="no-transform")
+  meta(http-equiv="Cache-Control" content="no-siteapp")
