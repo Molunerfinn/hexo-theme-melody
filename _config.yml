@@ -284,3 +284,27 @@ google_adsense:
   js: //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-...........
   enable_page_level_ads: true
+  
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+google_site_verification:
+
+# Bing Webmaster tools verification setting
+# See: https://www.bing.com/webmaster/
+bing_site_verification:
+
+# Yandex Webmaster tools verification setting
+# See: https://webmaster.yandex.ru/
+#yandex_site_verification:
+
+# Baidu Webmaster tools verification setting
+# See: https://ziyuan.baidu.com/site/
+baidu_site_verification:
+
+# 360 Webmaster tools verification setting
+# see http://zhanzhang.so.com/
+qihu_site_verification:
+
+# avoid baidu transformation
+disable_baidu_transformation: true
