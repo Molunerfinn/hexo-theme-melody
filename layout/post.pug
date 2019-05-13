@@ -14,10 +14,10 @@ block top_img
             if (theme.post_meta.date_type === 'both')
               time.post-meta__date
                 i.fa.fa-calendar(aria-hidden="true")
-                =" 发表于 "+date(page.date, config.date_format)
+                =' '+_p('post.created')+' '+date(page.date, config.date_format)
                 span.post-meta__separator |
                 i.fa.fa-calendar-check-o(aria-hidden="true")
-                =" 更新于 "+date(page.updated, config.date_format)
+                =' '+_p('post.updated')+' '+date(page.updated, config.date_format)
             else
               - var date_type = theme.post_meta.date_type === 'updated' ? 'updated' : 'date'
               time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]

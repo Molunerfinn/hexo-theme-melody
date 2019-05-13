@@ -27,6 +27,8 @@ no_title: 无题
 read_more: 阅读更多
 
 post:
+  created: 发表于
+  updated: 更新于
   wordcount: 字数总计
   min2read: '阅读时长: %s 分钟'
   copyright:
