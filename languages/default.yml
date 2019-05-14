@@ -27,6 +27,8 @@ no_title: No title
 read_more: Read more
 
 post:
+  created: created
+  updated: updated
   wordcount: Word count
   min2read: 'Reading time: %s min'
   copyright:
