@@ -7,6 +7,7 @@
 - var pageDescription = page.description || page.title || config.description || ''
 - var pageKeywords = (config.keywords || []).join(',')
 - if (page.tags && page.tags.data) pageKeywords = page.tags.data.map(function(tag) {return tag.name;}).join(',')
+- if (page.keywords) pageKeywords = page.keywords.join(',')
 - var pageAuthor = config.author + ',' + config.email
 - var pageCopyright = config.copyright || config.author
 
