@@ -1,4 +1,4 @@
-- var top_img = theme.top_img || config.top_img
+- var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img || true
 - var bg_img = top_img && top_img !== true ? `background-image: url(${top_img})` : ''
 - var flag = top_img === true ? 'no-bg' : ''
 nav#nav(style=bg_img class=flag)
