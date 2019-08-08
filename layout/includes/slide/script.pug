@@ -27,7 +27,12 @@ script.
       { src: '/js/third-party/reveal/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       { src: '/js/third-party/reveal/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       // Syntax highlight for <code> elements
-      { src: '/js/third-party/reveal/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '/js/third-party/reveal/highlight.min.js', async: true, callback: function() {
+        // issue #218
+        setTimeout(function () {
+          hljs.initHighlighting();
+        }, 0)
+      } },
       // Zoom in and out with Alt+click
       { src: '/js/third-party/reveal/zoom.min.js', async: true },
       // Speaker notes
