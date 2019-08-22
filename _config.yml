@@ -217,7 +217,7 @@ disqus:
 
 # valine comment system. https://valine.js.org
 # valine:
-#   enable: false # if you want use valine,please set this value is ture
+#   enable: false # if you want use valine,please set this value is true
 #   appId:  # leancloud application app id
 #   appKey:  # leancloud application app key
 #   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
