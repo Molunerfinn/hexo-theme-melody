@@ -9,5 +9,5 @@ nav#nav(style=bg_img class=flag)
     if(theme.social)
       #site-social-icons
         each url, icon in theme.social
-          a.social-icon(href=url target="_blank")
+          a.social-icon(href=url target="_blank" rel="noreferrer noopener")
             i(class="fa-" + icon)
