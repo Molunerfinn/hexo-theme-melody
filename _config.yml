@@ -63,19 +63,20 @@ algolia_search:
     per_page: 10
 
 # Local search
-# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=local-search
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/third-party-support.html#local-search
 # ---------------
 local_search:
   enable: false
 
 # MathJax
-# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=mathjax
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/third-party-support.html#mathjax
 # ---------------
 mathjax:
   enable: false
   cdn: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # KaTeX
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/third-party-support.html#katex
 # ---------------
 katex:
   enable: false
@@ -131,12 +132,14 @@ avatar:
 
 top_img: true # false or url of img
 
+top_img_height: 60 # best range: 60 - 100
+
 post_meta:
   date_type: created # created or updated
   categories: true
   tags: true
 
-# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/additional-package-support?id=word-counting
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/additional-package-support.html#word-counting
 wordcount:
   enable: false
 
@@ -149,7 +152,7 @@ post_copyright:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/theme-config?id=auto-excerpt
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/theme-config.html#auto-excerpt
 # auto_excerpt:
 #   enable: false
 #   length: 150
@@ -165,8 +168,8 @@ slide:
   mouseWheel: false
   transition: slide
   transitionSpeed: default
-  parallaxBackgroundImage: ''
-  parallaxBackgroundSize: ''
+  parallaxBackgroundImage: ""
+  parallaxBackgroundSize: ""
   parallaxBackgroundHorizontal: null
   parallaxBackgroundVertical: null
 
@@ -284,7 +287,6 @@ google_adsense:
   js: //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-...........
   enable_page_level_ads: true
-  
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
