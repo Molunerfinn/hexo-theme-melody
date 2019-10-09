@@ -1,11 +1,29 @@
-#sidebar
-  - const showToc = is_post() && theme.toc.enable
-  -
-    let tocNumber
-    if (page.toc_number !== undefined) tocNumber = page.toc_number
-    else if (theme.toc.number !== undefined) tocNumber = theme.toc.number
-    else tocNumber = true
-  -
+- const showToc = is_post() && theme.toc.enable
+-
+  let tocNumber
+  if (page.toc_number !== undefined) tocNumber = page.toc_number
+  else if (theme.toc.number !== undefined) tocNumber = theme.toc.number
+  else tocNumber = true
+  let currentPageType = is_post()
+    ? 'post'
+    : is_home()
+    ? 'index'
+    : 'other'
+  let display = 'false'
+  const sidebar_display = theme.sidebar_display || 'post'
+  if (
+    currentPageType === sidebar_display ||
+    (sidebar_display === 'all') ||
+    (currentPageType !== 'index' && (sidebar_display === 'index-none')) ||
+    (currentPageType !== 'post' && (sidebar_display === 'post-none'))
+  ) {
+    display = 'true'
+  }
+  if (theme.sidebar_display === 'hidden') {
+    display = 'false'
+  }
+-
+#sidebar(data-display=display)
   if(showToc)
     .toggle-sidebar-info.text-center
       span(data-toggle= _p('sidebar.toggle_article'))= _p('sidebar.toggle_site')
