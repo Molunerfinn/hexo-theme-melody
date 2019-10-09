@@ -1,4 +1,4 @@
---- # ---------------
+# ---------------
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
@@ -101,8 +101,8 @@ tencent_analytics:
 # ---------------
 stylesheets:
   - /css/index.css
-  # scripts loaded in the end of the body
-  # ---------------
+# scripts loaded in the end of the body
+# ---------------
 scripts:
   - /js/utils.js
   - /js/fancybox.js
@@ -113,8 +113,8 @@ scripts:
   - /js/scroll.js
   - /js/head.js
 
-  # cdn for third-party library
-  # ---------------
+# cdn for third-party library
+# ---------------
 cdn:
   css:
     fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
@@ -269,15 +269,18 @@ canvas_ribbon:
 
 # Sidebar Settings
 # ---------------
-#links_title: Links
-#links:
-#Name: url
+# links_title: Links
+# links:
+# Name: url
 
 # Follow Me Button
 # follow:
 #   enable: true
 #   url: ''
 #   text: ''
+
+# controls the sidebar showing or hidden in different pages
+sidebar_display: post # all/index/post/index-none/post-none/hidden
 
 # Ads
 # ---------------
