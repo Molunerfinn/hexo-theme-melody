@@ -15,13 +15,18 @@
     background-attachment: local
 
 #site-info
-  padding: 10rem 1rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 0 1rem
+  height: unit($top_img_height, "vh")
 
 #site-title,
 #site-sub-title
   color: $theme-header-text-color
   text-align: center
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
+  text-shadow: $light-shadow
   line-height: 1.5
 
 #site-title
@@ -39,7 +44,7 @@
   .social-icon
     margin: 0 0.5rem
     color: $theme-header-text-color
-    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
+    text-shadow: $light-shadow
     font-size: 1.4rem
     cursor: pointer
 
@@ -77,7 +82,7 @@
     position: relative
     margin-left: 0.6rem
     padding-bottom: 0.3rem
-    text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.3)
+    text-shadow: $dark-shadow
     font-size: 0.7rem
     cursor: pointer
 
@@ -122,7 +127,7 @@
     transform: translate3d(0, 100%, 0)
 
   #site-name
-    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
+    text-shadow: $light-shadow
     font-weight: bold
     cursor: pointer
 
@@ -165,7 +170,8 @@
 
         &:hover
           color: $light-blue
-    .search 
+
+    .search
       right: 0.5rem
 
       span
