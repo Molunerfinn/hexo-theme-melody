@@ -39,6 +39,7 @@ See demo:
 - [Oolong Box](https://www.oolongbox.com/)
 - [Kiyoshi's Blog](https://blog.k1yoshi.com/)
 - [Sheey的小窝](https://sheey.moe/)
+- [Ahuiyo の Blog](https://ahuiyo.cn/)
 
 If you are using `theme-melody` and want to be shown to others like above (It will be stopped when the demo sites' number up to 25), please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
