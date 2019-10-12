@@ -33,13 +33,13 @@ See demo:
 - [Ykk's blog](https://ykksmile.top/)
 - [Inno’s Blog](https://innofang.github.io/)
 - [SpiffyEight77's Blog](https://spiffyeight77.github.io/)
-- [JunzhouLiu](https://liujunzhou.top/)
 - [FoolのGarden](https://gofugui.github.io/)
 - [高可用可伸缩微服务架构](https://msainaction.github.io/)
 - [Oolong Box](https://www.oolongbox.com/)
 - [Kiyoshi's Blog](https://blog.k1yoshi.com/)
 - [Sheey的小窝](https://sheey.moe/)
 - [Ahuiyo の Blog](https://ahuiyo.cn/)
+- [XIAO Blog](https://blog.xiaojianzheng.cn)
 
 If you are using `theme-melody` and want to be shown to others like above (It will be stopped when the demo sites' number up to 25), please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
