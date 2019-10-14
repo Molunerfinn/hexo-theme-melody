@@ -29,7 +29,7 @@ html(lang=config.language)
     include ../head.pug
     include ../config.pug
   body
-    include ../nav.pug
+    include ./404-nav.pug
     each item in theme.cdn.js
       if item !== undefined
         script(src=url_for(item))
