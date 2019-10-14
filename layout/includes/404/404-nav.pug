@@ -2,10 +2,10 @@
 - var bg_img = top_img && top_img !== true ? `background-image: url(${top_img})` : ''
 - var flag = top_img === true ? 'no-bg' : ''
 nav#nav(style=bg_img class=flag)
-  include ./header.pug
+  include ../header.pug
   #site-info
-    #site-title= config.title 
-    #site-sub-title= theme['404Text'] || '404 Page Not Found'
+    #site-title= config.title
+    #site-sub-title= config.subtitle
     if(theme.social)
       #site-social-icons
         each url, icon in theme.social

@@ -313,3 +313,6 @@ qihu_site_verification:
 
 # avoid baidu transformation
 disable_baidu_transformation: true
+
+# 404 Page SubTitle
+404Text:
