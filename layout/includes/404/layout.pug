@@ -1,0 +1,41 @@
+- pageTitle = `Page not found | ${config.title}`
+
+- var pageDescription = page.description || page.title || config.description || ''
+- var pageKeywords = (config.keywords || []).join(',')
+- if (page.tags && page.tags.data) pageKeywords = page.tags.data.map(function(tag) {return tag.name;}).join(',')
+- if (page.keywords) pageKeywords = page.keywords.join(',')
+- var pageAuthor = config.email ? config.author + ',' + config.email : config.author
+- var pageCopyright = config.copyright || config.author
+
+doctype html
+html(lang=config.language)
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="description" content=pageDescription)
+    meta(name="keywords" content=pageKeywords)
+    meta(name="author" content=pageAuthor)
+    meta(name="copyright" content=pageCopyright)
+    title= pageTitle
+    !=favicon_tag(config.favicon || theme.favicon || '/melody-favicon.ico')
+    if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+      each url in theme.stylesheets
+        link(rel='stylesheet', href=url_for(url) + '?version=' + version())
+    each item in theme.cdn.css
+      if item !== undefined
+        link(rel='stylesheet', href=item + '?version=' + version())
+    link(rel='stylesheet', href=url_for('/css/404.css') + '?version=' + version())
+    include ../head.pug
+    include ../config.pug
+  body
+    include ../nav.pug
+    each item in theme.cdn.js
+      if item !== undefined
+        script(src=url_for(item))
+    if theme.scripts !== undefined && theme.scripts.length > 0
+      //- scripts list from config.yml
+      each url in theme.scripts
+        script(src=url_for(url) + '?version=' + version())
+    include ../additional-js.pug
+    include ../search/index.pug
