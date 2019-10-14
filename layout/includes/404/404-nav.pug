@@ -4,8 +4,8 @@
 nav#nav(style=bg_img class=flag)
   include ../header.pug
   #site-info
-    #site-title= config.title
-    #site-sub-title= config.subtitle
+    #site-title= config.title 
+    #site-sub-title= theme['404Text'] || '404 Page Not Found'
     if(theme.social)
       #site-social-icons
         each url, icon in theme.social
