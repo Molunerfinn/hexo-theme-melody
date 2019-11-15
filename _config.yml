@@ -235,7 +235,7 @@ disqus:
 # ---------------
 since: 2013
 
-# footer_custom_text:
+# footer_custom_text: put custom text directly or put hitokoto to fetch random texts
 
 ICP:
   enable: false
