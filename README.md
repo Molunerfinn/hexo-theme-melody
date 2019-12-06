@@ -30,7 +30,6 @@ See demo:
 - [HibisciDai's blog](https://hibiscidai.com/)
 - [李牧羊](https://www.limuyang.cc/)
 - [DoubleFJ の Blog](http://putop.top)
-- [Ykk's blog](https://ykksmile.top/)
 - [Inno’s Blog](https://innofang.github.io/)
 - [SpiffyEight77's Blog](https://spiffyeight77.github.io/)
 - [FoolのGarden](https://gofugui.github.io/)
@@ -41,6 +40,12 @@ See demo:
 - [Ahuiyo の Blog](https://ahuiyo.cn/)
 - [XIAO Blog](https://blog.xiaojianzheng.cn)
 - [Moon's Blog](https://loumoon.github.io/)
+- [cuteerhas](https://lishoushoua.github.io/)
+- [李林林的小站](https://leilinen.github.io/)
+- [Sunshine](http://hudongyang.com/)
+- [过客别墅](https://zc-apiao.space/)
+
+and more...
 
 If you are using `theme-melody` and want to be shown to others like above (It will be stopped when the demo sites' number up to 25), please write down your site in this [issue](https://github.com/Molunerfinn/hexo-theme-melody/issues/1)!
 
