@@ -1,6 +1,6 @@
 {
   "eslint.enable": true,
-  "editor.formatOnSave": true,
+  // "editor.formatOnSave": true,
   "[markdown]": {
     "editor.formatOnSave": false
   },
@@ -12,5 +12,8 @@
   "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
   "stylusSupremacy.sortProperties": "grouped",
   "eslint.autoFixOnSave": true,
-  "stylusSupremacy.quoteChar": "\""
+  "stylusSupremacy.quoteChar": "\"",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

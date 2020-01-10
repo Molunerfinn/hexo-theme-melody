@@ -95,7 +95,9 @@ $(function () {
     var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight)
     var scrollPercent = (currentTop) / (contentMath)
     var scrollPercentRounded = Math.round(scrollPercent * 100)
-    var percentage = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded
+    var percentage = (scrollPercentRounded > 100) ? 100
+      : (scrollPercentRounded <= 0) ? 0
+        : scrollPercentRounded
     $('.progress-num').text(percentage)
     $('.sidebar-toc__progress-bar').velocity('stop')
       .velocity({
