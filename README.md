@@ -44,6 +44,8 @@ See demo:
 - [李林林的小站](https://leilinen.github.io/)
 - [Sunshine](http://hudongyang.com/)
 - [过客别墅](https://zc-apiao.space/)
+- [jie wei](http://weijiew.com/)
+- [Mandarin的日常](https://liwenhau.github.io/)
 
 and more...
 
