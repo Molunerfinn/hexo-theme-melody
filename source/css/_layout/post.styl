@@ -258,14 +258,15 @@ a.fancybox
   text-align: center
   text-decoration: none
 
-img
-  padding: $img-border-padding
-  max-width: 100%
-  border: 1px solid $img-border-color
-  transition: all 0.2s
+.content, #sidebar
+  img
+    padding: $img-border-padding
+    max-width: 100%
+    border: 1px solid $img-border-color
+    transition: all 0.2s
 
-  &:hover
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
+    &:hover
+      box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
 
 .code-area-wrap
   position: relative
