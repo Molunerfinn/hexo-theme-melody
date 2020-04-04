@@ -3,8 +3,9 @@ if theme.valine && theme.valine.enable
   script(src='https://cdn1.lncld.net/static/js/3.0.4/av-min.js')
   script(src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
   script.
-    var notify = '#{ theme.valine.notify }' == true ? true : false;
-    var verify = '#{ theme.valine.verify }' == true ? true : false;
+    var notify = '#{ theme.valine.notify }' == 'true';
+    var verify = '#{ theme.valine.verify }' == 'true';
+    var record_ip = '#{ theme.valine.recordip }' == 'true';
     var GUEST_INFO = ['nick','mail','link'];
     var guest_info = '#{ theme.valine.guest_info }'.split(',').filter(function(item){
       return GUEST_INFO.indexOf(item) > -1
@@ -14,6 +15,7 @@ if theme.valine && theme.valine.enable
       el:'#vcomment',
       notify:notify,
       verify:verify,
+      recordIP:record_ip,
       appId:'#{theme.valine.appId}',
       appKey:'#{theme.valine.appKey}',
       placeholder:'#{theme.valine.placeholder}',
