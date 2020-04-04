@@ -24,7 +24,6 @@ See demo:
 - [Elody's Blog](https://elody-07.github.io)
 - [zouyaoji's Blog](https://zouyaoji.top/)
 - [flytreeleft's Blog](https://flytreeleft.org/)
-- [Crystalwindz's Blog](https://crystalwindz.com/)
 - [霪霖笙箫的博客](https://fridolph.github.io/)
 - [upupming 的博客](https://upupming.site/)
 - [HibisciDai's blog](https://hibiscidai.com/)
@@ -46,6 +45,7 @@ See demo:
 - [过客别墅](https://zc-apiao.space/)
 - [jie wei](http://weijiew.com/)
 - [Mandarin的日常](https://liwenhau.github.io/)
+- [Flexiston 灵·石](https://www.flexiston.com/)
 
 and more...
 
