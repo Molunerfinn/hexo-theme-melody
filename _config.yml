@@ -225,6 +225,7 @@ disqus:
 #   appKey:  # leancloud application app key
 #   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
 #   verify: false # valine verify code (true/false)
+#   recordip: false # whether record commentor's ip (true/false)
 #   pageSize: 10 # comment list page size
 #   avatar: mm # gravatar style https://valine.js.org/#/avatar
 #   lang: zh-cn # i18n: zh-cn/en

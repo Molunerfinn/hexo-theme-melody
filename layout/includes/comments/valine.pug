@@ -5,6 +5,7 @@ if theme.valine && theme.valine.enable
   script.
     var notify = '#{ theme.valine.notify }' == 'true';
     var verify = '#{ theme.valine.verify }' == 'true';
+    var record_ip = '#{ theme.valine.recordip }' == 'true';
     var GUEST_INFO = ['nick','mail','link'];
     var guest_info = '#{ theme.valine.guest_info }'.split(',').filter(function(item){
       return GUEST_INFO.indexOf(item) > -1
@@ -14,6 +15,7 @@ if theme.valine && theme.valine.enable
       el:'#vcomment',
       notify:notify,
       verify:verify,
+      recordIP:record_ip,
       appId:'#{theme.valine.appId}',
       appKey:'#{theme.valine.appKey}',
       placeholder:'#{theme.valine.placeholder}',
