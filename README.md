@@ -45,7 +45,6 @@ See demo:
 - [过客别墅](https://zc-apiao.space/)
 - [jie wei](http://weijiew.com/)
 - [Mandarin的日常](https://liwenhau.github.io/)
-- [Flexiston 灵·石](https://www.flexiston.com/)
 
 and more...
 
