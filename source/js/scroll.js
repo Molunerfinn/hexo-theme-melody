@@ -72,7 +72,14 @@ $(function () {
 
   // scroll to a head(anchor)
   function scrollToHead (anchor) {
-    $(anchor).velocity('stop').velocity('scroll', {
+    var item
+    try {
+      item = $(anchor)
+    } catch (e) {
+      // fix #286 support hexo v5
+      item = $(decodeURL(anchor))
+    }
+    item.velocity('stop').velocity('scroll', {
       duration: 500,
       easing: 'easeInOutQuart'
     })
@@ -137,6 +144,14 @@ $(function () {
     if (currentId === '') {
       $('.toc-link').removeClass('active')
       $('.toc-child').hide()
+    }
+
+    // fix #286 since hexo v5.0.0 will
+    // encodeURI the toc-item href
+    var hexoVersion = GLOBAL_CONFIG.hexoVersion[0]
+
+    if (hexoVersion === '5') {
+      currentId = encodeURI(currentId)
     }
 
     var currentActive = $('.toc-link.active')

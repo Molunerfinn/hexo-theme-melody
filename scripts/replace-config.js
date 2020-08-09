@@ -8,6 +8,10 @@ hexo.extend.helper.register('version', function () {
   return version
 })
 
+hexo.extend.helper.register('hexoVersion', function () {
+  return hexo.version
+})
+
 hexo.on('generateBefore', function () {
   const rootConfig = hexo.config
   if (hexo.locals.get) {
