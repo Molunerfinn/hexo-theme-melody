@@ -1,3 +1,12 @@
+## :tada: 1.8.1 (2020-08-09)
+
+
+### :bug: Bug Fixes
+
+* toc-item's href will be encoded in hexo v5 ([bed1f19](https://github.com/Molunerfinn/hexo-theme-melody/commit/bed1f19)), closes [#286](https://github.com/Molunerfinn/hexo-theme-melody/issues/286)
+
+
+
 # :tada: 1.8.0 (2020-08-09)
 
 
