@@ -1,3 +1,12 @@
+## :tada: 1.8.2 (2020-08-09)
+
+
+### :bug: Bug Fixes
+
+* decodeURL -> decodeURI ([6929e58](https://github.com/Molunerfinn/hexo-theme-melody/commit/6929e58))
+
+
+
 ## :tada: 1.8.1 (2020-08-09)
 
 
