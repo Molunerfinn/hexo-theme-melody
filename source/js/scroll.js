@@ -77,7 +77,7 @@ $(function () {
       item = $(anchor)
     } catch (e) {
       // fix #286 support hexo v5
-      item = $(decodeURL(anchor))
+      item = $(decodeURI(anchor))
     }
     item.velocity('stop').velocity('scroll', {
       duration: 500,
