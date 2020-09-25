@@ -12,7 +12,6 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.j
 - var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
 - var autoSlide = slide.autoSlide || defaultSlide.autoSlide
 - var loop = slide.loop || defaultSlide.loop
-- var autoSlideStoppable = slide.autoSlideStoppable || defaultSlide.autoSlideStoppable
 
 script.
   Reveal.initialize({
@@ -24,7 +23,6 @@ script.
     parallaxBackgroundHorizontal: '!{parallaxBackgroundHorizontal}',
     parallaxBackgroundVertical: '!{parallaxBackgroundVertical}',
     autoSlide: '!{autoSlide}',
-    autoSlideStoppable: '!{autoSlideStoppable}',
     loop: '!{loop}',
     markdown: {
       smartypants: true
