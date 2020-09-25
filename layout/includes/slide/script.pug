@@ -10,16 +10,22 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.j
 - var parallaxBackgroundSize = slide.parallaxBackgroundSize || defaultSlide.parallaxBackgroundSize
 - var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal || defaultSlide.parallaxBackgroundHorizontal
 - var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
+- var autoSlide = slide.autoSlide || defaultSlide.autoSlide
+- var loop = slide.loop || defaultSlide.loop
+- var autoSlideStoppable = slide.autoSlideStoppable || defaultSlide.autoSlideStoppable
 
 script.
   Reveal.initialize({
-    mouseWheel: !{mouseWheel},
+    mouseWheel: '!{mouseWheel}',
     transition: '!{transition}',
     transitionSpeed: '!{transitionSpeed}',
     parallaxBackgroundImage: '!{parallaxBackgroundImage}',
     parallaxBackgroundSize: '!{parallaxBackgroundSize}',
     parallaxBackgroundHorizontal: '!{parallaxBackgroundHorizontal}',
     parallaxBackgroundVertical: '!{parallaxBackgroundVertical}',
+    autoSlide: '!{autoSlide}',
+    autoSlideStoppable: '!{autoSlideStoppable}',
+    loop: '!{loop}',
     markdown: {
       smartypants: true
     },
