@@ -19,6 +19,7 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/mat
 - var progress = slide.progress || defaultSlide.progress || true
 - var showNotes = slide.showNotes || defaultSlide.showNotes || false
 - var autoPlayMedia = slide.autoPlayMedia || defaultSlide.autoPlayMedia || false
+- var backgroundTransition = slide.backgroundTransition|| defaultSlide.backgroundTransition || 'fade'
 
 script.
   Reveal.initialize({
@@ -36,6 +37,7 @@ script.
     progress: !{progress},
     showNotes: !{showNotes},
     autoPlayMedia: !{autoPlayMedia},
+    backgroundTransition: '!{backgroundTransition}',
     markdown: {
       smartypants: true
     },

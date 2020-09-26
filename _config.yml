@@ -180,6 +180,7 @@ slide:
   progress: true
   showNotes: false
   autoPlayMedia: false
+  backgroundTransition: 'fade'
 
 # QR_code:
 # - itemlist:
