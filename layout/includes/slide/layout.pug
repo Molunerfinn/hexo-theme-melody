@@ -29,7 +29,7 @@ html(lang=config.language)
       - var slide = page.slide || theme.slide
       - var defaultSlide = theme.slide
       - var slideTheme = slide.theme || defaultSlide.theme
-      - var slideCodeTheme = slide.codeTheme || defaultSlide.codeTheme || monokai
+      - var slideCodeTheme = slide.codeTheme || defaultSlide.codeTheme || 'monokai'
       link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/" + slideTheme + ".css")
       link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/"+ slideCodeTheme + ".css")
       //- Available: zenburn.css and monokai.css)
