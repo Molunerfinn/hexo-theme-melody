@@ -1,6 +1,8 @@
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/js/head.min.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"))
-
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/zoom/zoom.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/search/search.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"))
 - var slide = page.slide || theme.slide
 - var defaultSlide = theme.slide
 - var mouseWheel = slide.mouseWheel || defaultSlide.mouseWheel 
@@ -10,9 +12,14 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.j
 - var parallaxBackgroundSize = slide.parallaxBackgroundSize || defaultSlide.parallaxBackgroundSize
 - var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal || defaultSlide.parallaxBackgroundHorizontal
 - var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
-- var autoSlide = slide.autoSlide || defaultSlide.autoSlide
-- var loop = slide.loop || defaultSlide.loop
-- var autoSlideStoppable = slide.autoSlideStoppable || defaultSlide.autoSlideStoppable
+- var autoSlide = slide.autoSlide || defaultSlide.autoSlide || false
+- var loop = slide.loop || defaultSlide.loop || false
+- var controlsLayout = slide.controlsLayout || defaultSlide.controlsLayout || "bottom-right"
+- var controlsBackArrows = slide.controlsBackArrows || defaultSlide.controlsBackArrows || "faded"
+- var progress = slide.progress || defaultSlide.progress || true
+- var showNotes = slide.showNotes || defaultSlide.showNotes || false
+- var autoPlayMedia = slide.autoPlayMedia || defaultSlide.autoPlayMedia || false
+- var backgroundTransition = slide.backgroundTransition|| defaultSlide.backgroundTransition || 'fade'
 
 script.
   Reveal.initialize({
@@ -25,27 +32,33 @@ script.
     parallaxBackgroundVertical: '!{parallaxBackgroundVertical}',
     autoSlide: !{autoSlide},
     loop: !{loop},
-    autoSlideStoppable: !{autoSlideStoppable},
+    controlsLayout: '!{controlsLayout}', // Determines where controls appear, "edges" or "bottom-right"
+    controlsBackArrows: '!{controlsBackArrows}',
+    progress: !{progress},
+    showNotes: !{showNotes},
+    autoPlayMedia: !{autoPlayMedia},
+    backgroundTransition: '!{backgroundTransition}',
     markdown: {
       smartypants: true
     },
+    plugins: [
+    // Search
+    RevealSearch,
+    // Speaker notes
+    RevealNotes,
+    // Zoom in and out with Alt+click
+    RevealZoom,
+    // MathJax
+    RevealMath
+    ],
     dependencies: [
-      { src: '/js/third-party/reveal/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '/js/third-party/reveal/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       // Syntax highlight for <code> elements
-      { src: '/js/third-party/reveal/highlight.min.js', async: true, callback: function() {
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js', async: true, callback: function() {
         // issue #218
         setTimeout(function () {
           hljs.initHighlighting();
         }, 0)
       } },
-      // Zoom in and out with Alt+click
-      { src: '/js/third-party/reveal/zoom.min.js', async: true },
-      // Speaker notes
-      { src: '/js/third-party/reveal/notes.min.js', async: true },
-      // MathJax
-      { src: '/js/third-party/reveal/math.min.js', async: true },
-      // Search
-      { src: '/js/third-party/reveal/search.min.js', async: true },
     ]
   });

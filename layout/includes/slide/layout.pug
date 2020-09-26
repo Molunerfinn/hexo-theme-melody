@@ -24,12 +24,15 @@ html(lang=config.language)
     title= pageTitle
     !=favicon_tag(config.favicon || theme.favicon || '/melody-favicon.ico')
     if !page.iframe
-      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css")
       - var slide = page.slide || theme.slide
       - var defaultSlide = theme.slide
       - var slideTheme = slide.theme || defaultSlide.theme
-      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/" + slideTheme + ".css")
-      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/css/zenburn.min.css")
+      - var slideCodeTheme = slide.codeTheme || defaultSlide.codeTheme || 'monokai'
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/" + slideTheme + ".css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/"+ slideCodeTheme + ".css")
+      //- Available: zenburn.css and monokai.css)
     else
       style.
         body {
