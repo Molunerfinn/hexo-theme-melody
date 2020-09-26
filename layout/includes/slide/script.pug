@@ -1,5 +1,8 @@
 script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.js"))
-
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/zoom/zoom.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/search/search.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"))
 - var slide = page.slide || theme.slide
 - var defaultSlide = theme.slide
 - var mouseWheel = slide.mouseWheel || defaultSlide.mouseWheel 
@@ -36,6 +39,16 @@ script.
     markdown: {
       smartypants: true
     },
+    plugins: [
+    // Search
+    RevealSearch,
+    // Speaker notes
+    RevealNotes,
+    // Zoom in and out with Alt+click
+    RevealZoom,
+    // MathJax
+    RevealMath
+    ],
     dependencies: [
       { src: '/js/third-party/reveal/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       { src: '/js/third-party/reveal/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -46,13 +59,5 @@ script.
           hljs.initHighlighting();
         }, 0)
       } },
-      // Zoom in and out with Alt+click
-      { src: '/js/third-party/reveal/zoom.min.js', async: true },
-      // Speaker notes
-      { src: '/js/third-party/reveal/notes.min.js', async: true },
-      // MathJax
-      { src: '/js/third-party/reveal/math.min.js', async: true },
-      // Search
-      { src: '/js/third-party/reveal/search.min.js', async: true },
     ]
   });
