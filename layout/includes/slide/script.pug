@@ -9,13 +9,13 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.js"
 - var parallaxBackgroundSize = slide.parallaxBackgroundSize || defaultSlide.parallaxBackgroundSize
 - var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal || defaultSlide.parallaxBackgroundHorizontal
 - var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
-- var autoSlide = slide.autoSlide || defaultSlide.autoSlide
-- var loop = slide.loop || defaultSlide.loop
-- var controlsLayout = slide.controlsLayout || defaultSlide.controlsLayout
-- var controlsBackArrows = slide.controlsBackArrows || defaultSlide.controlsBackArrows
-- var progress = slide.progress || defaultSlide.progress
-- var showNotes = slide.showNotes || defaultSlide.showNotes
-- var autoPlayMedia = slide.autoPlayMedia || defaultSlide.autoPlayMedia
+- var autoSlide = slide.autoSlide || defaultSlide.autoSlide || false
+- var loop = slide.loop || defaultSlide.loop || false
+- var controlsLayout = slide.controlsLayout || defaultSlide.controlsLayout || "bottom-right"
+- var controlsBackArrows = slide.controlsBackArrows || defaultSlide.controlsBackArrows || "faded"
+- var progress = slide.progress || defaultSlide.progress || true
+- var showNotes = slide.showNotes || defaultSlide.showNotes || false
+- var autoPlayMedia = slide.autoPlayMedia || defaultSlide.autoPlayMedia || false
 
 script.
   Reveal.initialize({
@@ -30,9 +30,9 @@ script.
     loop: !{loop},
     controlsLayout: '!{controlsLayout}', // Determines where controls appear, "edges" or "bottom-right"
     controlsBackArrows: '!{controlsBackArrows}',
-    //- progress: !{progress},
-    //- showNotes: !{showNotes},
-    //- autoPlayMedia: !{autoPlayMedia},
+    progress: !{progress},
+    showNotes: !{showNotes},
+    autoPlayMedia: !{autoPlayMedia},
     markdown: {
       smartypants: true
     },

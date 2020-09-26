@@ -172,6 +172,13 @@ slide:
   parallaxBackgroundSize: ""
   parallaxBackgroundHorizontal: null
   parallaxBackgroundVertical: null
+  loop: false
+  autoSlide: false
+  controlsBackArrows: "faded"
+  controlsLayout: "bottom-right" # Determines where controls appear, "edges" or "bottom-right"
+  progress: true
+  showNotes: false
+  autoPlayMedia: false
 
 # QR_code:
 # - itemlist:
