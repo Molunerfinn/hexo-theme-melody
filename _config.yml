@@ -164,7 +164,7 @@ slide:
   separator_vertical: --
   charset: utf-8
   theme: black
-  codetheme: monokai
+  codeTheme: monokai
   # optional
   mouseWheel: false
   transition: slide
