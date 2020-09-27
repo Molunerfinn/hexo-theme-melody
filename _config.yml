@@ -249,6 +249,7 @@ disqus:
   # clientSecret: # only required for some of the platforms
   # autoCreateIssue: false # Auto create issue on platform (github/...)
   # baseURL: # For self-hosted gitlab/bitbucket only, see here: https://vssue.js.org/options/#baseurl
+  # perPage: 10 # How much comment/page
 
 # Footer Settings
 # ---------------
