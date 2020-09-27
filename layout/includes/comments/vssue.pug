@@ -16,7 +16,7 @@ if theme.vssue && theme.vssue.enable
     - var baseURL = theme.vssue.baseURL
 
   script.
-    var vssue = new Vue({
+    new Vue({
       el: '#vssue',
       
       data: {
@@ -36,4 +36,3 @@ if theme.vssue && theme.vssue.enable
 
       template: `<vssue :title="title" :options="options"></vssue>`,
     })
-    vssue.render('vssue-container')
