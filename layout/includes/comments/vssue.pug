@@ -3,7 +3,7 @@ if theme.vssue && theme.vssue.enable
   link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue.css")
   script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js")
   - var platform = theme.vssue.platform || 'github'
-  script(src="cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
+  script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
   script.
     var vssue = new Vue({
       data: {
@@ -17,7 +17,7 @@ if theme.vssue && theme.vssue.enable
           autoCreateIssue: !{theme.vssue.autoCreateIssue},
           baseURL: '!{theme.vssue.baseURL}',
           perPage: !{theme.vssue.perPage},
-          labels: !{theme.vssue.labels}
+          labels: '!{theme.vssue.labels}',
         },
       },
 
