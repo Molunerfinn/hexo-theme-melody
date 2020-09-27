@@ -1,9 +1,9 @@
 if theme.vssue && theme.vssue.enable
   #vssue-container
-  link(rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css")
-  script(src="https://unpkg.com/vue/dist/vue.min.js")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue.css")
+  script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js")
   - var platform = theme.vssue.platform || 'github'
-  script(src="https://unpkg.com/vssue/dist/vssue." + platform + ".min.js")
+  script(src="cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
   script.
     var vssue = new Vue({
       data: {
