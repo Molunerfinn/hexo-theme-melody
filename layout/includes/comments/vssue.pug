@@ -1,5 +1,5 @@
 if theme.vssue && theme.vssue.enable
-  #vssue
+  #vssue-container
   link(rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css")
   script(src="https://unpkg.com/vue/dist/vue.min.js")
   - var platform = theme.vssue.platform || 'github'
@@ -19,3 +19,4 @@ if theme.vssue && theme.vssue.enable
 
       template: `<vssue :title="title" :options="options"></vssue>`,
     })
+    vssue.render('vssue-container')
