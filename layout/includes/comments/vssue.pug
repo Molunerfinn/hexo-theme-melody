@@ -17,13 +17,11 @@ html(lang=config.language)
       - var baseURL = "https://" + platform + ".org"
     else
       - var baseURL = theme.vssue.baseURL
-    script.
+    script(type='text/javascript').
       new Vue(
         el: '#vssue',
       
         data: {
-          title: options => `${options.prefix}${document.title}`,
-
           options: {
             owner: '!{theme.vssue.owner}',
             repo: '!{theme.vssue.repo}',
@@ -34,7 +32,4 @@ html(lang=config.language)
             perPage: !{perPage},
             labels: ['!{theme.vssue.labels}'],
         },
-      },
-
-      template: "<vssue :title="title" :options="options"></vssue>",
-    )
+      },)
