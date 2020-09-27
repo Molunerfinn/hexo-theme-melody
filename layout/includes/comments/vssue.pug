@@ -1,0 +1,21 @@
+if theme.vssue && theme.vssue.enable
+  #vssue
+  link(rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css")
+  script(src="https://unpkg.com/vue/dist/vue.min.js")
+  - var platform = theme.vssue.platform || 'github'
+  script(src="https://unpkg.com/vssue/dist/vssue." + platform + ".min.js")
+  script.
+    var vssue = new Vue({
+      data: {
+        title: 'Vssue Dev',
+
+        options: {
+          owner: '!{theme.vssue.owner}',
+          repo: '!{theme.vssue.repo}',
+          clientId:'!{theme.vssue.clientId}',
+          clientSecret: '!{theme.vssue.clientSecret}', // only required for some of the platforms
+        },
+      },
+
+      template: `<vssue :title="title" :options="options"></vssue>`,
+    })

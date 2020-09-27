@@ -241,6 +241,13 @@ disqus:
 #   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
 #   guest_info: nick,mail,link #valine comment header inf
 
+# vssue:
+  # enable: false # Set to true to enable
+  # owner:
+  # repo:
+  # clientId:
+  # clientSecret: # only required for some of the platforms
+
 # Footer Settings
 # ---------------
 since: 2013
