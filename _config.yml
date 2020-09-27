@@ -243,6 +243,7 @@ disqus:
 
 # vssue:
   # enable: false # Set to true to enable
+  # platform: github-v4
   # owner:
   # repo:
   # clientId:
