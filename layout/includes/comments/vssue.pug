@@ -7,7 +7,7 @@ if theme.vssue && theme.vssue.enable
   script.
     var vssue = new Vue({
       data: {
-        title: 'Vssue Dev',
+        title: options => `${options.prefix}${document.title}`,
 
         options: {
           owner: '!{theme.vssue.owner}',
@@ -17,6 +17,7 @@ if theme.vssue && theme.vssue.enable
           autoCreateIssue: !{theme.vssue.autoCreateIssue},
           baseURL: '!{theme.vssue.baseURL}',
           perPage: !{theme.vssue.perPage},
+          labels: !{theme.vssue.labels}
         },
       },
 
