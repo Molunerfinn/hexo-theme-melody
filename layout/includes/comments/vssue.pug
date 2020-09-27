@@ -1,34 +1,39 @@
-html
-  head
-    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue.css")
-  body
-    #vssue
-    script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js")
-      - var platform = theme.vssue.platform || 'github'
-    script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
-    if theme.vssue.platform = 'github-v4'
-      - var baseURL = 'https://github.com'
-    else if theme.vssue.platform = 'gitlab' || 'bitbucket' || 'gitee' || 'github' || 'gitea'
-      - var baseURL = "https://" + platform + ".com"
-    else if theme.vssue.platform = 'bitbucket'
-      - var baseURL = "https://" + platform + ".org"
-    else
-      - var baseURL = theme.vssue.baseURL
-    - var perPage = theme.vssue.perPage || 10
-    - var autoCreateIssue = theme.vssue.autoCreateIssue || false
-    script(type='text/javascript').
-      new Vue(
-        el: '#vssue',
+if theme.vssue && theme.vssue.enable
+  #vssue-container
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue.css")
+  script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js")
+  - var platform = theme.vssue.platform || 'github'
+  script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
+  - var perPage = theme.vssue.perPage || 10
+  - var autoCreateIssue = theme.vssue.autoCreateIssue || false
+  if ['github-v4', 'github'].includes(theme.vssue.platform)
+    - var baseURL = 'https://github.com'
+  else if theme.vssue.platform = 'gitlab'
+    - var baseURL = "https://gitlab.com"
+  else if theme.vssue.platform = 'gitee'
+    - var baseURL = "https://gitee.com"
+  else if theme.vssue.platform = 'gitea'
+    - var baseURL = "https://gitea.com"
+  else if theme.vssue.platform = 'bitbucket'
+    - var baseURL = "https://bitbucket.org"
+  else
+    - var baseURL = theme.vssue.baseURL
+
+  script.
+    var vssue = new Vue({
+      el: '#vssue',
       
-        data: {
-          options: {
-            owner: '!{theme.vssue.owner}',
-            repo: '!{theme.vssue.repo}',
-            clientId:'!{theme.vssue.clientId}',
-            clientSecret: '!{theme.vssue.clientSecret}',
-            autoCreateIssue: !{autoCreateIssue},
-            baseURL: '!{baseURL}',
-            perPage: !{perPage},
-            labels: ['!{theme.vssue.labels}'],
+      data: {
+        options: {
+          owner: '!{theme.vssue.owner}',
+          repo: '!{theme.vssue.repo}',
+          clientId:'!{theme.vssue.clientId}',
+          clientSecret: '!{theme.vssue.clientSecret}',
+          autoCreateIssue: !{autoCreateIssue},
+          baseURL: '!{baseURL}',
+          perPage: !{perPage},
+          labels: ['!{theme.vssue.labels}'],
         },
-      },)
+      },
+    })
+    vssue.render('vssue-container')
