@@ -7,8 +7,6 @@ html(lang=config.language)
     script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js")
       - var platform = theme.vssue.platform || 'github'
     script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
-      - var perPage = theme.vssue.perPage || 10
-      - var autoCreateIssue = theme.vssue.autoCreateIssue || false
     if theme.vssue.platform = 'github-v4'
       - var baseURL = 'https://github.com'
     else if theme.vssue.platform = 'gitlab' || 'bitbucket' || 'gitee' || 'github' || 'gitea'
@@ -17,6 +15,8 @@ html(lang=config.language)
       - var baseURL = "https://" + platform + ".org"
     else
       - var baseURL = theme.vssue.baseURL
+    - var perPage = theme.vssue.perPage || 10
+    - var autoCreateIssue = theme.vssue.autoCreateIssue || false
     script(type='text/javascript').
       new Vue(
         el: '#vssue',
