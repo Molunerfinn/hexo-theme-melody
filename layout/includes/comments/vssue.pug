@@ -7,6 +7,9 @@ if theme.vssue && theme.vssue.enable
   script.
     var vssue = new Vue({
       data: {
+        el: '#vssue',
+
+
         title: options => `${options.prefix}${document.title}`,
 
         options: {
