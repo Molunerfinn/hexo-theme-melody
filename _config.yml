@@ -247,6 +247,7 @@ disqus:
   # repo:
   # clientId:
   # clientSecret: # only required for some of the platforms
+  # autoCreateIssue: false # Auto create issue on platform (github/...)
 
 # Footer Settings
 # ---------------
