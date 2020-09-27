@@ -6,10 +6,9 @@ if theme.vssue && theme.vssue.enable
   script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
   script.
     var vssue = new Vue({
+      el: '#vssue',
+      
       data: {
-        el: '#vssue',
-
-
         title: options => `${options.prefix}${document.title}`,
 
         options: {
