@@ -6,7 +6,9 @@ if theme.vssue && theme.vssue.enable
   script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
   - var perPage = theme.vssue.perPage || 10
   - var autoCreateIssue = theme.vssue.autoCreateIssue || false
-  if ['github-v4', 'github'].includes(theme.vssue.platform)
+  if theme.vssue.selfhosted = true
+    - var baseURL = theme.vssue.baseURL
+  else if ['github-v4', 'github'].includes(theme.vssue.platform)
     - var baseURL = 'https://github.com'
   else if theme.vssue.platform = 'gitlab'
     - var baseURL = "https://gitlab.com"
@@ -16,8 +18,6 @@ if theme.vssue && theme.vssue.enable
     - var baseURL = "https://gitea.com"
   else if theme.vssue.platform = 'bitbucket'
     - var baseURL = "https://bitbucket.org"
-  else
-    - var baseURL = theme.vssue.baseURL
 
   script.
     var vssue = new Vue({
