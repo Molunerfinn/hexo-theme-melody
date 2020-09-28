@@ -4,6 +4,7 @@ if theme.vssue && theme.vssue.enable
   script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js")
   - var platform = theme.vssue.platform || 'github'
   script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
+  //- Used for scripts
   - var perPage = theme.vssue.perPage || 10
   - var autoCreateIssue = theme.vssue.autoCreateIssue || false
   if theme.vssue.baseURL != ""
