@@ -6,7 +6,7 @@ if theme.vssue && theme.vssue.enable
   script(src="https://cdn.jsdelivr.net/npm/vssue@1.4.6/dist/vssue." + platform + ".min.js")
   - var perPage = theme.vssue.perPage || 10
   - var autoCreateIssue = theme.vssue.autoCreateIssue || false
-  if theme.vssue.selfhosted = true
+  if theme.vssue.baseURL != ""
     - var baseURL = theme.vssue.baseURL
   else if ['github-v4', 'github'].includes(theme.vssue.platform)
     - var baseURL = 'https://github.com'
