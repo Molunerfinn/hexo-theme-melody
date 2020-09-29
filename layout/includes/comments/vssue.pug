@@ -7,17 +7,17 @@ if theme.vssue && theme.vssue.enable
   //- Used for scripts
   - var perPage = theme.vssue.perPage || 10
   - var autoCreateIssue = theme.vssue.autoCreateIssue || false
-  if theme.vssue.baseURL != ""
+  if theme.vssue.baseURL !== ""
     - var baseURL = theme.vssue.baseURL
   else if ['github-v4', 'github'].includes(theme.vssue.platform)
     - var baseURL = 'https://github.com'
-  else if theme.vssue.platform = 'gitlab'
+  else if theme.vssue.platform === 'gitlab'
     - var baseURL = "https://gitlab.com"
-  else if theme.vssue.platform = 'gitee'
+  else if theme.vssue.platform === 'gitee'
     - var baseURL = "https://gitee.com"
-  else if theme.vssue.platform = 'gitea'
+  else if theme.vssue.platform === 'gitea'
     - var baseURL = "https://gitea.com"
-  else if theme.vssue.platform = 'bitbucket'
+  else if theme.vssue.platform === 'bitbucket'
     - var baseURL = "https://bitbucket.org"
 
   script.
