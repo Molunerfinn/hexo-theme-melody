@@ -241,6 +241,18 @@ disqus:
 #   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
 #   guest_info: nick,mail,link #valine comment header inf
 
+# vssue:
+  # enable: false # Set to true to enable
+  # platform: github-v4
+  # owner:
+  # repo:
+  # clientId:
+  # clientSecret: # only required for some of the platforms
+  # autoCreateIssue: false # Auto create issue on platform (github/...)
+  # baseURL: "" # For self-hosted gitlab/bitbucket only, see here: https://vssue.js.org/options/#baseurl
+  # perPage: 10 # How much comment/page
+  # labels: 'Vssue'
+
 # Footer Settings
 # ---------------
 since: 2013
