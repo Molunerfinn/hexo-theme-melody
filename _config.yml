@@ -17,10 +17,10 @@
 
 # Main menu navigation
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
+  # Home: /
+  # Archives: /archives
+  # Tags: /tags
+  # Categories: /categories
   #XXX: /xxx
 
 # Favicon
