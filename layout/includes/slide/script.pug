@@ -1,8 +1,8 @@
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/zoom/zoom.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/search/search.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/zoom/zoom.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/search/search.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/notes/notes.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/math/math.js"))
 - var slide = page.slide || theme.slide
 - var defaultSlide = theme.slide
 - var mouseWheel = slide.mouseWheel || defaultSlide.mouseWheel 
@@ -52,9 +52,9 @@ script.
     RevealMath
     ],
     dependencies: [
-      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
       // Syntax highlight for <code> elements
-      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js', async: true, callback: function() {
+      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js', async: true, callback: function() {
         // issue #218
         setTimeout(function () {
           hljs.initHighlighting();
