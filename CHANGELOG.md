@@ -1,3 +1,21 @@
+# :tada: 1.9.0 (2020-10-21)
+
+
+### :sparkles: Features
+
+* add some options in slides configuration ([9a3bd2e](https://github.com/Molunerfinn/hexo-theme-melody/commit/9a3bd2e))
+* **comment:** add vssue comment system ([#302](https://github.com/Molunerfinn/hexo-theme-melody/issues/302)) ([e49a2b2](https://github.com/Molunerfinn/hexo-theme-melody/commit/e49a2b2))
+
+
+### :bug: Bug Fixes
+
+* decodeURL -> decodeURI ([6929e58](https://github.com/Molunerfinn/hexo-theme-melody/commit/6929e58))
+* image witdh can't fit the content ([cbb36bf](https://github.com/Molunerfinn/hexo-theme-melody/commit/cbb36bf)), closes [#285](https://github.com/Molunerfinn/hexo-theme-melody/issues/285)
+* unexpected navbar menu ([b9627a7](https://github.com/Molunerfinn/hexo-theme-melody/commit/b9627a7)), closes [#291](https://github.com/Molunerfinn/hexo-theme-melody/issues/291)
+* URL display problem in some environments ([#284](https://github.com/Molunerfinn/hexo-theme-melody/issues/284)) ([355b021](https://github.com/Molunerfinn/hexo-theme-melody/commit/355b021))
+
+
+
 ## :tada: 1.8.2 (2020-08-09)
 
 
