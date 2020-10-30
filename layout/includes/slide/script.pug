@@ -3,6 +3,8 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/zoom/zo
 script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/search/search.js"))
 script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/notes/notes.js"))
 script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/math/math.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js"))
 - var slide = page.slide || theme.slide
 - var defaultSlide = theme.slide
 - var mouseWheel = slide.mouseWheel || defaultSlide.mouseWheel 
@@ -42,6 +44,9 @@ script.
       smartypants: true
     },
     plugins: [
+    RevealMarkdown,
+    // Markdown
+    RevealHighlight
     // Search
     RevealSearch,
     // Speaker notes
@@ -50,15 +55,5 @@ script.
     RevealZoom,
     // MathJax
     RevealMath
-    ],
-    dependencies: [
-      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      // Syntax highlight for <code> elements
-      { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js', async: true, callback: function() {
-        // issue #218
-        setTimeout(function () {
-          hljs.initHighlighting();
-        }, 0)
-      } },
     ]
   });
