@@ -67,7 +67,7 @@ if theme.google_analytics
     ga('create', '!{theme.google_analytics}', 'auto');
     ga('send', 'pageview');
 if theme.google_analytics_MeasurementID
-  script(async, defer, src=`https://www.googletagmanager.com/gtag/js?id=${theme.google_analytics_MeasurementID}`)
+  script(async, src=`https://www.googletagmanager.com/gtag/js?id=${theme.google_analytics_MeasurementID}`)
   script.
 	window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
