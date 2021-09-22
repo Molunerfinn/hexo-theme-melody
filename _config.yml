@@ -257,6 +257,12 @@ disqus:
   # perPage: 10 # How much comment/page
   # labels: 'Vssue'
 
+# waline comment system. https://waline.js.org/
+# waline:
+  # enable: true
+  # serverURL: ''
+  # lang: zh-CN
+
 # Footer Settings
 # ---------------
 since: 2013
