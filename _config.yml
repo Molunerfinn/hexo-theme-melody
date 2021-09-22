@@ -262,6 +262,7 @@ disqus:
   # enable: true
   # serverURL: ''
   # lang: zh-CN
+  # avatar: ''
 
 # Footer Settings
 # ---------------
