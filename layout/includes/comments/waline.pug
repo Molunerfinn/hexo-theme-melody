@@ -1,0 +1,10 @@
+if theme.waline && theme.waline.enable
+  #waline
+  script(src='https://cdn.jsdelivr.net/npm/@waline/client')
+  script.
+    Waline({
+      el:'#waline',
+      serverURL: '#{theme.waline.serverURL}',
+      lang: '#{theme.waline.lang}'
+      avatar: '#{theme.waline.avatar}'
+    })
