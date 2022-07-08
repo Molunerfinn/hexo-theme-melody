@@ -150,7 +150,7 @@ $(function () {
     // encodeURI the toc-item href
     var hexoVersion = GLOBAL_CONFIG.hexoVersion[0]
 
-    if (hexoVersion === '5') {
+    if (parseInt(hexoVersion) >= 5) {
       currentId = encodeURI(currentId)
     }
 
