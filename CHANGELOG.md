@@ -1,3 +1,22 @@
+## :tada: 1.9.1 (2022-07-11)
+
+
+### :sparkles: Features
+
+* add waline support ([#331](https://github.com/Molunerfinn/hexo-theme-melody/issues/331)) ([d51ac1e](https://github.com/Molunerfinn/hexo-theme-melody/commit/d51ac1e))
+
+
+### :bug: Bug Fixes
+
+* **style:** fix recent post item content overflow ([b3e7f34](https://github.com/Molunerfinn/hexo-theme-melody/commit/b3e7f34))
+* fireworks effect for animejs 3 ([#321](https://github.com/Molunerfinn/hexo-theme-melody/issues/321)) ([49cd43e](https://github.com/Molunerfinn/hexo-theme-melody/commit/49cd43e))
+* post page search ([#328](https://github.com/Molunerfinn/hexo-theme-melody/issues/328)) ([9c30e08](https://github.com/Molunerfinn/hexo-theme-melody/commit/9c30e08))
+* support toc auto heightlight for hexo v6 ([#339](https://github.com/Molunerfinn/hexo-theme-melody/issues/339)) ([98455c6](https://github.com/Molunerfinn/hexo-theme-melody/commit/98455c6))
+* tab error ([b7eca92](https://github.com/Molunerfinn/hexo-theme-melody/commit/b7eca92))
+* **slide:** Remove unused dependencies ([#306](https://github.com/Molunerfinn/hexo-theme-melody/issues/306)) ([a3b33f1](https://github.com/Molunerfinn/hexo-theme-melody/commit/a3b33f1))
+
+
+
 # :tada: 1.9.0 (2020-10-21)
 
 
