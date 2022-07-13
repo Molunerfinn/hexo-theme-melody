@@ -259,10 +259,17 @@ disqus:
 
 # waline comment system. https://waline.js.org/
 # waline:
-  # enable: true
-  # serverURL: ''
-  # lang: zh-CN
-  # avatar: ''
+#   enable: true
+#   serverURL: https://waline.ravi.cool
+#   lang: zh-CN
+#   emoji: https://cdn.jsdelivr.net/npm/@waline/emojis@1.0.1/weibo # Custom emoji https://waline.js.org/guide/client/emoji.html
+#   dark: auto # true/false/auto
+#   meta: nick,mail,link # Reviewer Related Properties
+#   requiredMeta: nick # Required fields (like: nick,mail)
+#   login: enable # Login required or not enable/disable/force
+#   wordLimit: 0 # 0/10/10,20 no limit/max 10/10 to 20
+#   pageSize: 10 # comment list page size
+#   placeholder: Just go go # comment input placeholder(like: Please leave your footprints )
 
 # Footer Settings
 # ---------------

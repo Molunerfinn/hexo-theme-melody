@@ -1,10 +1,27 @@
 if theme.waline && theme.waline.enable
   #waline
-  script(src='https://cdn.jsdelivr.net/npm/@waline/client')
+  script(src='https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.js')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css')
   script.
-    Waline({
-      el:'#waline',
+    const e = {
+      placeholder: '#{theme.waline.placeholder}'
+    };
+    var emoji = '#{theme.waline.emoji}'.split (",");
+    var meta = '#{theme.waline.meta}'.split (",");
+    var requiredMeta = '#{theme.waline.requiredMeta}'.split (",");
+    requiredMeta = requiredMeta.length == 0 ? []:requiredMeta;
+    var wordLimit = '#{theme.waline.wordLimit}'.split (",");
+    wordLimit = wordLimit.length == 0 ? #{theme.waline.wordLimit}:wordLimit
+    Waline.init({
+       el: '#waline',
       serverURL: '#{theme.waline.serverURL}',
-      lang: '#{theme.waline.lang}'
-      avatar: '#{theme.waline.avatar}'
-    })
+      lang: '#{theme.waline.lang}',
+      emoji: emoji,
+      dark: '#{theme.waline.dark}',
+      meta: meta,
+      requiredMeta: requiredMeta,
+      login: '#{theme.waline.login}',
+      wordLimit: wordLimit,
+      pageSize: #{theme.waline.pageSize},
+      locale: e
+      });
